@@ -84,3 +84,17 @@ SSH：`root@127.0.0.1 -p 6969`（经车机调试转发），密码只由本人�
 - 不贴出车机热点密码（`/var/opt/conn/carplay/iap2*.cfg`、hostapd.conf）；`fetch` 步骤会拒绝这些路径。
 - 不改车机防火墙和原厂配置，除非本人明确同意；原厂 CarPlay/AA 始终可恢复（重启车机即还原）。
 - `references/`、`samples/` 只读。
+
+## 致谢 / 借鉴
+
+本项目大量借鉴了 **NBT-AAD**（nanaisu，Supra / BMW iDrive 6 上的 Android Auto）：
+https://github.com/Sq00ky/Supra-iDrive6-Android-Auto
+
+- iDrive 菜单入口和投屏期间的前台独占，直接使用了它的 iDrive 插件 `libNbtAad.so`，监督脚本沿用了它的 `/opt/aa/nbt-aad` 接口。
+- 车机图层、MOST/CCS 旋钮解码、USB AOA 读取、车机 Wi‑Fi 热点等做法，都参考了它的源码（`references/upstream/`、`references/nbt-aad/`）。
+- 上游代码按 PolyForm Noncommercial 许可发布（见 `references/upstream/LICENSE.md`），本仓库中来自上游的部分同样**仅限非商业用途**，并保留其 Required Notice：
+  `Copyright (c) 2026 nanaisu - NBT-AAD (https://github.com/Sq00ky/Supra-iDrive6-Android-Auto)`
+
+CarLife 协议细节参考了百度 Apollo 开源的 CarLife-Vehicle-Lib（Apache-2.0）。
+
+欢迎一起研究，有问题可以开 Issue。
