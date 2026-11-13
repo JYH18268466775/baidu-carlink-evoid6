@@ -1,0 +1,39 @@
+﻿# wifi-scan-103  2026-11-13 17:20:37
+Fri Nov 13 09:20:38 UTC 2026
+? (160.48.199.97) at 00:13:1e:2f:a4:2e on vlan73
+? (160.48.199.99) at d0:b5:c2:0b:f3:92 on vlan73
+? (160.48.199.186) at 00:13:1e:2f:a4:2e on vlan80
+? (160.48.199.253) at 00:01:02:03:04:05 on veom0
+? (169.254.213.50) at 5c:53:10:29:2b:cc on dwc0
+? (172.16.224.101) at 1a:7d:f3:5b:89:af on uap0
+? (172.16.224.103) at 6a:1d:79:b4:44:13 on uap0
+probe: socket functions from libsocket.so.3
+probe: connecting to 172.16.224.103 from local ports from 50300; nothing is sent
+probe: port 7240 no answer
+probe: port 8240 no answer
+probe: port 9240 no answer
+probe: port 9241 no answer
+probe: port 9242 no answer
+probe: port 9340 no answer
+probe: port 7200 no answer
+probe: port 8200 no answer
+probe: port 9200 no answer
+probe: port 9201 no answer
+probe: port 9202 no answer
+probe: port 9300 no answer
+probe: port 7999 no answer
+probe: port 7998 no answer
+probe: port 5277 no answer
+probe: port 5000 no answer
+probe: port 5001 no answer
+probe: port 8000 no answer
+probe: port 8080 no answer
+probe: port 7000 no answer
+probe: port 6000 no answer
+probe: port 4000 no answer
+probe: port 23 no answer
+probe: port 22 no answer
+probe: port 80 no answer
+probe: done, 0 port(s) open
+probe-exit=1
+# ssh exit code: 0

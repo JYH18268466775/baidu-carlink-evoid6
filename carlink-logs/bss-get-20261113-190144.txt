@@ -1,0 +1,23 @@
+﻿# bss-get  2026-11-13 19:01:44
+role tool 5912 bytes
+-rwxr-xr-x  2 root      root           5912 Nov 13 11:01 clmenu-bssrole.elf
+==BEFORE
+11
+uap0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	address: bc:30:7e:30:93:c4
+	media: <unknown type> autoselect
+	inet 172.16.224.1 netmask 0xffffff00 broadcast 172.16.224.255
+	inet6 fe80::be30:7eff:fe30:93c4%uap0 prefixlen 64 scopeid 0x9
+==GET
+bssrole: get uap0 failed, errno 1
+get-exit=6
+==AFTER
+11
+uap0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	address: bc:30:7e:30:93:c4
+	media: <unknown type> autoselect
+	inet 172.16.224.1 netmask 0xffffff00 broadcast 172.16.224.255
+	inet6 fe80::be30:7eff:fe30:93c4%uap0 prefixlen 64 scopeid 0x9
+? (172.16.224.101) at 1a:7d:f3:5b:89:af on uap0
+? (172.16.224.103) at 6a:1d:79:b4:44:13 on uap0
+# ssh exit code: 0

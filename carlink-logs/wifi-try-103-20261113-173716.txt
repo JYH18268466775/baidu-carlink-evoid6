@@ -1,0 +1,18 @@
+﻿# wifi-try-103  2026-11-13 17:37:16
+receiver 34556 bytes, launcher 7842 bytes
+-rwxr-xr-x  2 root      root          34556 Nov 13 09:37 clmenu-wcap.elf
+-rw-r--r--  2 root      root           7842 Nov 13 09:37 clmenu-wlaunch.sh
+==CONTEXTS
+==LAYER-BEFORE
+ldd:FATAL: Could not load library libilmClient.cpp-ne.so.1
+ldd:FATAL: Could not load library libilmClient.cpp-ne.so.1
+ldd:FATAL: Could not load library libilmClient.cpp-ne.so.1
+==RESTORE-iDrive-layer
+==LAYER-AFTER
+ldd:FATAL: Could not load library libilmClient.cpp-ne.so.1
+ldd:FATAL: Could not load library libilmClient.cpp-ne.so.1
+==== NOW press Start connection on the phone. The car waits up to 30 s for it.
+iDrive baseline changed; visible test deferred
+launch-exit=75
+==CONTEXTS-AFTER
+# ssh exit code: 0

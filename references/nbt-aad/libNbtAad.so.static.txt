@@ -1,0 +1,1790 @@
+{
+  "name": "libNbtAad.so",
+  "bytes": 70287,
+  "sha256": "406fce40e9f8fcd625b80e49215bc92418c438a8bcae401f983aff367046e68e",
+  "matchesLocal": true,
+  "elf": {
+    "type": 3,
+    "machine": 40,
+    "entry": "0x1ed4",
+    "flags": "0x5000002",
+    "ph": [
+      [
+        1879048193,
+        48492,
+        48492,
+        48492,
+        664,
+        664,
+        4,
+        4
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        49184,
+        49184,
+        5,
+        4096
+      ],
+      [
+        1,
+        49184,
+        53280,
+        53280,
+        1132,
+        4240,
+        6,
+        4096
+      ],
+      [
+        2,
+        49312,
+        53408,
+        53408,
+        240,
+        240,
+        6,
+        4
+      ],
+      [
+        4,
+        49160,
+        49160,
+        49160,
+        24,
+        24,
+        4,
+        1
+      ]
+    ],
+    "sections": [
+      {
+        "i": 0,
+        "name": "",
+        "type": 0,
+        "addr": 0,
+        "off": 0,
+        "len": 0,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 1,
+        "name": ".hash",
+        "type": 5,
+        "addr": 212,
+        "off": 212,
+        "len": 916,
+        "link": 2,
+        "info": 0,
+        "entsize": 4
+      },
+      {
+        "i": 2,
+        "name": ".dynsym",
+        "type": 11,
+        "addr": 1128,
+        "off": 1128,
+        "len": 2080,
+        "link": 3,
+        "info": 3,
+        "entsize": 16
+      },
+      {
+        "i": 3,
+        "name": ".dynstr",
+        "type": 3,
+        "addr": 3208,
+        "off": 3208,
+        "len": 2550,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 4,
+        "name": ".rel.dyn",
+        "type": 9,
+        "addr": 5760,
+        "off": 5760,
+        "len": 344,
+        "link": 2,
+        "info": 0,
+        "entsize": 8
+      },
+      {
+        "i": 5,
+        "name": ".rel.plt",
+        "type": 9,
+        "addr": 6104,
+        "off": 6104,
+        "len": 704,
+        "link": 2,
+        "info": 7,
+        "entsize": 8
+      },
+      {
+        "i": 6,
+        "name": ".init",
+        "type": 1,
+        "addr": 6808,
+        "off": 6808,
+        "len": 8,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 7,
+        "name": ".plt",
+        "type": 1,
+        "addr": 6816,
+        "off": 6816,
+        "len": 1076,
+        "link": 0,
+        "info": 0,
+        "entsize": 4
+      },
+      {
+        "i": 8,
+        "name": ".text",
+        "type": 1,
+        "addr": 7892,
+        "off": 7892,
+        "len": 30284,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 9,
+        "name": ".fini",
+        "type": 1,
+        "addr": 38176,
+        "off": 38176,
+        "len": 8,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 10,
+        "name": ".rodata",
+        "type": 1,
+        "addr": 38184,
+        "off": 38184,
+        "len": 10064,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 11,
+        "name": ".ARM.extab",
+        "type": 1,
+        "addr": 48248,
+        "off": 48248,
+        "len": 244,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 12,
+        "name": ".ARM.exidx",
+        "type": 1879048193,
+        "addr": 48492,
+        "off": 48492,
+        "len": 664,
+        "link": 8,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 13,
+        "name": ".eh_frame",
+        "type": 1,
+        "addr": 49156,
+        "off": 49156,
+        "len": 4,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 14,
+        "name": ".note",
+        "type": 7,
+        "addr": 49160,
+        "off": 49160,
+        "len": 24,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 15,
+        "name": ".init_array",
+        "type": 14,
+        "addr": 53280,
+        "off": 49184,
+        "len": 12,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 16,
+        "name": ".fini_array",
+        "type": 15,
+        "addr": 53292,
+        "off": 49196,
+        "len": 4,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 17,
+        "name": ".jcr",
+        "type": 1,
+        "addr": 53296,
+        "off": 49200,
+        "len": 4,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 18,
+        "name": ".data.rel.ro",
+        "type": 1,
+        "addr": 53304,
+        "off": 49208,
+        "len": 104,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 19,
+        "name": ".dynamic",
+        "type": 6,
+        "addr": 53408,
+        "off": 49312,
+        "len": 240,
+        "link": 3,
+        "info": 0,
+        "entsize": 8
+      },
+      {
+        "i": 20,
+        "name": ".got",
+        "type": 1,
+        "addr": 53648,
+        "off": 49552,
+        "len": 408,
+        "link": 0,
+        "info": 0,
+        "entsize": 4
+      },
+      {
+        "i": 21,
+        "name": ".data",
+        "type": 1,
+        "addr": 54056,
+        "off": 49960,
+        "len": 356,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 22,
+        "name": ".bss",
+        "type": 8,
+        "addr": 54416,
+        "off": 50316,
+        "len": 3104,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 23,
+        "name": ".comment",
+        "type": 1,
+        "addr": 0,
+        "off": 50316,
+        "len": 72,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 24,
+        "name": ".ARM.attributes",
+        "type": 1879048195,
+        "addr": 0,
+        "off": 50388,
+        "len": 43,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 25,
+        "name": ".shstrtab",
+        "type": 3,
+        "addr": 0,
+        "off": 50431,
+        "len": 223,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      },
+      {
+        "i": 26,
+        "name": ".symtab",
+        "type": 2,
+        "addr": 0,
+        "off": 51776,
+        "len": 8784,
+        "link": 27,
+        "info": 422,
+        "entsize": 16
+      },
+      {
+        "i": 27,
+        "name": ".strtab",
+        "type": 3,
+        "addr": 0,
+        "off": 60560,
+        "len": 9727,
+        "link": 0,
+        "info": 0,
+        "entsize": 0
+      }
+    ],
+    "structuralEnd": 70287,
+    "tailBytes": 0,
+    "tailSha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prefixSha": "406fce40e9f8fcd625b80e49215bc92418c438a8bcae401f983aff367046e68e"
+  },
+  "dynamic": [
+    [
+      1,
+      "libAppFramework.A.so"
+    ],
+    [
+      1,
+      "libCoreFramework.A.so"
+    ],
+    [
+      1,
+      "libstdc++.so.6"
+    ],
+    [
+      1,
+      "libm.so.2"
+    ],
+    [
+      1,
+      "libc.so.3"
+    ],
+    [
+      14,
+      "libNbtAad.so"
+    ]
+  ],
+  "imports": 95,
+  "exports": 32
+}
+
+[Dynamic imports]
+index address size binding type visibility section name
+3 0x0 0 1 2 0 0 __aeabi_unwind_cpp_pr0
+4 0x0 0 2 0 0 0 __register_frame_info
+6 0x0 0 1 2 0 0 _ZN3bmw9PluginApp4postEPNS_8RunnableEj
+8 0x0 0 1 2 0 0 clock_gettime
+9 0x0 0 1 2 0 0 open
+10 0x0 0 1 1 0 0 _slogfd
+11 0x0 0 1 2 0 0 memcpy
+12 0x0 0 1 2 0 0 sigfillset
+13 0x0 0 1 2 0 0 _ZN3bmw6ParcelC1Eb
+14 0x0 0 2 0 0 0 _Jv_RegisterClasses
+15 0x0 0 1 2 0 0 pthread_mutex_init
+16 0x0 0 1 2 0 0 _ZN3bmw9PluginAppC1ERNS_11IDispatcherENS_11BasicStringIcEEjjNS_20RHMIInterfaceVersionERKNS_6BundleES8_
+18 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjRKNS_13DataTableBaseE
+20 0x0 0 1 2 0 0 _ZN3bmw11BasicStringIcED1Ev
+21 0x0 0 2 2 0 0 __cxa_finalize
+22 0x0 0 1 2 0 0 _ZN3bmw6ParcelD1Ev
+23 0x0 0 1 2 0 0 mkdir
+24 0x0 0 1 2 0 0 _ZdlPv
+25 0x0 0 1 2 0 0 __get_errno_ptr
+26 0x0 0 1 2 0 0 strncmp
+27 0x0 0 1 2 0 0 __aeabi_unwind_cpp_pr1
+28 0x0 0 1 2 0 0 _ZN3bmw3MapIjNS_7VariantEED1Ev
+29 0x0 0 1 2 0 0 dlsym
+30 0x0 0 1 2 0 0 _ZN3bmw9PluginApp12triggerEventEj
+32 0x0 0 1 0 0 0 recv
+33 0x0 0 1 2 0 0 strlen
+34 0x0 0 1 2 0 0 pthread_mutex_lock
+35 0x0 0 1 2 0 0 opendir
+36 0x0 0 1 2 0 0 stat
+37 0x0 0 1 2 0 0 pthread_once
+38 0x0 0 1 0 0 0 sendto
+39 0x0 0 1 2 0 0 strtol
+40 0x0 0 1 2 0 0 snprintf
+41 0x0 0 1 2 0 0 __cxa_pure_virtual
+42 0x0 0 1 2 0 0 _ZN3bmw9PluginApp10addHandlerEjjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+43 0x0 0 1 2 0 0 select
+44 0x0 0 1 2 0 0 _ZN3bmw6TextIDC1Ej
+46 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjRKNS_7ImageIDE
+47 0x0 0 1 2 0 0 access
+48 0x0 0 1 1 0 0 __slog_mux
+49 0x0 0 1 2 0 0 getpid
+51 0x0 0 1 2 0 0 __gxx_personality_v0
+53 0x0 0 1 2 0 0 fclose
+54 0x0 0 1 2 0 0 _ZNK3bmw6Parcel8readBoolERb
+55 0x0 0 1 2 0 0 _ZN3bmw9PluginApp10onFinalizeEv
+56 0x0 0 1 2 0 0 fopen
+58 0x0 0 1 2 0 0 time
+59 0x0 0 1 2 0 0 fileno
+60 0x0 0 1 2 0 0 write
+62 0x0 0 1 2 0 0 closedir
+64 0x0 0 1 2 0 0 close
+65 0x0 0 1 2 0 0 __cxa_end_cleanup
+68 0x0 0 1 2 0 0 fgets
+69 0x0 0 1 2 0 0 strncpy
+71 0x0 0 1 2 0 0 MsgSendv
+72 0x0 0 1 2 0 0 unlink
+73 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjb
+76 0x0 0 1 1 0 0 _ZTVN10__cxxabiv117__class_type_infoE
+77 0x0 0 1 2 0 0 fflush
+78 0x0 0 1 2 0 0 memset
+80 0x0 0 1 2 0 0 _ZN3bmw13DataTableBaseC1EPNS_3MapIjNS_7VariantEEEj
+81 0x0 0 1 1 0 0 environ
+83 0x0 0 1 2 0 0 pthread_atfork
+84 0x0 0 1 2 0 0 fprintf
+86 0x0 0 1 2 0 0 strcspn
+87 0x0 0 1 2 0 0 memcmp
+88 0x0 0 1 2 0 0 vsnprintf
+90 0x0 0 1 2 0 0 sigemptyset
+91 0x0 0 1 2 0 0 _ZN3bmw9PluginApp6onInitEv
+92 0x0 0 1 0 0 0 socket
+95 0x0 0 1 2 0 0 __stackavail
+97 0x0 0 1 2 0 0 _ZN3bmw9PluginApp33cdsAddPropertyChangedEventHandlerERNS_11BasicStringIcEEjRKNS_8DelegateIbRKNS1_ItEEvvvEE
+98 0x0 0 1 2 0 0 rename
+100 0x0 0 1 2 0 0 pthread_mutex_unlock
+101 0x0 0 1 2 0 0 strstr
+102 0x0 0 1 2 0 0 strcmp
+103 0x0 0 1 2 0 0 waitpid
+105 0x0 0 1 2 0 0 atoi
+107 0x0 0 1 2 0 0 readdir
+109 0x0 0 1 2 0 0 spawn
+110 0x0 0 1 2 0 0 strchr
+112 0x0 0 1 2 0 0 fsync
+113 0x0 0 1 2 0 0 _ZN3bmw3MapIjNS_7VariantEEixERKj
+116 0x0 0 1 2 0 0 _Znwj
+117 0x0 0 1 2 0 0 _ZN3bmw9PluginApp10addHandlerEjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+118 0x0 0 1 2 0 0 fscanf
+119 0x0 0 1 2 0 0 _ZN3bmw11BasicStringIcEC1EPKc
+121 0x0 0 1 1 0 0 _ZTVN10__cxxabiv120__si_class_type_infoE
+122 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjRKNS_6TextIDE
+123 0x0 0 1 2 0 0 _ZN3bmw7ImageIDC1Ej
+124 0x0 0 1 1 0 0 __slog_once
+126 0x0 0 1 2 0 0 strcpy
+127 0x0 0 1 2 0 0 kill
+128 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11setPropertyEjjRKNS_6ParcelE
+129 0x0 0 2 0 0 0 __deregister_frame_info
+
+[Dynamic exports]
+index address size binding type visibility section name
+5 0x937c 188 1 2 0 8 slogi
+7 0x8fa8 36 2 2 0 8 _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED1Ev
+17 0x9520 0 1 2 0 9 _fini
+19 0x904c 52 2 2 0 8 _ZN3bmw7Variant16IObjectContainerD0Ev
+31 0xd07c 8 2 1 0 18 _ZTIN3bmw7Variant16IObjectContainerE
+45 0xd328 0 1 0 0 21 __data_start
+50 0x9018 52 2 2 0 8 _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED0Ev
+52 0xd48c 0 1 0 0 65521 __bss_start__
+57 0xc004 0 1 0 0 65521 __exidx_end
+61 0xd058 24 2 1 0 18 _ZTVN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+63 0xd088 24 2 1 0 18 _ZTVN3bmw7Variant16IObjectContainerE
+66 0xe0b0 0 1 0 0 65521 __end__
+67 0xe0b0 0 1 0 0 65521 __bss_end__
+70 0x8f7c 36 2 2 0 8 _ZN3bmw7Variant16IObjectContainerD1Ev
+74 0x8fa0 8 2 2 0 8 _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE4typeEv
+75 0xd038 8 2 1 0 18 _ZZN3nbt9huVersionEPcjPKcE6kPaths
+79 0xd48c 0 1 0 0 65521 __bss_start
+82 0xe0b0 0 1 0 0 65521 _bss_end__
+85 0x9528 45 2 1 0 10 _ZTSN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+89 0xd474 24 1 1 0 21 pluginAppInfo
+93 0x9558 33 2 1 0 10 _ZTSN3bmw7Variant16IObjectContainerE
+94 0xe0b0 0 1 0 0 65521 _end
+96 0x9438 64 1 2 0 8 slogb
+99 0x934c 48 1 2 0 8 slogf
+104 0x1ed4 0 1 0 0 8 _btext
+106 0x8fcc 76 2 2 0 8 _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE5cloneEv
+108 0xd070 12 2 1 0 18 _ZTIN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+111 0xd48c 0 1 0 0 65521 _edata
+114 0x9200 332 1 2 0 8 vslogf
+115 0xbd6c 0 1 0 0 65521 __exidx_start
+120 0x80000 0 1 0 0 24 _stack
+125 0x1a98 0 1 2 0 6 _init
+
+[Static symbol table]
+index address size binding type visibility section name
+25 0x1 0 0 0 0 65521 BUILDENV_qss
+26 0x1 0 0 0 0 65521 VARIANT_startup
+27 0x1 0 0 0 0 65521 VARIANT_v7
+28 0x1 0 0 0 0 65521 VARIANT_le
+29 0x1 0 0 0 0 65521 VARIANT_a
+30 0x1 0 0 0 0 65521 __pic__
+31 0x1 0 0 0 0 65521 __PIC__
+32 0x1a98 0 0 0 0 6 $a
+33 0x9520 0 0 0 0 9 $a
+34 0x1 0 0 0 0 65521 BUILDENV_qss
+35 0x1 0 0 0 0 65521 VARIANT_startup
+36 0x1 0 0 0 0 65521 VARIANT_v7
+37 0x1 0 0 0 0 65521 VARIANT_le
+38 0x1 0 0 0 0 65521 VARIANT_a
+39 0x1 0 0 0 0 65521 __pic__
+40 0x1 0 0 0 0 65521 __PIC__
+41 0xc008 0 0 0 0 14 $d
+42 0x1a9c 0 0 0 0 6 $a
+43 0x9524 0 0 0 0 9 $a
+44 0x0 0 0 4 0 65521 crtstuff.c
+45 0x1 0 0 0 0 65521 __PIC__
+46 0xc004 0 0 1 0 13 __EH_FRAME_BEGIN__
+47 0xd030 0 0 1 0 17 __JCR_LIST__
+48 0xd328 0 0 0 0 21 $d
+49 0x1ed4 0 0 2 0 8 __do_global_dtors_aux
+50 0x1ed4 0 0 0 0 8 $a
+51 0x1f38 0 0 0 0 8 $d
+52 0xd490 1 0 1 0 22 completed.4602
+53 0xd02c 0 0 1 0 16 __do_global_dtors_aux_fini_array_entry
+54 0xd02c 0 0 0 0 16 $d
+55 0x1f50 0 0 2 0 8 frame_dummy
+56 0x1f50 0 0 0 0 8 $a
+57 0x1fb0 0 0 0 0 8 $d
+58 0xd494 24 0 1 0 22 object.4617
+59 0xd020 0 0 1 0 15 __frame_dummy_init_array_entry
+60 0xd020 0 0 0 0 15 $d
+61 0x0 0 0 4 0 65521 nbt_aad_app.cpp
+62 0x1 0 0 0 0 65521 __pic__
+63 0x1 0 0 0 0 65521 __PIC__
+64 0x8f7c 0 0 0 0 8 $a
+65 0x8f98 0 0 0 0 8 $d
+66 0x8fa0 0 0 0 0 8 $a
+67 0x1fc8 4 0 2 0 8 _ZN12_GLOBAL__N_112runnableNoopEPv
+68 0x1fc8 0 0 0 0 8 $a
+69 0x8fa8 0 0 0 0 8 $a
+70 0x8fc4 0 0 0 0 8 $d
+71 0x1fcc 108 0 2 0 8 _GLOBAL__I_nbt_aad_app.cpp
+72 0x2030 0 0 0 0 8 $d
+73 0xd024 0 0 0 0 15 $d
+74 0x2038 64 0 2 0 8 _ZN12_GLOBAL__N_15nowMsEv
+75 0x2038 0 0 0 0 8 $a
+76 0x2078 128 0 2 0 8 _ZN12_GLOBAL__N_114driverInputNowERKNS_11DaemonStateE
+77 0x2078 0 0 0 0 8 $a
+78 0x20f0 0 0 0 0 8 $d
+79 0x20f8 32 0 2 0 8 _ZN12_GLOBAL__N_110fileExistsEPKc
+80 0x20f8 0 0 0 0 8 $a
+81 0x2118 68 0 2 0 8 _ZN12_GLOBAL__N_111autostartOnEv
+82 0x2118 0 0 0 0 8 $a
+83 0x2150 0 0 0 0 8 $d
+84 0x215c 68 0 2 0 8 _ZN12_GLOBAL__N_112menuIdriveOnEv
+85 0x215c 0 0 0 0 8 $a
+86 0x2194 0 0 0 0 8 $d
+87 0x21a0 68 0 2 0 8 _ZN12_GLOBAL__N_110warningsOnEv
+88 0x21a0 0 0 0 0 8 $a
+89 0x21d8 0 0 0 0 8 $d
+90 0x21e4 68 0 2 0 8 _ZN12_GLOBAL__N_111driveModeOnEv
+91 0x21e4 0 0 0 0 8 $a
+92 0x221c 0 0 0 0 8 $d
+93 0x2228 68 0 2 0 8 _ZN12_GLOBAL__N_110kombiNavOnEv
+94 0x2228 0 0 0 0 8 $a
+95 0x2260 0 0 0 0 8 $d
+96 0x226c 68 0 2 0 8 _ZN12_GLOBAL__N_17usbAaOnEv
+97 0x226c 0 0 0 0 8 $a
+98 0x22a4 0 0 0 0 8 $d
+99 0x22b0 320 0 2 0 8 _ZN12_GLOBAL__N_19envFlagOnEPKcb
+100 0x22b0 0 0 0 0 8 $a
+101 0x23d8 0 0 0 0 8 $d
+102 0x23f0 248 0 2 0 8 _ZN12_GLOBAL__N_115menuReturnEventEv
+103 0x23f0 0 0 0 0 8 $a
+104 0x24d0 0 0 0 0 8 $d
+105 0x8fcc 0 0 0 0 8 $a
+106 0x9010 0 0 0 0 8 $d
+107 0x24e8 32 0 2 0 8 _ZN12_GLOBAL__N_19addActionEPN3bmw9PluginAppEjPFbPvRKNS0_6ParcelEE
+108 0x24e8 0 0 0 0 8 $a
+109 0x9018 0 0 0 0 8 $a
+110 0x9044 0 0 0 0 8 $d
+111 0x904c 0 0 0 0 8 $a
+112 0x9078 0 0 0 0 8 $d
+113 0x2508 140 0 2 0 8 _ZN12_GLOBAL__N_112sendToDaemonEPKc
+114 0x2594 184 0 2 0 8 _ZN12_GLOBAL__N_17jsonStrEPKcS1_Pcj
+115 0x2594 0 0 0 0 8 $a
+116 0x264c 136 0 2 0 8 _ZN12_GLOBAL__N_117aaSurfaceOfDaemonEv
+117 0x264c 0 0 0 0 8 $a
+118 0x26c4 0 0 0 0 8 $d
+119 0x26d4 60 0 2 0 8 _ZN12_GLOBAL__N_18pidAliveEi
+120 0x26d4 0 0 0 0 8 $a
+121 0x2710 384 0 2 0 8 _ZN12_GLOBAL__N_115controlPortBusyEv
+122 0x2710 0 0 0 0 8 $a
+123 0x2884 0 0 0 0 8 $d
+124 0x2890 64 0 2 0 8 _ZN12_GLOBAL__N_113showAutostartEPN3bmw9PluginAppE
+125 0x2890 0 0 0 0 8 $a
+126 0x28c8 0 0 0 0 8 $d
+127 0x28d0 64 0 2 0 8 _ZN12_GLOBAL__N_114showMenuIdriveEPN3bmw9PluginAppE
+128 0x28d0 0 0 0 0 8 $a
+129 0x2908 0 0 0 0 8 $d
+130 0x2910 64 0 2 0 8 _ZN12_GLOBAL__N_113showDriveModeEPN3bmw9PluginAppE
+131 0x2910 0 0 0 0 8 $a
+132 0x2948 0 0 0 0 8 $d
+133 0x2950 64 0 2 0 8 _ZN12_GLOBAL__N_112showKombiNavEPN3bmw9PluginAppE
+134 0x2950 0 0 0 0 8 $a
+135 0x2988 0 0 0 0 8 $d
+136 0x2990 64 0 2 0 8 _ZN12_GLOBAL__N_112showWarningsEPN3bmw9PluginAppE
+137 0x2990 0 0 0 0 8 $a
+138 0x29c8 0 0 0 0 8 $d
+139 0x29d0 64 0 2 0 8 _ZN12_GLOBAL__N_19showUsbAaEPN3bmw9PluginAppE
+140 0x29d0 0 0 0 0 8 $a
+141 0x2a08 0 0 0 0 8 $d
+142 0x2a10 176 0 2 0 8 _ZN12_GLOBAL__N_17spinRunEPv
+143 0x2a10 0 0 0 0 8 $a
+144 0x2ab8 0 0 0 0 8 $d
+145 0x2ac0 308 0 2 0 8 T.583
+146 0x2ac0 0 0 0 0 8 $a
+147 0x2be0 0 0 0 0 8 $d
+148 0x2bf4 744 0 2 0 8 T.586
+149 0x2bf4 0 0 0 0 8 $a
+150 0x2eb0 0 0 0 0 8 $d
+151 0x2edc 124 0 2 0 8 _ZN12_GLOBAL__N_110showUsbLogEPN3bmw9PluginAppE
+152 0x2edc 0 0 0 0 8 $a
+153 0x2f48 0 0 0 0 8 $d
+154 0x2f58 1188 0 2 0 8 _ZN12_GLOBAL__N_14alogEPKcz
+155 0x2f58 0 0 0 0 8 $a
+156 0x33c4 0 0 0 0 8 $d
+157 0x33fc 96 0 2 0 8 _ZN12_GLOBAL__N_110destroyAppEPv
+158 0x33fc 0 0 0 0 8 $a
+159 0x3450 0 0 0 0 8 $d
+160 0x345c 56 0 2 0 8 _ZN12_GLOBAL__N_110appOnErrorEPN3bmw9PluginAppEjRKNS0_11BasicStringIcEE
+161 0x345c 0 0 0 0 8 $a
+162 0x3488 0 0 0 0 8 $d
+163 0x3494 156 0 2 0 8 _ZN12_GLOBAL__N_111holdEnabledEv
+164 0x3494 0 0 0 0 8 $a
+165 0x3518 0 0 0 0 8 $d
+166 0x3530 68 0 2 0 8 _ZN12_GLOBAL__N_114bootGuardResetEPKc
+167 0x3530 0 0 0 0 8 $a
+168 0x3568 0 0 0 0 8 $d
+169 0x3574 156 0 2 0 8 _ZN12_GLOBAL__N_115carAsideEnabledEv
+170 0x3574 0 0 0 0 8 $a
+171 0x35f8 0 0 0 0 8 $d
+172 0x3610 468 0 2 0 8 _ZN12_GLOBAL__N_19createAppERN3bmw11IDispatcherEPKcRKNS0_6BundleES7_
+173 0x3610 0 0 0 0 8 $a
+174 0x37b0 0 0 0 0 8 $d
+175 0x3828 1396 0 2 0 8 _ZN12_GLOBAL__N_19appOnInitEPN3bmw9PluginAppE
+176 0x37e4 68 0 2 0 8 _ZN12_GLOBAL__N_113appOnFinalizeEPN3bmw9PluginAppE
+177 0xbc8c 0 0 0 0 11 $d
+178 0x37e4 0 0 0 0 8 $a
+179 0x381c 0 0 0 0 8 $d
+180 0x3828 0 0 0 0 8 $a
+181 0x3d10 0 0 0 0 8 $d
+182 0x62b0 544 0 2 0 8 _ZN12_GLOBAL__N_113onEntryActionEPvRKN3bmw6ParcelE
+183 0x6240 112 0 2 0 8 _ZN12_GLOBAL__N_110onStartRowEPvRKN3bmw6ParcelE
+184 0x61d8 104 0 2 0 8 _ZN12_GLOBAL__N_19onStopRowEPvRKN3bmw6ParcelE
+185 0x616c 108 0 2 0 8 _ZN12_GLOBAL__N_112onRestartRowEPvRKN3bmw6ParcelE
+186 0x8974 412 0 2 0 8 _ZN12_GLOBAL__N_117onAutostartToggleEPvRKN3bmw6ParcelE
+187 0x8c54 808 0 2 0 8 _ZN12_GLOBAL__N_114onUsbLogToggleEPvRKN3bmw6ParcelE
+188 0x87c0 436 0 2 0 8 _ZN12_GLOBAL__N_118onMenuIdriveToggleEPvRKN3bmw6ParcelE
+189 0x863c 388 0 2 0 8 _ZN12_GLOBAL__N_117onDriveModeToggleEPvRKN3bmw6ParcelE
+190 0x84a0 412 0 2 0 8 _ZN12_GLOBAL__N_116onKombiNavToggleEPvRKN3bmw6ParcelE
+191 0x8304 412 0 2 0 8 _ZN12_GLOBAL__N_116onWarningsToggleEPvRKN3bmw6ParcelE
+192 0x8168 412 0 2 0 8 _ZN12_GLOBAL__N_113onUsbAaToggleEPvRKN3bmw6ParcelE
+193 0x7fb4 436 0 2 0 8 _ZN12_GLOBAL__N_111onMenuFocusEPvRKN3bmw6ParcelE
+194 0x7eb4 256 0 2 0 8 _ZN12_GLOBAL__N_115onSettingsFocusEPvRKN3bmw6ParcelE
+195 0x7d64 336 0 2 0 8 _ZN12_GLOBAL__N_19onAaFocusEPvRKN3bmw6ParcelE
+196 0x7c00 356 0 2 0 8 _ZN12_GLOBAL__N_111onAaVisibleEPvRKN3bmw6ParcelE
+197 0x3d9c 996 0 2 0 8 _ZN12_GLOBAL__N_111runnableRunEPv
+198 0x64d0 5936 0 2 0 8 _ZN12_GLOBAL__N_19statusRunEPv
+199 0x3d9c 0 0 0 0 8 $a
+200 0x4124 0 0 0 0 8 $d
+201 0x4ae8 424 0 2 0 8 _ZN12_GLOBAL__N_112onPdcChangedEPvRKN3bmw11BasicStringItEE
+202 0x4924 452 0 2 0 8 _ZN12_GLOBAL__N_117onDayNightChangedEPvRKN3bmw11BasicStringItEE
+203 0x48b0 8 0 2 0 8 _ZN12_GLOBAL__N_112onDriveMode0EPvRKN3bmw11BasicStringItEE
+204 0x48a8 8 0 2 0 8 _ZN12_GLOBAL__N_112onDriveMode1EPvRKN3bmw11BasicStringItEE
+205 0x5248 1052 0 2 0 8 _ZN12_GLOBAL__N_118onGraphicalContextEPvRKN3bmw11BasicStringItEE
+206 0x4374 588 0 2 0 8 _ZN12_GLOBAL__N_112onDscChangedEPvRKN3bmw11BasicStringItEE
+207 0x436c 8 0 2 0 8 _ZN12_GLOBAL__N_113onCallStatus0EPvRKN3bmw11BasicStringItEE
+208 0x4364 8 0 2 0 8 _ZN12_GLOBAL__N_113onCallStatus1EPvRKN3bmw11BasicStringItEE
+209 0x4c90 404 0 2 0 8 _ZN12_GLOBAL__N_113onGearChangedEPvRKN3bmw11BasicStringItEE
+210 0x4180 484 0 2 0 8 _ZN12_GLOBAL__N_112onCallStatusEiRKN3bmw11BasicStringItEE
+211 0x4180 0 0 0 0 8 $a
+212 0x4348 0 0 0 0 8 $d
+213 0x4364 0 0 0 0 8 $a
+214 0x436c 0 0 0 0 8 $a
+215 0x4374 0 0 0 0 8 $a
+216 0x459c 0 0 0 0 8 $d
+217 0x45c0 744 0 2 0 8 _ZN12_GLOBAL__N_111onDriveModeEiRKN3bmw11BasicStringItEE
+218 0x45c0 0 0 0 0 8 $a
+219 0x4880 0 0 0 0 8 $d
+220 0x48a8 0 0 0 0 8 $a
+221 0x48b0 0 0 0 0 8 $a
+222 0x48b8 108 0 2 0 8 _ZN12_GLOBAL__N_18sendShowEv
+223 0x48b8 0 0 0 0 8 $a
+224 0x4910 0 0 0 0 8 $d
+225 0x4924 0 0 0 0 8 $a
+226 0x4ac4 0 0 0 0 8 $d
+227 0x4ae8 0 0 0 0 8 $a
+228 0x4c6c 0 0 0 0 8 $d
+229 0x4c90 0 0 0 0 8 $a
+230 0x4e04 0 0 0 0 8 $d
+231 0x4e24 460 0 2 0 8 _ZN12_GLOBAL__N_16owInitEv
+232 0x4e24 0 0 0 0 8 $a
+233 0x4fc8 0 0 0 0 8 $d
+234 0x4ff0 252 0 2 0 8 _ZN12_GLOBAL__N_115stepAsideForCarEPKc
+235 0x4ff0 0 0 0 0 8 $a
+236 0x50cc 0 0 0 0 8 $d
+237 0x50ec 348 0 2 0 8 _ZN12_GLOBAL__N_115readDaemonStateEv
+238 0x50ec 0 0 0 0 8 $a
+239 0x5228 0 0 0 0 8 $d
+240 0x5248 0 0 0 0 8 $a
+241 0x5624 0 0 0 0 8 $d
+242 0x5664 96 0 2 0 8 _ZN12_GLOBAL__N_116guardedByOverlayEPKc
+243 0x5664 0 0 0 0 8 $a
+244 0x56bc 0 0 0 0 8 $d
+245 0x56c4 184 0 2 0 8 _ZN12_GLOBAL__N_18fireHoldEPN3bmw9PluginAppEPKc
+246 0x56c4 0 0 0 0 8 $a
+247 0x576c 0 0 0 0 8 $d
+248 0x577c 1004 0 2 0 8 _ZN12_GLOBAL__N_122recoverScreenIfUncleanEv
+249 0x577c 0 0 0 0 8 $a
+250 0x5b08 0 0 0 0 8 $d
+251 0x5b68 1012 0 2 0 8 _ZN12_GLOBAL__N_112launchDaemonEv
+252 0x5b68 0 0 0 0 8 $a
+253 0x5f20 0 0 0 0 8 $d
+254 0x5f5c 280 0 2 0 8 _ZN12_GLOBAL__N_117startDaemonOrShowEv
+255 0x5f5c 0 0 0 0 8 $a
+256 0x6060 0 0 0 0 8 $d
+257 0x6074 248 0 2 0 8 _ZN12_GLOBAL__N_19beginStopEb
+258 0x6074 0 0 0 0 8 $a
+259 0x6150 0 0 0 0 8 $d
+260 0x616c 0 0 0 0 8 $a
+261 0x61c8 0 0 0 0 8 $d
+262 0x61d8 0 0 0 0 8 $a
+263 0x6230 0 0 0 0 8 $d
+264 0x6240 0 0 0 0 8 $a
+265 0x629c 0 0 0 0 8 $d
+266 0x62b0 0 0 0 0 8 $a
+267 0x64a8 0 0 0 0 8 $d
+268 0x64d0 0 0 0 0 8 $a
+269 0x743c 0 0 0 0 8 $d
+270 0x7560 0 0 0 0 8 $a
+271 0x7c00 0 0 0 0 8 $a
+272 0x7d4c 0 0 0 0 8 $d
+273 0x7d64 0 0 0 0 8 $a
+274 0x7ea4 0 0 0 0 8 $d
+275 0x7eb4 0 0 0 0 8 $a
+276 0x7fa4 0 0 0 0 8 $d
+277 0x7fb4 0 0 0 0 8 $a
+278 0x8158 0 0 0 0 8 $d
+279 0x8168 0 0 0 0 8 $a
+280 0x82d4 0 0 0 0 8 $d
+281 0x8304 0 0 0 0 8 $a
+282 0x846c 0 0 0 0 8 $d
+283 0x84a0 0 0 0 0 8 $a
+284 0x860c 0 0 0 0 8 $d
+285 0x863c 0 0 0 0 8 $a
+286 0x8794 0 0 0 0 8 $d
+287 0x87c0 0 0 0 0 8 $a
+288 0x893c 0 0 0 0 8 $d
+289 0x8974 0 0 0 0 8 $a
+290 0x8ae0 0 0 0 0 8 $d
+291 0x8b10 324 0 2 0 8 _ZN12_GLOBAL__N_113libraryLoadedEv
+292 0x8b10 0 0 0 0 8 $a
+293 0x8c34 0 0 0 0 8 $d
+294 0x8c54 0 0 0 0 8 $a
+295 0x8f30 0 0 0 0 8 $d
+296 0xd038 0 0 0 0 18 $d
+297 0xd058 0 0 0 0 18 $d
+298 0xd070 0 0 0 0 18 $d
+299 0xd07c 0 0 0 0 18 $d
+300 0xd088 0 0 0 0 18 $d
+301 0xd040 0 0 0 0 18 .LANCHOR2
+302 0xd040 8 0 1 0 18 _ZN12_GLOBAL__N_1L15kDriveModePropsE
+303 0xd040 0 0 0 0 18 $d
+304 0xd048 8 0 1 0 18 _ZN12_GLOBAL__N_1L10kCallPropsE
+305 0xd050 4 0 1 0 18 _ZN12_GLOBAL__N_1L14kAutostartFileE
+306 0xd054 4 0 1 0 18 _ZN12_GLOBAL__N_1L16kAutostartManualE
+307 0xd474 0 0 0 0 21 $d
+308 0xd32c 0 0 0 0 21 .LANCHOR1
+309 0xd32c 8 0 1 0 21 _ZN12_GLOBAL__N_110g_logMutexE
+310 0xd32c 0 0 0 0 21 $d
+311 0xd334 192 0 1 0 21 _ZN12_GLOBAL__N_112g_appLogPathE
+312 0xd3f4 4 0 1 0 21 _ZN12_GLOBAL__N_110g_ramLogOnE
+313 0xd3f8 4 0 1 0 21 _ZN12_GLOBAL__N_18g_holdOnE
+314 0xd3fc 4 0 1 0 21 _ZZN12_GLOBAL__N_115carAsideEnabledEvE1v
+315 0xd400 4 0 1 0 21 _ZN12_GLOBAL__N_116g_driveModeSubAtE
+316 0xd404 4 0 1 0 21 _ZN12_GLOBAL__N_19g_lastDscE
+317 0xd408 8 0 1 0 21 _ZN12_GLOBAL__N_115g_lastDriveModeE
+318 0xd410 4 0 1 0 21 _ZN12_GLOBAL__N_19g_lastPdcE
+319 0xd414 4 0 1 0 21 _ZN12_GLOBAL__N_114g_lastDayNightE
+320 0xd418 4 0 1 0 21 _ZN12_GLOBAL__N_110g_lastGearE
+321 0xd41c 4 0 1 0 21 _ZZN12_GLOBAL__N_118onGraphicalContextEPvRKN3bmw11BasicStringItEEE8s_lastVc
+322 0xd420 48 0 1 0 21 _ZZN12_GLOBAL__N_118onGraphicalContextEPvRKN3bmw11BasicStringItEEE12s_lastWidget
+323 0xd450 4 0 1 0 21 _ZN12_GLOBAL__N_111g_shownTextE
+324 0xd454 4 0 1 0 21 _ZN12_GLOBAL__N_110g_shownRowE
+325 0xd458 4 0 1 0 21 _ZZN12_GLOBAL__N_113hideOnHardKeyEvE1v
+326 0xd45c 24 0 1 0 21 _ZN12_GLOBAL__N_111g_prevStateE
+327 0xd4b0 0 0 0 0 22 $d
+328 0xd4b0 0 0 0 0 22 .LANCHOR0
+329 0xd4b0 8 0 1 0 22 _ZN12_GLOBAL__N_18g_ramLogE
+330 0xd4b8 116 0 1 0 22 _ZN12_GLOBAL__N_14g_owE
+331 0xd52c 4 0 1 0 22 _ZN12_GLOBAL__N_117g_driveModeChangeE
+332 0xd530 4 0 1 0 22 _ZN12_GLOBAL__N_111g_dscChangeE
+333 0xd534 1 0 1 0 22 _ZN12_GLOBAL__N_116g_autostartShownE
+334 0xd535 1 0 1 0 22 _ZN12_GLOBAL__N_117g_menuIdriveShownE
+335 0xd536 1 0 1 0 22 _ZN12_GLOBAL__N_116g_driveModeShownE
+336 0xd537 1 0 1 0 22 _ZN12_GLOBAL__N_115g_kombiNavShownE
+337 0xd538 1 0 1 0 22 _ZN12_GLOBAL__N_115g_warningsShownE
+338 0xd539 1 0 1 0 22 _ZN12_GLOBAL__N_112g_usbAaShownE
+339 0xd53c 4 0 1 0 22 _ZN12_GLOBAL__N_18g_runAppE
+340 0xd540 1 0 1 0 22 _ZN12_GLOBAL__N_113g_spinRunningE
+341 0xd541 1 0 1 0 22 _ZN12_GLOBAL__N_112g_spinWantedE
+342 0xd544 4 0 1 0 22 _ZN12_GLOBAL__N_111g_spinFrameE
+343 0xd548 4 0 1 0 22 _ZN12_GLOBAL__N_114g_spinRunnableE
+344 0xd54c 4 0 1 0 22 _ZN12_GLOBAL__N_115g_appLogCheckedE
+345 0xd550 1 0 1 0 22 _ZN12_GLOBAL__N_115g_appLogRotatedE
+346 0xd551 1 0 1 0 22 _ZN12_GLOBAL__N_113g_usbLogShownE
+347 0xd554 4 0 1 0 22 _ZN12_GLOBAL__N_15g_appE
+348 0xd558 144 0 1 0 22 _ZN12_GLOBAL__N_16g_vtblE
+349 0xd5e8 4 0 1 0 22 _ZN12_GLOBAL__N_112g_baseOnInitE
+350 0xd5ec 4 0 1 0 22 _ZN12_GLOBAL__N_110g_initTimeE
+351 0xd5f0 20 0 1 0 22 _ZN12_GLOBAL__N_19g_runVtblE
+352 0xd604 4 0 1 0 22 _ZN12_GLOBAL__N_114g_gearRunnableE
+353 0xd608 20 0 1 0 22 _ZN12_GLOBAL__N_112g_statusVtblE
+354 0xd61c 4 0 1 0 22 _ZN12_GLOBAL__N_116g_statusRunnableE
+355 0xd620 2 0 1 0 22 _ZN12_GLOBAL__N_110g_callLineE
+356 0xd624 4 0 1 0 22 _ZN12_GLOBAL__N_19g_callEndE
+357 0xd628 1 0 1 0 22 _ZN12_GLOBAL__N_114g_pdcDismissedE
+358 0xd629 1 0 1 0 22 _ZZN12_GLOBAL__N_16owInitEvE6s_done
+359 0xd62a 1 0 1 0 22 _ZN12_GLOBAL__N_112g_popupAsideE
+360 0xd62b 1 0 1 0 22 _ZN12_GLOBAL__N_110g_hideSentE
+361 0xd62c 1 0 1 0 22 _ZN12_GLOBAL__N_19g_holdingE
+362 0xd62d 1 0 1 0 22 _ZZN12_GLOBAL__N_115readDaemonStateEvE8s_logged
+363 0xd62e 1 0 1 0 22 _ZN12_GLOBAL__N_111g_aaFocusedE
+364 0xd630 4 0 1 0 22 _ZN12_GLOBAL__N_115g_aaFocusLostMsE
+365 0xd634 4 0 1 0 22 _ZN12_GLOBAL__N_111g_holdTriesE
+366 0xd638 1 0 1 0 22 _ZN12_GLOBAL__N_18g_aaSeenE
+367 0xd63c 4 0 1 0 22 _ZN12_GLOBAL__N_110g_holdTimeE
+368 0xd640 4 0 1 0 22 _ZN12_GLOBAL__N_112g_lastLaunchE
+369 0xd644 2560 0 1 0 22 _ZZN12_GLOBAL__N_112launchDaemonEvE6envbuf
+370 0xe044 1 0 1 0 22 _ZN12_GLOBAL__N_110g_wantHomeE
+371 0xe048 4 0 1 0 22 _ZN12_GLOBAL__N_111g_startTimeE
+372 0xe04c 4 0 1 0 22 _ZN12_GLOBAL__N_113g_prevOverlayE
+373 0xe050 1 0 1 0 22 _ZN12_GLOBAL__N_118g_restartAfterStopE
+374 0xe054 4 0 1 0 22 _ZN12_GLOBAL__N_19g_stopPidE
+375 0xe058 4 0 1 0 22 _ZN12_GLOBAL__N_110g_stopTimeE
+376 0xe05c 4 0 1 0 22 _ZN12_GLOBAL__N_111g_stopStageE
+377 0xe060 1 0 1 0 22 _ZN12_GLOBAL__N_112g_entryStartE
+378 0xe061 1 0 1 0 22 _ZN12_GLOBAL__N_115g_autostartDoneE
+379 0xe064 4 0 1 0 22 _ZN12_GLOBAL__N_115g_autostartMonoE
+380 0xe068 20 0 1 0 22 _ZN12_GLOBAL__N_110g_spinVtblE
+381 0xe07c 1 0 1 0 22 _ZN12_GLOBAL__N_112g_holdGaveUpE
+382 0xe07d 1 0 1 0 22 _ZN12_GLOBAL__N_111g_aaVisibleE
+383 0xe080 4 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE8s_logged
+384 0xe084 1 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE16s_unfocusedInput
+385 0xe088 4 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE11s_unfocused
+386 0xe08c 1 0 1 0 22 _ZN12_GLOBAL__N_113g_menuFocusedE
+387 0xe08d 1 0 1 0 22 _ZN12_GLOBAL__N_117g_settingsFocusedE
+388 0xe090 4 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE8s_logged_0
+389 0xe094 4 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE9s_keyTime
+390 0xe098 4 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE9s_carLeft
+391 0xe09c 1 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE14s_carLeftInput
+392 0xe0a0 4 0 1 0 22 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE10s_leftSeen
+393 0xe0a4 1 0 1 0 22 _ZN12_GLOBAL__N_112g_focusKnownE
+394 0xe0a8 8 0 1 0 22 _ZZN12_GLOBAL__N_111onMenuFocusEPvRKN3bmw6ParcelEE6s_last
+395 0x1 0 0 0 0 65521 __pic__
+396 0x1 0 0 0 0 65521 __PIC__
+397 0x9080 28 0 2 0 8 _slog_prepare
+398 0x9080 0 0 0 0 8 $a
+399 0x9094 0 0 0 0 8 $d
+400 0x909c 356 0 2 0 8 slogsend
+401 0x909c 0 0 0 0 8 $a
+402 0x91e8 0 0 0 0 8 $d
+403 0x94d0 80 0 2 0 8 _slog_init
+404 0x9200 0 0 0 0 8 $a
+405 0x9478 28 0 2 0 8 _slog_parent
+406 0x948c 0 0 0 0 8 $d
+407 0x9494 60 0 2 0 8 _slog_child
+408 0x9494 0 0 0 0 8 $a
+409 0x94c8 0 0 0 0 8 $d
+410 0x94d0 0 0 0 0 8 $a
+411 0x950c 0 0 0 0 8 $d
+412 0x0 0 0 4 0 65521 crtstuff.c
+413 0x1 0 0 0 0 65521 __PIC__
+414 0xc004 0 0 1 0 13 __FRAME_END__
+415 0xd030 0 0 1 0 17 __JCR_END__
+416 0xd190 0 0 1 2 65521 _GLOBAL_OFFSET_TABLE_
+417 0xd328 0 0 1 2 21 __dso_handle
+418 0xd0a0 0 0 1 2 65521 _DYNAMIC
+419 0x1aa0 0 0 0 0 7 $a
+420 0x1ab0 0 0 0 0 7 $d
+421 0x1ab4 0 0 0 0 7 $a
+422 0x0 0 1 2 0 0 __aeabi_unwind_cpp_pr0
+423 0x0 0 2 0 0 0 __register_frame_info
+424 0x937c 188 1 2 0 8 slogi
+425 0x0 0 1 2 0 0 _ZN3bmw9PluginApp4postEPNS_8RunnableEj
+426 0x8fa8 36 2 2 0 8 _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED1Ev
+427 0x0 0 1 2 0 0 clock_gettime
+428 0x0 0 1 2 0 0 open
+429 0x0 0 1 1 0 0 _slogfd
+430 0x0 0 1 2 0 0 memcpy
+431 0x0 0 1 2 0 0 sigfillset
+432 0x0 0 1 2 0 0 _ZN3bmw6ParcelC1Eb
+433 0x0 0 2 0 0 0 _Jv_RegisterClasses
+434 0x0 0 1 2 0 0 pthread_mutex_init
+435 0x0 0 1 2 0 0 _ZN3bmw9PluginAppC1ERNS_11IDispatcherENS_11BasicStringIcEEjjNS_20RHMIInterfaceVersionERKNS_6BundleES8_
+436 0x9520 0 1 2 0 9 _fini
+437 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjRKNS_13DataTableBaseE
+438 0x904c 52 2 2 0 8 _ZN3bmw7Variant16IObjectContainerD0Ev
+439 0x0 0 1 2 0 0 _ZN3bmw11BasicStringIcED1Ev
+440 0x0 0 2 2 0 0 __cxa_finalize
+441 0x0 0 1 2 0 0 _ZN3bmw6ParcelD1Ev
+442 0x0 0 1 2 0 0 mkdir
+443 0x0 0 1 2 0 0 _ZdlPv
+444 0x0 0 1 2 0 0 __get_errno_ptr
+445 0x0 0 1 2 0 0 strncmp
+446 0x0 0 1 2 0 0 __aeabi_unwind_cpp_pr1
+447 0x0 0 1 2 0 0 _ZN3bmw3MapIjNS_7VariantEED1Ev
+448 0x0 0 1 2 0 0 dlsym
+449 0x0 0 1 2 0 0 _ZN3bmw9PluginApp12triggerEventEj
+450 0xd07c 8 2 1 0 18 _ZTIN3bmw7Variant16IObjectContainerE
+451 0x0 0 1 0 0 0 recv
+452 0x0 0 1 2 0 0 strlen
+453 0x0 0 1 2 0 0 pthread_mutex_lock
+454 0x0 0 1 2 0 0 opendir
+455 0x0 0 1 2 0 0 stat
+456 0x0 0 1 2 0 0 pthread_once
+457 0x0 0 1 0 0 0 sendto
+458 0x0 0 1 2 0 0 strtol
+459 0x0 0 1 2 0 0 snprintf
+460 0x0 0 1 2 0 0 __cxa_pure_virtual
+461 0x0 0 1 2 0 0 _ZN3bmw9PluginApp10addHandlerEjjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+462 0x0 0 1 2 0 0 select
+463 0x0 0 1 2 0 0 _ZN3bmw6TextIDC1Ej
+464 0xd328 0 1 0 0 21 __data_start
+465 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjRKNS_7ImageIDE
+466 0x0 0 1 2 0 0 access
+467 0x0 0 1 1 0 0 __slog_mux
+468 0x0 0 1 2 0 0 getpid
+469 0x9018 52 2 2 0 8 _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED0Ev
+470 0x0 0 1 2 0 0 __gxx_personality_v0
+471 0xd48c 0 1 0 0 65521 __bss_start__
+472 0x0 0 1 2 0 0 fclose
+473 0x0 0 1 2 0 0 _ZNK3bmw6Parcel8readBoolERb
+474 0x0 0 1 2 0 0 _ZN3bmw9PluginApp10onFinalizeEv
+475 0x0 0 1 2 0 0 fopen
+476 0xc004 0 1 0 0 65521 __exidx_end
+477 0x0 0 1 2 0 0 time
+478 0x0 0 1 2 0 0 fileno
+479 0x0 0 1 2 0 0 write
+480 0xd058 24 2 1 0 18 _ZTVN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+481 0x0 0 1 2 0 0 closedir
+482 0xd088 24 2 1 0 18 _ZTVN3bmw7Variant16IObjectContainerE
+483 0x0 0 1 2 0 0 close
+484 0x0 0 1 2 0 0 __cxa_end_cleanup
+485 0xe0b0 0 1 0 0 65521 __end__
+486 0xe0b0 0 1 0 0 65521 __bss_end__
+487 0x0 0 1 2 0 0 fgets
+488 0x0 0 1 2 0 0 strncpy
+489 0x8f7c 36 2 2 0 8 _ZN3bmw7Variant16IObjectContainerD1Ev
+490 0x0 0 1 2 0 0 MsgSendv
+491 0x0 0 1 2 0 0 unlink
+492 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjb
+493 0x8fa0 8 2 2 0 8 _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE4typeEv
+494 0xd038 8 2 1 0 18 _ZZN3nbt9huVersionEPcjPKcE6kPaths
+495 0x0 0 1 1 0 0 _ZTVN10__cxxabiv117__class_type_infoE
+496 0x0 0 1 2 0 0 fflush
+497 0x0 0 1 2 0 0 memset
+498 0xd48c 0 1 0 0 65521 __bss_start
+499 0x0 0 1 2 0 0 _ZN3bmw13DataTableBaseC1EPNS_3MapIjNS_7VariantEEEj
+500 0x0 0 1 1 0 0 environ
+501 0xe0b0 0 1 0 0 65521 _bss_end__
+502 0x0 0 1 2 0 0 pthread_atfork
+503 0x0 0 1 2 0 0 fprintf
+504 0x9528 45 2 1 0 10 _ZTSN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+505 0x0 0 1 2 0 0 strcspn
+506 0x0 0 1 2 0 0 memcmp
+507 0x0 0 1 2 0 0 vsnprintf
+508 0xd474 24 1 1 0 21 pluginAppInfo
+509 0x0 0 1 2 0 0 sigemptyset
+510 0x0 0 1 2 0 0 _ZN3bmw9PluginApp6onInitEv
+511 0x0 0 1 0 0 0 socket
+512 0x9558 33 2 1 0 10 _ZTSN3bmw7Variant16IObjectContainerE
+513 0xe0b0 0 1 0 0 65521 _end
+514 0x0 0 1 2 0 0 __stackavail
+515 0x9438 64 1 2 0 8 slogb
+516 0x0 0 1 2 0 0 _ZN3bmw9PluginApp33cdsAddPropertyChangedEventHandlerERNS_11BasicStringIcEEjRKNS_8DelegateIbRKNS1_ItEEvvvEE
+517 0x0 0 1 2 0 0 rename
+518 0x934c 48 1 2 0 8 slogf
+519 0x0 0 1 2 0 0 pthread_mutex_unlock
+520 0x0 0 1 2 0 0 strstr
+521 0x0 0 1 2 0 0 strcmp
+522 0x0 0 1 2 0 0 waitpid
+523 0x1ed4 0 1 0 0 8 _btext
+524 0x0 0 1 2 0 0 atoi
+525 0x8fcc 76 2 2 0 8 _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE5cloneEv
+526 0x0 0 1 2 0 0 readdir
+527 0xd070 12 2 1 0 18 _ZTIN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+528 0x0 0 1 2 0 0 spawn
+529 0x0 0 1 2 0 0 strchr
+530 0xd48c 0 1 0 0 65521 _edata
+531 0x0 0 1 2 0 0 fsync
+532 0x0 0 1 2 0 0 _ZN3bmw3MapIjNS_7VariantEEixERKj
+533 0x9200 332 1 2 0 8 vslogf
+534 0xbd6c 0 1 0 0 65521 __exidx_start
+535 0x0 0 1 2 0 0 _Znwj
+536 0x0 0 1 2 0 0 _ZN3bmw9PluginApp10addHandlerEjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+537 0x0 0 1 2 0 0 fscanf
+538 0x0 0 1 2 0 0 _ZN3bmw11BasicStringIcEC1EPKc
+539 0x80000 0 1 0 0 24 _stack
+540 0x0 0 1 1 0 0 _ZTVN10__cxxabiv120__si_class_type_infoE
+541 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11updateModelEjRKNS_6TextIDE
+542 0x0 0 1 2 0 0 _ZN3bmw7ImageIDC1Ej
+543 0x0 0 1 1 0 0 __slog_once
+544 0x1a98 0 1 2 0 6 _init
+545 0x0 0 1 2 0 0 strcpy
+546 0x0 0 1 2 0 0 kill
+547 0x0 0 1 2 0 0 _ZN3bmw9PluginApp11setPropertyEjjRKNS_6ParcelE
+548 0x0 0 2 0 0 0 __deregister_frame_info
+
+[ASCII strings inside ELF structure, minimum length 5]
+offset string
+0xc89 _fini
+0xc8f __cxa_finalize
+0xc9e __deregister_frame_info
+0xcb6 __register_frame_info
+0xccc _Jv_RegisterClasses
+0xce0 _ZN3bmw7Variant16IObjectContainerD1Ev
+0xd06 _ZTVN3bmw7Variant16IObjectContainerE
+0xd2b _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE4typeEv
+0xd61 _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED1Ev
+0xd93 clock_gettime
+0xda1 __aeabi_unwind_cpp_pr0
+0xdbd fopen
+0xdc3 strlen
+0xdca fgets
+0xdd0 strncmp
+0xdd8 fclose
+0xddf _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE5cloneEv
+0xe16 _Znwj
+0xe1c _ZTVN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0xe4d _ZN3bmw9PluginApp10addHandlerEjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+0xe8f _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED0Ev
+0xec1 _ZdlPv
+0xec8 _ZN3bmw7Variant16IObjectContainerD0Ev
+0xeee socket
+0xef5 sendto
+0xefc strstr
+0xf03 strchr
+0xf0a fscanf
+0xf16 __get_errno_ptr
+0xf26 select
+0xf32 memcmp
+0xf39 _ZN3bmw9PluginApp11updateModelEjb
+0xf5b _ZN3bmw7ImageIDC1Ej
+0xf6f _ZN3bmw9PluginApp11updateModelEjRKNS_7ImageIDE
+0xf9e _ZN3bmw9PluginApp4postEPNS_8RunnableEj
+0xfc5 memset
+0xfcc sigfillset
+0xfd7 spawn
+0xfdd waitpid
+0xfe5 environ
+0xfed pthread_mutex_lock
+0x1000 access
+0x1007 opendir
+0x100f readdir
+0x1017 closedir
+0x1020 unlink
+0x1027 rename
+0x102e pthread_mutex_unlock
+0x1043 vsnprintf
+0x104d write
+0x1053 _ZZN3nbt9huVersionEPcjPKcE6kPaths
+0x1075 __aeabi_unwind_cpp_pr1
+0x108c __cxa_end_cleanup
+0x109e _ZN3bmw11BasicStringIcEC1EPKc
+0x10bc _ZN3bmw9PluginAppC1ERNS_11IDispatcherENS_11BasicStringIcEEjjNS_20RHMIInterfaceVersionERKNS_6BundleES8_
+0x1123 _ZN3bmw11BasicStringIcED1Ev
+0x113f memcpy
+0x1146 __gxx_personality_v0
+0x115b _ZN3bmw9PluginApp10onFinalizeEv
+0x117b _ZN3bmw9PluginApp10addHandlerEjjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+0x11be _ZN3bmw9PluginApp6onInitEv
+0x11d9 _ZN3bmw13DataTableBaseC1EPNS_3MapIjNS_7VariantEEEj
+0x120c _ZN3bmw3MapIjNS_7VariantEEixERKj
+0x122d _ZN3bmw6TextIDC1Ej
+0x1240 _ZN3bmw9PluginApp11updateModelEjRKNS_13DataTableBaseE
+0x1276 _ZN3bmw3MapIjNS_7VariantEED1Ev
+0x1295 dlsym
+0x129b _ZN3bmw9PluginApp33cdsAddPropertyChangedEventHandlerERNS_11BasicStringIcEEjRKNS_8DelegateIbRKNS1_ItEEvvvEE
+0x130b fprintf
+0x1313 strtol
+0x131a strcspn
+0x1322 strcpy
+0x1329 strcmp
+0x1330 _ZN3bmw9PluginApp12triggerEventEj
+0x1352 sigemptyset
+0x135e _ZN3bmw9PluginApp11updateModelEjRKNS_6TextIDE
+0x138c strncpy
+0x1394 _ZN3bmw6ParcelC1Eb
+0x13a7 _ZN3bmw9PluginApp11setPropertyEjjRKNS_6ParcelE
+0x13d6 _ZN3bmw6ParcelD1Ev
+0x13e9 fflush
+0x13f0 fileno
+0x13f7 fsync
+0x13fd _ZNK3bmw6Parcel8readBoolERb
+0x1419 mkdir
+0x141f getpid
+0x1426 pluginAppInfo
+0x1434 _ZTIN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0x1465 _ZTVN10__cxxabiv120__si_class_type_infoE
+0x148e _ZTSN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0x14bf _ZTIN3bmw7Variant16IObjectContainerE
+0x14e4 _ZTVN10__cxxabiv117__class_type_infoE
+0x150a _ZTSN3bmw7Variant16IObjectContainerE
+0x152f __cxa_pure_virtual
+0x1542 libAppFramework.A.so
+0x1557 libCoreFramework.A.so
+0x156d libstdc++.so.6
+0x157c libm.so.2
+0x1586 libc.so.3
+0x1590 __slog_mux
+0x159b pthread_once
+0x15a8 MsgSendv
+0x15b1 __slog_once
+0x15bd _slogfd
+0x15c5 vslogf
+0x15cc __stackavail
+0x15d9 slogi
+0x15df slogb
+0x15e5 pthread_mutex_init
+0x15f8 pthread_atfork
+0x1607 _btext
+0x160e __exidx_start
+0x161c __exidx_end
+0x1628 __data_start
+0x1635 _edata
+0x163c __bss_start
+0x1648 __bss_start__
+0x1656 __bss_end__
+0x1662 __end__
+0x166a _stack
+0x1671 libNbtAad.so
+0x9528 N3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0x9558 N3bmw7Variant16IObjectContainerE
+0x957c /var/opt/aa/autostart
+0x9594 /var/opt/aa/menu-idrive
+0x95ac /var/opt/aa/show-warnings
+0x95c8 /var/opt/aa/show-drivemode
+0x95e4 /var/opt/aa/kombi-nav
+0x95fc /var/opt/aa/usb-aa
+0x9610 /opt/aa/nbt-aad.env
+0x962c false
+0x9634 NBT_MENU_RETURN=
+0x9648 media
+0x9650 /dev/shmem/nbt-aad-surface
+0x967c /opt/sys/bin/LayerManagerControl
+0x96a4 /dev/null
+0x96b0 /var/opt/aa/usblog
+0x96cc umass
+0x96d4 %s/%s
+0x96dc nbt-aad-app.log
+0x96ec %s/%.*s.old.log
+0x96fc [%5ld.%03ld] [NbtAadApp] %s
+0x971c NBT_RAM_LOG
+0x9728 unknown
+0x9730 ---- nbt-aad-app RAM log (%s, 5 MB cap) ----
+0x975d   Build: %s
+0x9769   HU software / nav version: %s
+0x978c /dev/shmem/nbt-aad-app.log
+0x97a8 rhmiapp-40-usb (Nov  6 2026 15:35:20)
+0x97d0 [Log] RAM log full (5 MB cap): no more lines are logged to RAM until the next start
+0x9828 [NbtAadApp] %s
+0x9838 destroy(%p)
+0x9844 (null)
+0x984c onError %u: %s
+0x985c NBT_AA_HOLD
+0x9868 screen exclusivity (NBT_AA_HOLD): %s
+0x9890 /var/opt/aa/bootguard
+0x98a8 bootloop guard reset (%s)
+0x98c4 NBT_AA_CAR_ASIDE
+0x98d8 Android Auto steps aside until the Android Auto entry is chosen
+0x9918 iDrive screens opened by the car (camera, safety, warnings): %s
+0x9958 ignored (NBT_AA_CAR_ASIDE=0)
+0x9978 create(name=%s) %s
+0x998c /opt/aa/app.disable
+0x99a0 disabled by %s
+0x99b0 create: already created
+0x99c8 NbtAad
+0x99d0 create: app %p (PluginApp vtable %p)
+0x99f8 onFinalize
+0x9a04 About: Richtext list model %u <- TextID %u
+0x9a30 onInit: raActions %u/%u/%u/%u/%u/%u/%u + menu focus handler + settings focus handler registered, base onInit -> %d, start with the car %s, save logs to USB %s, MENU opens iDrive %s
+0x9ae8 _ZTVN3bmw8RunnableE
+0x9afc from libCoreFramework
+0x9b14 built locally
+0x9b24 gear subscription posted (Runnable vtable %s)
+0x9b54 /opt/aa/status.disable
+0x9b6c status polling disabled by %s (no live texts, no return to menu, no stop timeouts)
+0x9bc0 status polling posted (%s every %u ms)
+0x9be8 /dev/shmem/nbt-aad-state
+0x9c04 /opt/aa/gear.disable
+0x9c1c driving.gear
+0x9c2c CDS handler for %s registered
+0x9c4c sensors.PDCStatus
+0x9c60 vehicle.dayNightChangeOver
+0x9c7c hmi.graphicalContext
+0x9c94  (Show iDrive warnings is on)
+0x9cb4 CDS handler for %s registered%s
+0x9cd4 driving.DSCActive
+0x9ce8 state
+0x9cf8 in a call
+0x9d04 CDS %s = '%s' -> %s
+0x9d18  (initial)
+0x9d24 CDS %s = '%s' -> %d%s
+0x9d3c dsc %d %d
+0x9d48  (not valid)
+0x9d58 CDS %s = '%s' -> mode %d%s
+0x9d74 CDS %s: first value %lds after subscribing: a change of mode
+0x9db4 drivemode %d %d %d
+0x9dc8 park assist on: Android Auto chosen over it, so iDrive screens make it step aside again until park assist ends
+0x9e40 CDS %s = '%s' -> %d (1 day, 2 night, 0 no change, 3 invalid)
+0x9e80 /dev/shmem/nbt-aad-daynight
+0x9ea0 daynight %d
+0x9eb0 daynight %d
+0x9ebc CDS %s = '%s' -> pdc %d
+0x9ed4 /dev/shmem/nbt-aad-pdc
+0x9eec pdc %d
+0x9ef4 pdc %d
+0x9efc CDS %s = '%s' -> gear %d
+0x9f18 /dev/shmem/nbt-aad-gear
+0x9f30 gear %d
+0x9f3c gear %d
+0x9f44 NBT_AA_WARN_IGNORE=
+0x9f5c ; never for contexts 
+0x9f74 warnings: iDrive screens that come up on their own over Android Auto make it step aside until they close%s%s
+0x9fe4 /dev/shmem/nbt-aad-gctx
+0xa004 no graphicalContext yet
+0xa01c car screen: iDrive %s with no driver input (%s): Android Auto steps aside until the entry is chosen
+0xa080 %23s %d %d
+0xa08c nbt-aad is running but %s is missing or stale (old daemon build?)
+0xa0d0 running
+0xa0d8 visibleContext
+0xa0e8 widgetType
+0xa0f4 menuTitle
+0xa100  (Show iDrive warnings is off)
+0xa120 CDS %s: visibleContext %d widget '%s' title '%s'%s
+0xa154 vc %d
+0xa160 connected
+0xa16c GFXIDENTIFIER_INVALID
+0xa184 %s ignored: Android Auto is on screen (stray knob input); exit to iDrive first
+0xa1d4 hold: not entering state %u (%s): already tried %d times
+0xa210 hold: event %u -> state %u (%s, try %d)
+0xa238 nbt-aad pid %d is gone without a clean exit (state '%s', overlay %d): restoring the screen
+0xa294 layer
+0xa29c 0x80000000
+0xa2a8 render
+0xa2b0 order
+0xa2b8 0x100
+0xa2c0 surface
+0xa2cc visibility
+0xa2d8 /dev/shmem/nbt-aad-lm1280
+0xa2f4 src %d %d %d %d dst %d %d %d %d
+0xa31c source
+0xa324 region
+0xa32c destination
+0xa338 CarPlay geometry restored from %s: source %s,%s %sx%s, destination %s,%s %sx%s
+0xa388 no saved CarPlay geometry (%s) or Android Auto on its own surface: surface 1280 left as it is
+0xa3e8 launch ignored (pressed again within 3 s)
+0xa414 /opt/aa/nbt-aad
+0xa424 launch: %s not found
+0xa43c PATH=/bin:/usr/bin:/opt/os/bin:/opt/sys/bin:/opt/core/bin:/opt/car/bin:/fs/sda0/opt/mm/bin
+0xa498 NBT_AUDIO_BT=1
+0xa4a8 PATH=
+0xa4b0 launch: cannot open /dev/null or %s (errno %d)
+0xa4e0 launch: spawn %s failed (errno %d)
+0xa504 launch: started %s pid %d (%d env overrides, output -> %s)
+0xa540 start: nbt-aad already running (pid %d, %s): asking it to come to the front
+0xa58c start: already connected -> event %u
+0xa5b4 %s: nbt-aad is not running
+0xa5d0 restart
+0xa5e0 force stop
+0xa5ec %s: sent 'quit' to nbt-aad pid %d
+0xa610 menu: Restart (raAction %u)
+0xa62c menu: Force Stop (raAction %u)
+0xa64c menu: Start (raAction %u)
+0xa668 start ignored: a stop/restart is in progress
+0xa698 menu Start
+0xa6a4 entry button pressed (raAction %u): nbt-aad %s (pid %d, overlay %d%s)
+0xa6ec , stop/restart in progress
+0xa708 entry: Android Auto is already on screen
+0xa734 Open Android Auto entry
+0xa74c starting
+0xa758 entry: event %u -> our menu (%s)
+0xa77c nbt-aad (pid %d) has exited
+0xa798 restart: starting nbt-aad again
+0xa7b8 nbt-aad (pid unknown) still running 10 s after 'quit': giving up
+0xa7fc nbt-aad pid %d still running 3 s after 'quit': SIGTERM
+0xa834 nbt-aad pid %d still running 10 s after 'quit': SIGKILL
+0xa86c nbt-aad pid %d survived SIGKILL; giving up
+0xa898 start with the car: nbt-aad already running (pid %d)
+0xa8d0 bootloop guard: wall clock not set (%ld): counting boots with no time window
+0xa924 start with the car: SKIPPED by the bootloop guard: the head unit restarted %d times within %ld min while nbt-aad was starting with it. Start it from this menu (that resets the guard); send both USB logs.
+0xa9f0 bootloop guard: cannot write %s (errno %d): not counting this boot
+0xaa3c bootloop guard: autostart %d of %d allowed within %ld min
+0xaa78 start with the car: launching nbt-aad (%s)
+0xaaa4 connecting
+0xaab0 default
+0xaab8 entry text -> %u (%s)
+0xaad0 /opt/aa/spinner.disable
+0xaae8 connecting animation %s (entry icon frames, Start row busy ring)
+0xab2c start row text -> %u (%s)
+0xab48 warnings: iDrive context %d closed (back on %d for 2 s): Android Auto comes back
+0xab9c warnings: iDrive context %d follows driver input: not a warning, hold as usual
+0xabec warnings: iDrive context %d came up on its own over Android Auto (screen under it: %d): Android Auto steps aside until it closes
+0xac70 Android Auto came on screen
+0xac8c hold: Android Auto stepped aside for the driving-mode / DSC display: staying on state %u
+0xace8 hold: Android Auto stepped aside: event %u -> iDrive main menu
+0xad28 hold: Android Auto stepped aside (state %u visible %d, hard key %d, reverse %d, park assist %d)
+0xad88 hold: BACK held on the knob: not re-holding until it is released
+0xadcc took the focus
+0xaddc BACK returned to our menu during a call
+0xae04 hold: call in progress: Android Auto stays up, state %u released
+0xae48 call ended
+0xae54 retry: state not shown yet
+0xae70 hold: iDrive did not show state %u: knob/touch may reach iDrive this time
+0xaebc BACK returned to our menu
+0xaed8 back in our Settings page
+0xaef4 a hard key went to Android Auto
+0xaf14 NBT_AA_HIDE_ON_KEY
+0xaf28 Android Auto steps aside (NBT_AA_HIDE_ON_KEY=1)
+0xaf58 hard keys: %s
+0xaf68 iDrive left state 13 on a forwarded hard key: Android Auto keeps the screen
+0xafb4 connected after the Open Android Auto entry, our menu on top: asking nbt-aad to come to the front
+0xb018 connected: return to menu off (NBT_MENU_RETURN=off)
+0xb04c reported off
+0xb05c connected %ld s after Start, our menu not on top (focus %s): no navigation
+0xb0a8 Media/Radio list
+0xb0bc iDrive main menu
+0xb0d0 connected %ld s after Start: event %u -> %s
+0xb0fc up 5 min after start with the car
+0xb120 warnings: iDrive context %d holds the focus over Android Auto with no driver input: Android Auto steps aside until it closes
+0xb1a0 state lost focus (OPTIONS panel?)
+0xb1c4 in our Settings page
+0xb1dc left state 13 for its own screen
+0xb200 Android Auto keeps the screen (NBT_AA_HIDE_ON_KEY default)
+0xb23c hold: iDrive left state %u (hard key): asked nbt-aad to step aside
+0xb280 warnings: iDrive context %d during reverse / park assist / a call: left to that logic
+0xb2d8 hold: state %u visible -> %d
+0xb2f8 hold: iDrive went back to the Android Auto screen: asking nbt-aad to come to the front
+0xb350 hold: state %u focus -> %d
+0xb36c a hard key went to Android Auto (immediate)
+0xb398 settings state %u focus -> %d
+0xb3b8 settings: seven checkbox models refreshed
+0xb3e4 menu state %u focus -> %d
+0xb400 BACK/tilt popped to our menu (immediate)
+0xb42c Android Auto over USB: cannot remove %s (errno %d)
+0xb460 Android Auto over USB: cannot remove %s (errno %d, read-only?): remove it by hand
+0xb4b4 /var/opt/aa
+0xb4c0 Android Auto over USB: cannot create %s (errno %d)
+0xb4f8 menu: Android Auto over USB %s -> %s (applies at the next Start / Restart; NBT_USB in nbt-aad.env wins)
+0xb560 show iDrive warnings: cannot remove %s (errno %d)
+0xb594 show iDrive warnings: cannot remove %s (errno %d, read-only?): remove it by hand
+0xb5e8 show iDrive warnings: cannot create %s (errno %d)
+0xb61c  (context is only logged)
+0xb638  (a visible iDrive context now steps Android Auto aside for good)
+0xb67c menu: show iDrive warnings %s -> %s%s
+0xb6a4 cluster/HUD arrows: cannot remove %s (errno %d)
+0xb6d4 cluster/HUD arrows: cannot remove %s (errno %d, read-only?): remove it by hand
+0xb724 cluster/HUD arrows: cannot create %s (errno %d)
+0xb754 menu: turn arrows in cluster/HUD %s -> %s
+0xb780 show driving mode: cannot remove %s (errno %d)
+0xb7b0 show driving mode: cannot remove %s (errno %d, read-only?): remove it by hand
+0xb800 show driving mode: cannot create %s (errno %d)
+0xb830 menu: show driving mode changes %s -> %s
+0xb85c MENU opens iDrive: cannot remove %s (errno %d)
+0xb88c MENU opens iDrive: cannot remove %s (errno %d, read-only?): remove it by hand
+0xb8dc MENU opens iDrive: cannot create %s (errno %d)
+0xb90c MENU opens Android Auto's menu
+0xb92c MENU minimizes Android Auto
+0xb948 menu: MENU key opens iDrive %s -> %s (%s)
+0xb974 start with the car: cannot remove %s (errno %d)
+0xb9a4 start with the car: cannot remove %s (errno %d, read-only?): remove it by hand
+0xb9f4 start with the car: cannot create %s (errno %d)
+0xba24 menu: start with the car %s -> %s
+0xba48 library loaded into pid %d, %s
+0xba68 HU software / nav version: %s
+0xba88 menu: save logs to USB -> off
+0xbaa8 save logs to USB: cannot remove %s (errno %d)
+0xbad8 save logs to USB: cannot remove %s (errno %d, read-only?): remove it by hand
+0xbb28 save logs to USB: cannot create %s (errno %d)
+0xbb58 menu: save logs to USB -> on (%s, %s)
+0xbb80 menu: save logs to USB -> on, no USB stick found under /mnt yet (checked every %ld s)
+0xbbd8 Android Auto
+0xbbe8 NBT-AAD
+0xbbf0 /opt/sys/etc/nbt_version.txt
+0xbc10 driving.mode
+0xbc20 driving.mode35up
+0xbc34 communication.callStatus0
+0xbc50 communication.callStatus1
+0xbc6c /dev/slog
+0xc48d GCC: (GNU) 4.4.2
+0xc49f GCC: (GNU) 4.4.2
+0xc4b1 GCC: (GNU) 4.4.2
+0xc4c3 GCC: (GNU) 4.4.2
+0xc4d9 aeabi
+0xc500 .symtab
+0xc508 .strtab
+0xc510 .shstrtab
+0xc51a .hash
+0xc520 .dynsym
+0xc528 .dynstr
+0xc530 .rel.dyn
+0xc539 .rel.plt
+0xc542 .init
+0xc548 .text
+0xc54e .fini
+0xc554 .rodata
+0xc55c .ARM.extab
+0xc567 .ARM.exidx
+0xc572 .eh_frame
+0xc57c .note
+0xc582 .init_array
+0xc58e .fini_array
+0xc59f .data.rel.ro
+0xc5ac .dynamic
+0xc5ba .data
+0xc5c5 .comment
+0xc5ce .ARM.attributes
+0xec91 BUILDENV_qss
+0xec9e VARIANT_startup
+0xecae VARIANT_v7
+0xecb9 VARIANT_le
+0xecc4 VARIANT_a
+0xecce __pic__
+0xecd6 __PIC__
+0xece4 crtstuff.c
+0xecef __EH_FRAME_BEGIN__
+0xed02 __JCR_LIST__
+0xed0f __do_global_dtors_aux
+0xed25 completed.4602
+0xed34 __do_global_dtors_aux_fini_array_entry
+0xed5b frame_dummy
+0xed67 object.4617
+0xed73 __frame_dummy_init_array_entry
+0xed92 nbt_aad_app.cpp
+0xeda2 _ZN12_GLOBAL__N_112runnableNoopEPv
+0xedc5 _GLOBAL__I_nbt_aad_app.cpp
+0xede0 _ZN12_GLOBAL__N_15nowMsEv
+0xedfa _ZN12_GLOBAL__N_114driverInputNowERKNS_11DaemonStateE
+0xee30 _ZN12_GLOBAL__N_110fileExistsEPKc
+0xee52 _ZN12_GLOBAL__N_111autostartOnEv
+0xee73 _ZN12_GLOBAL__N_112menuIdriveOnEv
+0xee95 _ZN12_GLOBAL__N_110warningsOnEv
+0xeeb5 _ZN12_GLOBAL__N_111driveModeOnEv
+0xeed6 _ZN12_GLOBAL__N_110kombiNavOnEv
+0xeef6 _ZN12_GLOBAL__N_17usbAaOnEv
+0xef12 _ZN12_GLOBAL__N_19envFlagOnEPKcb
+0xef33 _ZN12_GLOBAL__N_115menuReturnEventEv
+0xef58 _ZN12_GLOBAL__N_19addActionEPN3bmw9PluginAppEjPFbPvRKNS0_6ParcelEE
+0xef9b _ZN12_GLOBAL__N_112sendToDaemonEPKc
+0xefbf _ZN12_GLOBAL__N_17jsonStrEPKcS1_Pcj
+0xefe3 _ZN12_GLOBAL__N_117aaSurfaceOfDaemonEv
+0xf00a _ZN12_GLOBAL__N_18pidAliveEi
+0xf027 _ZN12_GLOBAL__N_115controlPortBusyEv
+0xf04c _ZN12_GLOBAL__N_113showAutostartEPN3bmw9PluginAppE
+0xf07f _ZN12_GLOBAL__N_114showMenuIdriveEPN3bmw9PluginAppE
+0xf0b3 _ZN12_GLOBAL__N_113showDriveModeEPN3bmw9PluginAppE
+0xf0e6 _ZN12_GLOBAL__N_112showKombiNavEPN3bmw9PluginAppE
+0xf118 _ZN12_GLOBAL__N_112showWarningsEPN3bmw9PluginAppE
+0xf14a _ZN12_GLOBAL__N_19showUsbAaEPN3bmw9PluginAppE
+0xf178 _ZN12_GLOBAL__N_17spinRunEPv
+0xf195 T.583
+0xf19b T.586
+0xf1a1 _ZN12_GLOBAL__N_110showUsbLogEPN3bmw9PluginAppE
+0xf1d1 _ZN12_GLOBAL__N_14alogEPKcz
+0xf1ed _ZN12_GLOBAL__N_110destroyAppEPv
+0xf20e _ZN12_GLOBAL__N_110appOnErrorEPN3bmw9PluginAppEjRKNS0_11BasicStringIcEE
+0xf256 _ZN12_GLOBAL__N_111holdEnabledEv
+0xf277 _ZN12_GLOBAL__N_114bootGuardResetEPKc
+0xf29d _ZN12_GLOBAL__N_115carAsideEnabledEv
+0xf2c2 _ZN12_GLOBAL__N_19createAppERN3bmw11IDispatcherEPKcRKNS0_6BundleES7_
+0xf307 _ZN12_GLOBAL__N_19appOnInitEPN3bmw9PluginAppE
+0xf335 _ZN12_GLOBAL__N_113appOnFinalizeEPN3bmw9PluginAppE
+0xf368 _ZN12_GLOBAL__N_113onEntryActionEPvRKN3bmw6ParcelE
+0xf39b _ZN12_GLOBAL__N_110onStartRowEPvRKN3bmw6ParcelE
+0xf3cb _ZN12_GLOBAL__N_19onStopRowEPvRKN3bmw6ParcelE
+0xf3f9 _ZN12_GLOBAL__N_112onRestartRowEPvRKN3bmw6ParcelE
+0xf42b _ZN12_GLOBAL__N_117onAutostartToggleEPvRKN3bmw6ParcelE
+0xf462 _ZN12_GLOBAL__N_114onUsbLogToggleEPvRKN3bmw6ParcelE
+0xf496 _ZN12_GLOBAL__N_118onMenuIdriveToggleEPvRKN3bmw6ParcelE
+0xf4ce _ZN12_GLOBAL__N_117onDriveModeToggleEPvRKN3bmw6ParcelE
+0xf505 _ZN12_GLOBAL__N_116onKombiNavToggleEPvRKN3bmw6ParcelE
+0xf53b _ZN12_GLOBAL__N_116onWarningsToggleEPvRKN3bmw6ParcelE
+0xf571 _ZN12_GLOBAL__N_113onUsbAaToggleEPvRKN3bmw6ParcelE
+0xf5a4 _ZN12_GLOBAL__N_111onMenuFocusEPvRKN3bmw6ParcelE
+0xf5d5 _ZN12_GLOBAL__N_115onSettingsFocusEPvRKN3bmw6ParcelE
+0xf60a _ZN12_GLOBAL__N_19onAaFocusEPvRKN3bmw6ParcelE
+0xf638 _ZN12_GLOBAL__N_111onAaVisibleEPvRKN3bmw6ParcelE
+0xf669 _ZN12_GLOBAL__N_111runnableRunEPv
+0xf68b _ZN12_GLOBAL__N_19statusRunEPv
+0xf6aa _ZN12_GLOBAL__N_112onPdcChangedEPvRKN3bmw11BasicStringItEE
+0xf6e5 _ZN12_GLOBAL__N_117onDayNightChangedEPvRKN3bmw11BasicStringItEE
+0xf725 _ZN12_GLOBAL__N_112onDriveMode0EPvRKN3bmw11BasicStringItEE
+0xf760 _ZN12_GLOBAL__N_112onDriveMode1EPvRKN3bmw11BasicStringItEE
+0xf79b _ZN12_GLOBAL__N_118onGraphicalContextEPvRKN3bmw11BasicStringItEE
+0xf7dc _ZN12_GLOBAL__N_112onDscChangedEPvRKN3bmw11BasicStringItEE
+0xf817 _ZN12_GLOBAL__N_113onCallStatus0EPvRKN3bmw11BasicStringItEE
+0xf853 _ZN12_GLOBAL__N_113onCallStatus1EPvRKN3bmw11BasicStringItEE
+0xf88f _ZN12_GLOBAL__N_113onGearChangedEPvRKN3bmw11BasicStringItEE
+0xf8cb _ZN12_GLOBAL__N_112onCallStatusEiRKN3bmw11BasicStringItEE
+0xf905 _ZN12_GLOBAL__N_111onDriveModeEiRKN3bmw11BasicStringItEE
+0xf93e _ZN12_GLOBAL__N_18sendShowEv
+0xf95b _ZN12_GLOBAL__N_16owInitEv
+0xf976 _ZN12_GLOBAL__N_115stepAsideForCarEPKc
+0xf99d _ZN12_GLOBAL__N_115readDaemonStateEv
+0xf9c2 _ZN12_GLOBAL__N_116guardedByOverlayEPKc
+0xf9ea _ZN12_GLOBAL__N_18fireHoldEPN3bmw9PluginAppEPKc
+0xfa1a _ZN12_GLOBAL__N_122recoverScreenIfUncleanEv
+0xfa46 _ZN12_GLOBAL__N_112launchDaemonEv
+0xfa68 _ZN12_GLOBAL__N_117startDaemonOrShowEv
+0xfa8f _ZN12_GLOBAL__N_19beginStopEb
+0xfaad _ZN12_GLOBAL__N_113libraryLoadedEv
+0xfad0 .LANCHOR2
+0xfada _ZN12_GLOBAL__N_1L15kDriveModePropsE
+0xfaff _ZN12_GLOBAL__N_1L10kCallPropsE
+0xfb1f _ZN12_GLOBAL__N_1L14kAutostartFileE
+0xfb43 _ZN12_GLOBAL__N_1L16kAutostartManualE
+0xfb69 .LANCHOR1
+0xfb73 _ZN12_GLOBAL__N_110g_logMutexE
+0xfb92 _ZN12_GLOBAL__N_112g_appLogPathE
+0xfbb3 _ZN12_GLOBAL__N_110g_ramLogOnE
+0xfbd2 _ZN12_GLOBAL__N_18g_holdOnE
+0xfbee _ZZN12_GLOBAL__N_115carAsideEnabledEvE1v
+0xfc17 _ZN12_GLOBAL__N_116g_driveModeSubAtE
+0xfc3c _ZN12_GLOBAL__N_19g_lastDscE
+0xfc59 _ZN12_GLOBAL__N_115g_lastDriveModeE
+0xfc7d _ZN12_GLOBAL__N_19g_lastPdcE
+0xfc9a _ZN12_GLOBAL__N_114g_lastDayNightE
+0xfcbd _ZN12_GLOBAL__N_110g_lastGearE
+0xfcdc _ZZN12_GLOBAL__N_118onGraphicalContextEPvRKN3bmw11BasicStringItEEE8s_lastVc
+0xfd28 _ZZN12_GLOBAL__N_118onGraphicalContextEPvRKN3bmw11BasicStringItEEE12s_lastWidget
+0xfd79 _ZN12_GLOBAL__N_111g_shownTextE
+0xfd99 _ZN12_GLOBAL__N_110g_shownRowE
+0xfdb8 _ZZN12_GLOBAL__N_113hideOnHardKeyEvE1v
+0xfddf _ZN12_GLOBAL__N_111g_prevStateE
+0xfdff .LANCHOR0
+0xfe09 _ZN12_GLOBAL__N_18g_ramLogE
+0xfe25 _ZN12_GLOBAL__N_14g_owE
+0xfe3d _ZN12_GLOBAL__N_117g_driveModeChangeE
+0xfe63 _ZN12_GLOBAL__N_111g_dscChangeE
+0xfe83 _ZN12_GLOBAL__N_116g_autostartShownE
+0xfea8 _ZN12_GLOBAL__N_117g_menuIdriveShownE
+0xfece _ZN12_GLOBAL__N_116g_driveModeShownE
+0xfef3 _ZN12_GLOBAL__N_115g_kombiNavShownE
+0xff17 _ZN12_GLOBAL__N_115g_warningsShownE
+0xff3b _ZN12_GLOBAL__N_112g_usbAaShownE
+0xff5c _ZN12_GLOBAL__N_18g_runAppE
+0xff78 _ZN12_GLOBAL__N_113g_spinRunningE
+0xff9a _ZN12_GLOBAL__N_112g_spinWantedE
+0xffbb _ZN12_GLOBAL__N_111g_spinFrameE
+0xffdb _ZN12_GLOBAL__N_114g_spinRunnableE
+0xfffe _ZN12_GLOBAL__N_115g_appLogCheckedE
+0x10022 _ZN12_GLOBAL__N_115g_appLogRotatedE
+0x10046 _ZN12_GLOBAL__N_113g_usbLogShownE
+0x10068 _ZN12_GLOBAL__N_15g_appE
+0x10081 _ZN12_GLOBAL__N_16g_vtblE
+0x1009b _ZN12_GLOBAL__N_112g_baseOnInitE
+0x100bc _ZN12_GLOBAL__N_110g_initTimeE
+0x100db _ZN12_GLOBAL__N_19g_runVtblE
+0x100f8 _ZN12_GLOBAL__N_114g_gearRunnableE
+0x1011b _ZN12_GLOBAL__N_112g_statusVtblE
+0x1013c _ZN12_GLOBAL__N_116g_statusRunnableE
+0x10161 _ZN12_GLOBAL__N_110g_callLineE
+0x10180 _ZN12_GLOBAL__N_19g_callEndE
+0x1019d _ZN12_GLOBAL__N_114g_pdcDismissedE
+0x101c0 _ZZN12_GLOBAL__N_16owInitEvE6s_done
+0x101e4 _ZN12_GLOBAL__N_112g_popupAsideE
+0x10205 _ZN12_GLOBAL__N_110g_hideSentE
+0x10224 _ZN12_GLOBAL__N_19g_holdingE
+0x10241 _ZZN12_GLOBAL__N_115readDaemonStateEvE8s_logged
+0x10271 _ZN12_GLOBAL__N_111g_aaFocusedE
+0x10291 _ZN12_GLOBAL__N_115g_aaFocusLostMsE
+0x102b5 _ZN12_GLOBAL__N_111g_holdTriesE
+0x102d5 _ZN12_GLOBAL__N_18g_aaSeenE
+0x102f1 _ZN12_GLOBAL__N_110g_holdTimeE
+0x10310 _ZN12_GLOBAL__N_112g_lastLaunchE
+0x10331 _ZZN12_GLOBAL__N_112launchDaemonEvE6envbuf
+0x1035c _ZN12_GLOBAL__N_110g_wantHomeE
+0x1037b _ZN12_GLOBAL__N_111g_startTimeE
+0x1039b _ZN12_GLOBAL__N_113g_prevOverlayE
+0x103bd _ZN12_GLOBAL__N_118g_restartAfterStopE
+0x103e4 _ZN12_GLOBAL__N_19g_stopPidE
+0x10401 _ZN12_GLOBAL__N_110g_stopTimeE
+0x10420 _ZN12_GLOBAL__N_111g_stopStageE
+0x10440 _ZN12_GLOBAL__N_112g_entryStartE
+0x10461 _ZN12_GLOBAL__N_115g_autostartDoneE
+0x10485 _ZN12_GLOBAL__N_115g_autostartMonoE
+0x104a9 _ZN12_GLOBAL__N_110g_spinVtblE
+0x104c8 _ZN12_GLOBAL__N_112g_holdGaveUpE
+0x104e9 _ZN12_GLOBAL__N_111g_aaVisibleE
+0x10509 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE8s_logged
+0x10558 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE16s_unfocusedInput
+0x105b0 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE11s_unfocused
+0x10603 _ZN12_GLOBAL__N_113g_menuFocusedE
+0x10625 _ZN12_GLOBAL__N_117g_settingsFocusedE
+0x1064b _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE8s_logged_0
+0x1069c _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE9s_keyTime
+0x106ec _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE9s_carLeft
+0x1073c _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE14s_carLeftInput
+0x10792 _ZZN12_GLOBAL__N_111serviceHoldEPN3bmw9PluginAppERKNS_11DaemonStateEE10s_leftSeen
+0x107e4 _ZN12_GLOBAL__N_112g_focusKnownE
+0x10805 _ZZN12_GLOBAL__N_111onMenuFocusEPvRKN3bmw6ParcelEE6s_last
+0x1083f _slog_prepare
+0x1084d slogsend
+0x10856 _slog_init
+0x10861 _slog_parent
+0x1086e _slog_child
+0x1087a __FRAME_END__
+0x10888 __JCR_END__
+0x10894 _GLOBAL_OFFSET_TABLE_
+0x108aa __dso_handle
+0x108b7 _DYNAMIC
+0x108c0 __aeabi_unwind_cpp_pr0
+0x108d7 __register_frame_info
+0x108ed slogi
+0x108f3 _ZN3bmw9PluginApp4postEPNS_8RunnableEj
+0x1091a _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED1Ev
+0x1094c clock_gettime
+0x1095f _slogfd
+0x10967 memcpy
+0x1096e sigfillset
+0x10979 _ZN3bmw6ParcelC1Eb
+0x1098c _Jv_RegisterClasses
+0x109a0 pthread_mutex_init
+0x109b3 _ZN3bmw9PluginAppC1ERNS_11IDispatcherENS_11BasicStringIcEEjjNS_20RHMIInterfaceVersionERKNS_6BundleES8_
+0x10a1a _fini
+0x10a20 _ZN3bmw9PluginApp11updateModelEjRKNS_13DataTableBaseE
+0x10a56 _ZN3bmw7Variant16IObjectContainerD0Ev
+0x10a7c _ZN3bmw11BasicStringIcED1Ev
+0x10a98 __cxa_finalize
+0x10aa7 _ZN3bmw6ParcelD1Ev
+0x10aba mkdir
+0x10ac0 _ZdlPv
+0x10ac7 __get_errno_ptr
+0x10ad7 strncmp
+0x10adf __aeabi_unwind_cpp_pr1
+0x10af6 _ZN3bmw3MapIjNS_7VariantEED1Ev
+0x10b15 dlsym
+0x10b1b _ZN3bmw9PluginApp12triggerEventEj
+0x10b3d _ZTIN3bmw7Variant16IObjectContainerE
+0x10b67 strlen
+0x10b6e pthread_mutex_lock
+0x10b81 opendir
+0x10b8e pthread_once
+0x10b9b sendto
+0x10ba2 strtol
+0x10ba9 snprintf
+0x10bb2 __cxa_pure_virtual
+0x10bc5 _ZN3bmw9PluginApp10addHandlerEjjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+0x10c08 select
+0x10c0f _ZN3bmw6TextIDC1Ej
+0x10c22 __data_start
+0x10c2f _ZN3bmw9PluginApp11updateModelEjRKNS_7ImageIDE
+0x10c5e access
+0x10c65 __slog_mux
+0x10c70 getpid
+0x10c77 _ZN3bmw7Variant15ObjectContainerINS_6TextIDEED0Ev
+0x10ca9 __gxx_personality_v0
+0x10cbe __bss_start__
+0x10ccc fclose
+0x10cd3 _ZNK3bmw6Parcel8readBoolERb
+0x10cef _ZN3bmw9PluginApp10onFinalizeEv
+0x10d0f fopen
+0x10d15 __exidx_end
+0x10d26 fileno
+0x10d2d write
+0x10d33 _ZTVN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0x10d64 closedir
+0x10d6d _ZTVN3bmw7Variant16IObjectContainerE
+0x10d92 close
+0x10d98 __cxa_end_cleanup
+0x10daa __end__
+0x10db2 __bss_end__
+0x10dbe fgets
+0x10dc4 strncpy
+0x10dcc _ZN3bmw7Variant16IObjectContainerD1Ev
+0x10df2 MsgSendv
+0x10dfb unlink
+0x10e02 _ZN3bmw9PluginApp11updateModelEjb
+0x10e24 _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE4typeEv
+0x10e5a _ZZN3nbt9huVersionEPcjPKcE6kPaths
+0x10e7c _ZTVN10__cxxabiv117__class_type_infoE
+0x10ea2 fflush
+0x10ea9 memset
+0x10eb0 __bss_start
+0x10ebc _ZN3bmw13DataTableBaseC1EPNS_3MapIjNS_7VariantEEEj
+0x10eef environ
+0x10ef7 _bss_end__
+0x10f02 pthread_atfork
+0x10f11 fprintf
+0x10f19 _ZTSN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0x10f4a strcspn
+0x10f52 memcmp
+0x10f59 vsnprintf
+0x10f63 pluginAppInfo
+0x10f71 sigemptyset
+0x10f7d _ZN3bmw9PluginApp6onInitEv
+0x10f98 socket
+0x10f9f _ZTSN3bmw7Variant16IObjectContainerE
+0x10fc9 __stackavail
+0x10fd6 slogb
+0x10fdc _ZN3bmw9PluginApp33cdsAddPropertyChangedEventHandlerERNS_11BasicStringIcEEjRKNS_8DelegateIbRKNS1_ItEEvvvEE
+0x11047 rename
+0x1104e slogf
+0x11054 pthread_mutex_unlock
+0x11069 strstr
+0x11070 strcmp
+0x11077 waitpid
+0x1107f _btext
+0x1108b _ZNK3bmw7Variant15ObjectContainerINS_6TextIDEE5cloneEv
+0x110c2 readdir
+0x110ca _ZTIN3bmw7Variant15ObjectContainerINS_6TextIDEEE
+0x110fb spawn
+0x11101 strchr
+0x11108 _edata
+0x1110f fsync
+0x11115 _ZN3bmw3MapIjNS_7VariantEEixERKj
+0x11136 vslogf
+0x1113d __exidx_start
+0x1114b _Znwj
+0x11151 _ZN3bmw9PluginApp10addHandlerEjRKNS_8DelegateIbRKNS_6ParcelEvvvEE
+0x11193 fscanf
+0x1119a _ZN3bmw11BasicStringIcEC1EPKc
+0x111b8 _stack
+0x111bf _ZTVN10__cxxabiv120__si_class_type_infoE
+0x111e8 _ZN3bmw9PluginApp11updateModelEjRKNS_6TextIDE
+0x11216 _ZN3bmw7ImageIDC1Ej
+0x1122a __slog_once
+0x11236 _init
+0x1123c strcpy
+0x11248 _ZN3bmw9PluginApp11setPropertyEjjRKNS_6ParcelE
+0x11277 __deregister_frame_info

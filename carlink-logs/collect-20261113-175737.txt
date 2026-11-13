@@ -1,0 +1,759 @@
+﻿# collect  2026-11-13 17:57:37
+Fri Nov 13 09:57:39 UTC 2026
+-rw-rw-rw-  2 root      root          39446 Nov 13 09:57 carlink-session.log
+-rw-rw-rw-  2 root      root          15310 Nov 13 09:57 carlink-supervisor.log
+==AUDIO
+carlink-session.log:Audio player enabled (starts when audio arrives)
+carlink-session.log:Audio format: 44100 Hz, 2 channel(s), 16 bits
+carlink-session.log:Audio format: 44100 Hz, 2 channel(s), 16 bits
+carlink-session.log:Audio player: PCM open card 1 device 1
+carlink-session.log:Audio player: playing 44100 Hz stereo 16 bit
+carlink-session.log:Audio player: queue 35328..111104 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 32768..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 51712..65024 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 42496..65024 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 35840..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 43008..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 42496..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 39424..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 51712..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 36864..64000 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+carlink-session.log:Audio player: queue 51712..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+==LATENCY
+carlink-session.log:Latency: video frame 2090 bytes, 438 ms after the key
+carlink-session.log:Latency: video frame 2069 bytes, 522 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:43.643 UTC
+carlink-session.log:Input sent: OK
+carlink-session.log:Latency: video frame 73655 bytes, 67 ms after the key
+carlink-session.log:Latency: video frame 4028 bytes, 68 ms after the key
+carlink-session.log:Latency: video frame 2854 bytes, 68 ms after the key
+carlink-session.log:Latency: video frame 21622 bytes, 124 ms after the key
+carlink-session.log:Latency: video frame 3728 bytes, 176 ms after the key
+carlink-session.log:Latency: video frame 5307 bytes, 187 ms after the key
+carlink-session.log:Latency: video frame 4932 bytes, 233 ms after the key
+carlink-session.log:Latency: video frame 5420 bytes, 290 ms after the key
+carlink-session.log:Latency: video frame 5268 bytes, 345 ms after the key
+carlink-session.log:Latency: video frame 5042 bytes, 353 ms after the key
+carlink-session.log:Latency: video frame 2258 bytes, 424 ms after the key
+carlink-session.log:Latency: video frame 2247 bytes, 526 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:44.422 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 3332 bytes, 46 ms after the key
+carlink-session.log:Latency: video frame 2234 bytes, 117 ms after the key
+carlink-session.log:Latency: video frame 2228 bytes, 226 ms after the key
+carlink-session.log:Latency: video frame 2231 bytes, 294 ms after the key
+carlink-session.log:Latency: video frame 2228 bytes, 416 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2231 bytes, 497 ms after the key
+carlink-session.log:Latency: video frame 27028 bytes, 537 ms after the key
+carlink-session.log:Latency: video frame 2292 bytes, 592 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:45.338 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2111 bytes, 34 ms after the key
+carlink-session.log:Latency: video frame 8175 bytes, 62 ms after the key
+carlink-session.log:Latency: video frame 2145 bytes, 155 ms after the key
+carlink-session.log:Latency: video frame 2075 bytes, 232 ms after the key
+carlink-session.log:Latency: video frame 2035 bytes, 333 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 8123 bytes, 422 ms after the key
+carlink-session.log:Latency: video frame 2263 bytes, 516 ms after the key
+carlink-session.log:Latency: video frame 2246 bytes, 589 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:46.254 UTC
+carlink-session.log:Input sent: OK
+carlink-session.log:Latency: video frame 2241 bytes, 19 ms after the key
+carlink-session.log:Latency: video frame 22002 bytes, 84 ms after the key
+carlink-session.log:Latency: video frame 2745 bytes, 140 ms after the key
+carlink-session.log:Latency: video frame 2612 bytes, 258 ms after the key
+carlink-session.log:Latency: video frame 33453 bytes, 380 ms after the key
+carlink-session.log:Latency: video frame 2781 bytes, 440 ms after the key
+carlink-session.log:Latency: video frame 2634 bytes, 569 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:46.902 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 6415 bytes, 91 ms after the key
+carlink-session.log:Latency: video frame 2637 bytes, 150 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 7944 bytes, 213 ms after the key
+carlink-session.log:Latency: video frame 2724 bytes, 272 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 10469 bytes, 334 ms after the key
+carlink-session.log:Latency: video frame 2835 bytes, 390 ms after the key
+carlink-session.log:Latency: video frame 2727 bytes, 511 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:47.762 UTC
+carlink-session.log:Input sent: OK
+carlink-session.log:Latency: video frame 2727 bytes, 33 ms after the key
+carlink-session.log:Latency: video frame 2728 bytes, 69 ms after the key
+carlink-session.log:Latency: video frame 6745 bytes, 131 ms after the key
+carlink-session.log:Latency: video frame 2861 bytes, 141 ms after the key
+carlink-session.log:Latency: video frame 2822 bytes, 203 ms after the key
+carlink-session.log:Latency: video frame 2818 bytes, 268 ms after the key
+carlink-session.log:Latency: video frame 33189 bytes, 377 ms after the key
+carlink-session.log:Latency: video frame 2805 bytes, 389 ms after the key
+carlink-session.log:Latency: video frame 2629 bytes, 491 ms after the key
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: key written to the phone at 09:56:48.392 UTC
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 2626 bytes, 8 ms after the key
+carlink-session.log:Latency: video frame 11132 bytes, 53 ms after the key
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 7452 bytes, 124 ms after the key
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 2672 bytes, 222 ms after the key
+carlink-session.log:Latency: video frame 2610 bytes, 345 ms after the key
+carlink-session.log:Latency: video frame 2609 bytes, 464 ms after the key
+carlink-session.log:Latency: video frame 2609 bytes, 527 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:49.234 UTC
+carlink-session.log:Input sent: LEFT
+carlink-session.log:Latency: video frame 2604 bytes, 97 ms after the key
+carlink-session.log:Latency: video frame 2603 bytes, 216 ms after the key
+carlink-session.log:Latency: video frame 2603 bytes, 289 ms after the key
+carlink-session.log:Latency: video frame 2603 bytes, 337 ms after the key
+carlink-session.log:Latency: video frame 4738 bytes, 399 ms after the key
+carlink-session.log:Latency: video frame 33664 bytes, 525 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:50.011 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2591 bytes, 93 ms after the key
+carlink-session.log:Latency: video frame 2593 bytes, 124 ms after the key
+carlink-session.log:Latency: video frame 4289 bytes, 160 ms after the key
+carlink-session.log:Latency: video frame 2592 bytes, 310 ms after the key
+carlink-session.log:Latency: video frame 2587 bytes, 310 ms after the key
+carlink-session.log:Latency: video frame 2589 bytes, 396 ms after the key
+carlink-session.log:Latency: video frame 2587 bytes, 519 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:50.942 UTC
+carlink-session.log:Input sent: OK
+carlink-session.log:Latency: video frame 2589 bytes, 89 ms after the key
+carlink-session.log:Latency: video frame 14496 bytes, 138 ms after the key
+carlink-session.log:Latency: video frame 2308 bytes, 190 ms after the key
+carlink-session.log:Latency: video frame 2221 bytes, 320 ms after the key
+carlink-session.log:Latency: video frame 2212 bytes, 411 ms after the key
+carlink-session.log:Latency: video frame 2212 bytes, 489 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:51.720 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2019 bytes, 22 ms after the key
+carlink-session.log:Latency: video frame 6042 bytes, 86 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2282 bytes, 206 ms after the key
+carlink-session.log:Latency: video frame 2244 bytes, 224 ms after the key
+carlink-session.log:Latency: video frame 8141 bytes, 259 ms after the key
+carlink-session.log:Latency: video frame 2191 bytes, 330 ms after the key
+carlink-session.log:Latency: video frame 2117 bytes, 401 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2087 bytes, 441 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: key written to the phone at 09:56:52.789 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2087 bytes, 55 ms after the key
+carlink-session.log:Latency: video frame 2090 bytes, 107 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2087 bytes, 149 ms after the key
+carlink-session.log:Latency: video frame 27140 bytes, 222 ms after the key
+carlink-session.log:Latency: video frame 2376 bytes, 276 ms after the key
+carlink-session.log:Latency: video frame 2123 bytes, 395 ms after the key
+carlink-session.log:Latency: video frame 8396 bytes, 395 ms after the key
+carlink-session.log:Latency: video frame 2579 bytes, 464 ms after the key
+carlink-session.log:Latency: video frame 2504 bytes, 578 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:53.727 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2493 bytes, 48 ms after the key
+carlink-session.log:Latency: video frame 8139 bytes, 56 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2818 bytes, 112 ms after the key
+carlink-session.log:Latency: video frame 10071 bytes, 192 ms after the key
+carlink-session.log:Latency: video frame 2596 bytes, 231 ms after the key
+carlink-session.log:Latency: video frame 2507 bytes, 314 ms after the key
+carlink-session.log:Latency: video frame 2502 bytes, 414 ms after the key
+carlink-session.log:Latency: video frame 2506 bytes, 428 ms after the key
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2502 bytes, 533 ms after the key
+carlink-session.log:Latency: video frame 9068 bytes, 593 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:54.716 UTC
+carlink-session.log:Input sent: +1 rotary steps
+carlink-session.log:Latency: video frame 2020 bytes, 95 ms after the key
+carlink-session.log:Latency: video frame 4824 bytes, 95 ms after the key
+carlink-session.log:Latency: video frame 1990 bytes, 157 ms after the key
+carlink-session.log:Latency: video frame 1961 bytes, 224 ms after the key
+carlink-session.log:Latency: video frame 1952 bytes, 326 ms after the key
+carlink-session.log:Latency: video frame 1954 bytes, 448 ms after the key
+carlink-session.log:Latency: video frame 1952 bytes, 448 ms after the key
+carlink-session.log:Latency: video frame 1954 bytes, 561 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:55.581 UTC
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 1954 bytes, 60 ms after the key
+carlink-session.log:Latency: video frame 4079 bytes, 117 ms after the key
+carlink-session.log:Latency: video frame 1970 bytes, 193 ms after the key
+carlink-session.log:Latency: video frame 1959 bytes, 234 ms after the key
+carlink-session.log:Latency: video frame 1960 bytes, 300 ms after the key
+carlink-session.log:Latency: video frame 1959 bytes, 372 ms after the key
+carlink-session.log:Latency: video frame 26688 bytes, 480 ms after the key
+carlink-session.log:Latency: video frame 2137 bytes, 600 ms after the key
+carlink-session.log:Latency: video frame 1906 bytes, 600 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:56.843 UTC
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 1893 bytes, 12 ms after the key
+carlink-session.log:Latency: video frame 4382 bytes, 69 ms after the key
+carlink-session.log:Latency: video frame 1910 bytes, 115 ms after the key
+carlink-session.log:Latency: video frame 1898 bytes, 234 ms after the key
+carlink-session.log:Latency: video frame 1896 bytes, 301 ms after the key
+carlink-session.log:Latency: video frame 1898 bytes, 313 ms after the key
+carlink-session.log:Latency: video frame 1896 bytes, 415 ms after the key
+carlink-session.log:Latency: video frame 1898 bytes, 537 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:57.928 UTC
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 4632 bytes, 52 ms after the key
+carlink-session.log:Latency: video frame 1903 bytes, 109 ms after the key
+carlink-session.log:Latency: video frame 1899 bytes, 230 ms after the key
+carlink-session.log:Latency: video frame 1893 bytes, 230 ms after the key
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 4301 bytes, 288 ms after the key
+carlink-session.log:Latency: video frame 1903 bytes, 352 ms after the key
+carlink-session.log:Latency: video frame 1896 bytes, 481 ms after the key
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 1895 bytes, 547 ms after the key
+carlink-session.log:Latency: video frame 4202 bytes, 592 ms after the key
+carlink-session.log:Latency: key written to the phone at 09:56:58.741 UTC
+carlink-session.log:Input sent: -1 rotary steps
+carlink-session.log:Latency: video frame 1902 bytes, 38 ms after the key
+carlink-session.log:Latency: video frame 1901 bytes, 140 ms after the key
+carlink-session.log:Latency: video frame 1902 bytes, 269 ms after the key
+carlink-session.log:Latency: video frame 1977 bytes, 329 ms after the key
+carlink-session.log:Latency: video frame 1901 bytes, 405 ms after the key
+carlink-session.log:Latency: video frame 1899 bytes, 501 ms after the key
+carlink-session.log:Input sent: -1 rotary steps
+==KNOB
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:08.592
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:09.002
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:09.093
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:09.523
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:10.343
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:14.870
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:15.831
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:17.252
+carlink-supervisor.log:Fast hide: MENU key, hiding the CarLife picture at once (09:56:17.860 UTC)
+carlink-supervisor.log:Knob: MENU down -> CarLife (none) at 09:56:17.901
+carlink-supervisor.log:Knob: MENU up -> CarLife (none) at 09:56:18.011
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:18.922
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:19.068
+carlink-supervisor.log:Knob: ROTARY delta=-5 -> CarLife -5 at 09:56:19.979
+carlink-supervisor.log:Knob: ROTARY delta=-2 -> CarLife -2 at 09:56:20.031
+carlink-supervisor.log:Knob: ROTARY delta=-3 -> CarLife -3 at 09:56:20.081
+carlink-supervisor.log:Knob: ROTARY delta=-5 -> CarLife -5 at 09:56:20.131
+carlink-supervisor.log:Knob: ROTARY delta=-6 -> CarLife -6 at 09:56:20.182
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:20.809
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:20.890
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:21.760
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:21.911
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.181
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.232
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.277
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.328
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.380
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.449
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:23.597
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> Calayer state 2 s after the picture was marked shown:
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:24.053
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:24.109
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:24.209
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:24.901
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:24.947
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:25.000
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:25.058
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.290
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.341
+carlink-supervisor.log:Knob: ROTARY delta=-2 -> CarLife -2 at 09:56:25.386
+carlink-supervisor.log:Knob: ROTARY delta=-2 -> CarLife -2 at 09:56:25.437
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.487
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.538
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:26.076
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:26.154
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:26.550
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:26.626
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:27.178
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:27.891
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:28.467
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:29.018
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:32.205
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:33.158
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:33.647
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:34.208
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:34.284
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:34.608
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:35.174
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:35.614
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:36.226
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:36.794
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:37.734
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:38.204
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:38.717
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:39.242
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:39.742
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:40.355
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:41.022
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:43.623
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:43.775
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:44.421
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:44.884
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:45.322
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:45.684
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:46.242
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:46.414
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:46.894
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:47.042
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:47.173
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:47.750
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:47.900
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.341
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.391
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.442
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.493
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.539
+carlink-supervisor.log:Knob: TILT_LEFT down -> CarLife LEFT at 09:56:49.221
+carlink-supervisor.log:Knob: TILT_LEFT up -> CarLife (none) at 09:56:49.418
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:49.990
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:56:50.931
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:56:51.101
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:51.701
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:51.852
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.120
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.251
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.337
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.769
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.900
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:53.712
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:53.809
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:54.219
+carlink-supervisor.log:Knob: ROTARY delta=1 -> CarLife +1 at 09:56:54.697
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:55.559
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:56.839
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:57.917
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:58.169
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:58.428
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:58.726
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:59.905
+carlink-supervisor.log:Fast hide: MENU key, hiding the CarLife picture at once (09:57:18.652 UTC)
+carlink-supervisor.log:Knob: MENU down -> CarLife (none) at 09:57:18.697
+carlink-supervisor.log:Knob: MENU up -> CarLife (none) at 09:57:18.850
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:57:19.689
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:57:19.841
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:57:20.818
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:57:20.969
+carlink-supervisor.log:Knob: ROTARY delta=13 -> CarLife +13 at 09:57:21.810
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:57:21.860
+carlink-supervisor.log:Knob: ROTARY delta=-1 -> CarLife -1 at 09:57:21.990
+carlink-supervisor.log:Knob: PUSH down -> CarLife OK at 09:57:22.418
+carlink-supervisor.log:Knob: PUSH up -> CarLife (none) at 09:57:22.567
+carlink-supervisor.log:Summary: attached=1 registered=1 comm=1 messages=16433 controller=297 steering=222 skipped=1490 bad=0 events=119
+carlink-supervisor.log:Emitted 90 action lines, 0 write failures, 14 held back while iDrive was hidden, 2 fast hides
+==SUPERVISOR
+- original size:      x=1280, y=480
+- destination region: x=213, y=0, w=853, h=480
+- source region:      x=0, y=0, w=1280, h=480
+- virtual viewport:   x=0, y=0, w=0, h=0
+- orientation:        0 (up is top)
+- opacity:            1
+- visibility:         1
+- pixel format:       7 (unknown)
+- native surface:     2115368
+- accepts input from: keyboard mouse touch 
+- has keyboard focus: false
+- chromakey:          disabled (r=0, g=0, b=0)
+- counters:           frame=0, draw=0, update=0
+- on layer:           2147483648(0x80000000) 
+unknown symbol: kdMain referenced from libKD.so.1
+surface 256 (0x100)
+---------------------------------------
+- created by pid:       127006
+- original size:      x=1280, y=480
+- destination region: x=0, y=0, w=1280, h=480
+- source region:      x=0, y=0, w=1280, h=480
+- virtual viewport:   x=0, y=0, w=0, h=0
+- orientation:        0 (up is top)
+- opacity:            1
+- visibility:         1
+- pixel format:       7 (unknown)
+- native surface:     2114824
+- accepts input from: keyboard mouse touch 
+- has keyboard focus: false
+- chromakey:          disabled (r=0, g=0, b=0)
+- counters:           frame=0, draw=0, update=0
+- on layer:           
+unknown symbol: kdMain referenced from libKD.so.1
+layer 2147483648 (0x80000000)
+---------------------------------------
+- created by pid:       127006
+- original size:        x=1280, y=480
+- destination region:   x=0, y=0, w=1280, h=480
+- source region:        x=0, y=0, w=1280, h=480
+- orientation:          0 (up is top)
+- opacity:              1
+- visibility:           1
+- type:                 2 (software 2d)
+- chromakey:            disabled (r=0, g=0, b=0)
+- surface render order: 1510(0x5e6), 
+- on screen:            LayerManagerService returned: invalid arguments provided
+Failed to get available layers on screen with ID2415944
+rLife -1 at 09:56:23.990
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:24.053
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:24.109
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:24.209
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:24.901
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:24.947
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:25.000
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:25.058
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.290
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.341
+Knob: ROTARY delta=-2 -> CarLife -2 at 09:56:25.386
+Knob: ROTARY delta=-2 -> CarLife -2 at 09:56:25.437
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.487
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:25.538
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:26.076
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:26.154
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:26.550
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:26.626
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:27.178
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:27.891
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:28.467
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:29.018
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:32.205
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:33.158
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:33.647
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:34.208
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:34.284
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:34.608
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:35.174
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:35.614
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:36.226
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:36.794
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:37.734
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:38.204
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:38.717
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:39.242
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:39.742
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:40.355
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:41.022
+Knob: PUSH down -> CarLife OK at 09:56:43.623
+Knob: PUSH up -> CarLife (none) at 09:56:43.775
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:44.421
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:44.884
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:45.322
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:45.684
+Knob: PUSH down -> CarLife OK at 09:56:46.242
+Knob: PUSH up -> CarLife (none) at 09:56:46.414
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:46.894
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:47.042
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:47.173
+Knob: PUSH down -> CarLife OK at 09:56:47.750
+Knob: PUSH up -> CarLife (none) at 09:56:47.900
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.341
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.391
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.442
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.493
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:48.539
+Knob: TILT_LEFT down -> CarLife LEFT at 09:56:49.221
+Knob: TILT_LEFT up -> CarLife (none) at 09:56:49.418
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:49.990
+Knob: PUSH down -> CarLife OK at 09:56:50.931
+Knob: PUSH up -> CarLife (none) at 09:56:51.101
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:51.701
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:51.852
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.120
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.251
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.337
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.769
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:52.900
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:53.712
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:53.809
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:54.219
+Knob: ROTARY delta=1 -> CarLife +1 at 09:56:54.697
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:55.559
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:56.839
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:57.917
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:58.169
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:58.428
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:58.726
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:56:59.905
+Fast hide: MENU key, hiding the CarLife picture at once (09:57:18.652 UTC)
+unknown symbol: kdMain referenced from libKD.so.1
+09:57:22 carlink: quit requested
+09:57:22 carlink: shutting down
+Knob: MENU down -> CarLife (none) at 09:57:18.697
+Knob: MENU up -> CarLife (none) at 09:57:18.850
+Knob: PUSH down -> CarLife OK at 09:57:19.689
+Knob: PUSH up -> CarLife (none) at 09:57:19.841
+Knob: PUSH down -> CarLife OK at 09:57:20.818
+Knob: PUSH up -> CarLife (none) at 09:57:20.969
+Knob: ROTARY delta=13 -> CarLife +13 at 09:57:21.810
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:57:21.860
+Knob: ROTARY delta=-1 -> CarLife -1 at 09:57:21.990
+Knob: PUSH down -> CarLife OK at 09:57:22.418
+Knob: PUSH up -> CarLife (none) at 09:57:22.567
+Summary: attached=1 registered=1 comm=1 messages=16433 controller=297 steering=222 skipped=1490 bad=0 events=119
+Emitted 90 action lines, 0 write failures, 14 held back while iDrive was hidden, 2 fast hides
+09:57:24 carlink: audio: releasing the route: audioconn -r 0xb8
+unknown symbol: kdMain referenced from libKD.so.1
+RemoveHighSyncConnection(0xb8)
+CMCommand successfully executed
+09:57:25 carlink: audio: route released (status 0)
+09:57:26 carlink: session ended (status 0, picture shown: yes, failed attempts in a row: 0)
+==SESSION
+Input sent: +1 rotary steps
+Latency: video frame 7944 bytes, 213 ms after the key
+Latency: video frame 2724 bytes, 272 ms after the key
+Input sent: +1 rotary steps
+Latency: video frame 10469 bytes, 334 ms after the key
+Latency: video frame 2835 bytes, 390 ms after the key
+Latency: video frame 2727 bytes, 511 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: key written to the phone at 09:56:47.762 UTC
+Input sent: OK
+Latency: video frame 2727 bytes, 33 ms after the key
+Latency: video frame 2728 bytes, 69 ms after the key
+Latency: video frame 6745 bytes, 131 ms after the key
+Latency: video frame 2861 bytes, 141 ms after the key
+Latency: video frame 2822 bytes, 203 ms after the key
+Latency: video frame 2818 bytes, 268 ms after the key
+USB video progress: 960 frames queued
+Latency: video frame 33189 bytes, 377 ms after the key
+Latency: video frame 2805 bytes, 389 ms after the key
+Latency: video frame 2629 bytes, 491 ms after the key
+Input sent: -1 rotary steps
+Latency: key written to the phone at 09:56:48.392 UTC
+Input sent: -1 rotary steps
+Latency: video frame 2626 bytes, 8 ms after the key
+Latency: video frame 11132 bytes, 53 ms after the key
+Input sent: -1 rotary steps
+Input sent: -1 rotary steps
+Latency: video frame 7452 bytes, 124 ms after the key
+Input sent: -1 rotary steps
+Latency: video frame 2672 bytes, 222 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 2610 bytes, 345 ms after the key
+Latency: video frame 2609 bytes, 464 ms after the key
+Latency: video frame 2609 bytes, 527 ms after the key
+Latency: key written to the phone at 09:56:49.234 UTC
+Input sent: LEFT
+Latency: video frame 2604 bytes, 97 ms after the key
+Latency: video frame 2603 bytes, 216 ms after the key
+Latency: video frame 2603 bytes, 289 ms after the key
+Latency: video frame 2603 bytes, 337 ms after the key
+Latency: video frame 4738 bytes, 399 ms after the key
+Latency: video frame 33664 bytes, 525 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: key written to the phone at 09:56:50.011 UTC
+Input sent: +1 rotary steps
+Latency: video frame 2591 bytes, 93 ms after the key
+Latency: video frame 2593 bytes, 124 ms after the key
+Latency: video frame 4289 bytes, 160 ms after the key
+Latency: video frame 2592 bytes, 310 ms after the key
+Latency: video frame 2587 bytes, 310 ms after the key
+Latency: video frame 2589 bytes, 396 ms after the key
+Latency: video frame 2587 bytes, 519 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: key written to the phone at 09:56:50.942 UTC
+Input sent: OK
+Latency: video frame 2589 bytes, 89 ms after the key
+Latency: video frame 14496 bytes, 138 ms after the key
+Latency: video frame 2308 bytes, 190 ms after the key
+Latency: video frame 2221 bytes, 320 ms after the key
+Latency: video frame 2212 bytes, 411 ms after the key
+Latency: video frame 2212 bytes, 489 ms after the key
+Latency: key written to the phone at 09:56:51.720 UTC
+Input sent: +1 rotary steps
+Latency: video frame 2019 bytes, 22 ms after the key
+Latency: video frame 6042 bytes, 86 ms after the key
+Input sent: +1 rotary steps
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 2282 bytes, 206 ms after the key
+Latency: video frame 2244 bytes, 224 ms after the key
+Latency: video frame 8141 bytes, 259 ms after the key
+Latency: video frame 2191 bytes, 330 ms after the key
+Latency: video frame 2117 bytes, 401 ms after the key
+Input sent: +1 rotary steps
+Latency: video frame 2087 bytes, 441 ms after the key
+Input sent: +1 rotary steps
+Input sent: +1 rotary steps
+Latency: key written to the phone at 09:56:52.789 UTC
+Input sent: +1 rotary steps
+Latency: video frame 2087 bytes, 55 ms after the key
+Latency: video frame 2090 bytes, 107 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Input sent: +1 rotary steps
+Latency: video frame 2087 bytes, 149 ms after the key
+USB video progress: 1020 frames queued
+Latency: video frame 27140 bytes, 222 ms after the key
+Latency: video frame 2376 bytes, 276 ms after the key
+Latency: video frame 2123 bytes, 395 ms after the key
+Latency: video frame 8396 bytes, 395 ms after the key
+Latency: video frame 2579 bytes, 464 ms after the key
+Latency: video frame 2504 bytes, 578 ms after the key
+Latency: key written to the phone at 09:56:53.727 UTC
+Input sent: +1 rotary steps
+Latency: video frame 2493 bytes, 48 ms after the key
+Latency: video frame 8139 bytes, 56 ms after the key
+Input sent: +1 rotary steps
+Latency: video frame 2818 bytes, 112 ms after the key
+Audio player: queue 39424..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+Latency: video frame 10071 bytes, 192 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 2596 bytes, 231 ms after the key
+Latency: video frame 2507 bytes, 314 ms after the key
+Latency: video frame 2502 bytes, 414 ms after the key
+Latency: video frame 2506 bytes, 428 ms after the key
+Input sent: +1 rotary steps
+Latency: video frame 2502 bytes, 533 ms after the key
+Latency: video frame 9068 bytes, 593 ms after the key
+Latency: key written to the phone at 09:56:54.716 UTC
+Input sent: +1 rotary steps
+Latency: video frame 2020 bytes, 95 ms after the key
+Latency: video frame 4824 bytes, 95 ms after the key
+Latency: video frame 1990 bytes, 157 ms after the key
+Latency: video frame 1961 bytes, 224 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 1952 bytes, 326 ms after the key
+Latency: video frame 1954 bytes, 448 ms after the key
+Latency: video frame 1952 bytes, 448 ms after the key
+Latency: video frame 1954 bytes, 561 ms after the key
+Latency: key written to the phone at 09:56:55.581 UTC
+Input sent: -1 rotary steps
+Latency: video frame 1954 bytes, 60 ms after the key
+Latency: video frame 4079 bytes, 117 ms after the key
+Latency: video frame 1970 bytes, 193 ms after the key
+Latency: video frame 1959 bytes, 234 ms after the key
+Latency: video frame 1960 bytes, 300 ms after the key
+Latency: video frame 1959 bytes, 372 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 26688 bytes, 480 ms after the key
+Latency: video frame 2137 bytes, 600 ms after the key
+Latency: video frame 1906 bytes, 600 ms after the key
+Latency: key written to the phone at 09:56:56.843 UTC
+Input sent: -1 rotary steps
+Latency: video frame 1893 bytes, 12 ms after the key
+Latency: video frame 4382 bytes, 69 ms after the key
+Latency: video frame 1910 bytes, 115 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 1898 bytes, 234 ms after the key
+Latency: video frame 1896 bytes, 301 ms after the key
+Latency: video frame 1898 bytes, 313 ms after the key
+Latency: video frame 1896 bytes, 415 ms after the key
+Latency: video frame 1898 bytes, 537 ms after the key
+USB video progress: 1080 frames queued
+Latency: key written to the phone at 09:56:57.928 UTC
+Input sent: -1 rotary steps
+Latency: video frame 4632 bytes, 52 ms after the key
+Latency: video frame 1903 bytes, 109 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 1899 bytes, 230 ms after the key
+Latency: video frame 1893 bytes, 230 ms after the key
+Input sent: -1 rotary steps
+Latency: video frame 4301 bytes, 288 ms after the key
+Latency: video frame 1903 bytes, 352 ms after the key
+Latency: video frame 1896 bytes, 481 ms after the key
+Input sent: -1 rotary steps
+Latency: video frame 1895 bytes, 547 ms after the key
+Latency: video frame 4202 bytes, 592 ms after the key
+Latency: key written to the phone at 09:56:58.741 UTC
+Input sent: -1 rotary steps
+Latency: video frame 1902 bytes, 38 ms after the key
+Latency: video frame 1901 bytes, 140 ms after the key
+Latency: video frame 1902 bytes, 269 ms after the key
+Latency: video frame 1977 bytes, 329 ms after the key
+unknown symbol: kdMain referenced from libKD.so.1
+Latency: video frame 1901 bytes, 405 ms after the key
+Latency: video frame 1899 bytes, 501 ms after the key
+Input sent: -1 rotary steps
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+USB video progress: 1140 frames queued
+unknown symbol: kdMain referenced from libKD.so.1
+Audio player: queue 51712..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+USB video progress: 1200 frames queued
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+Audio player: queue 36864..64000 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+unknown symbol: kdMain referenced from libKD.so.1
+USB video progress: 1260 frames queued
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+USB video progress: 1320 frames queued
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+Stop requested; restoring iDrive now.
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+iDrive layer order and visibility restored.
+Display session completed; stopping this USB session.
+visible LayerManager stage raw status=0
+hide private video rc=0 errno=0
+hide private anchor rc=0 errno=0
+verify anchor restored rc=0 errno=0
+visible=0
+release renderer window handle rc=0 errno=0
+renderer window post id=1510 visible=0
+visible clip first POST=1
+mdev accepted frames=1346 close rc=0
+mmr_stop rc=0 errno=0
+destroy output event rc=0 errno=0
+detaching input
+Audio player: queue 51712..64512 bytes, ran dry 0 times (longest empty >= 0 ms), 0 write errors, 0 bytes skipped
+Terminated 
+USB capture stopped after completed display.
+mmr_input_detach rc=0 errno=0
+read visibility after input rc=0 errno=0
+visible=0
+detaching output 0
+mmr_output_detach rc=0 errno=0
+destroy window rc=0 errno=0
+destroy screen context rc=0 errno=0
+context created; destroying carlifebench5099643
+mmr_context_destroy rc=0 errno=0
+calling mmr_disconnect
+mmr_disconnect returned
+close mmr client rc=0
+close strm rc=0
+exit=0
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+Removed detached CarLife surface 1510.
+unknown symbol: kdMain referenced from libKD.so.1
+==KEEP
+total 170
+drwxrwxrwx  2 root      root           4096 Nov 13 09:57 .
+drwxr-xr-x  3 root      root           4096 Nov 12 14:11 ..
+-rw-rw-rw-  1 root      root          20793 Nov 12 15:29 prev-session.log
+-rw-rw-rw-  1 root      root           4764 Nov 12 15:29 prev-shm.txt
+-rw-rw-rw-  1 root      root          13512 Nov 12 15:29 prev-supervisor.log
+-rw-rw-rw-  1 root      root          19370 Nov 13 09:57 session.log
+-rw-rw-rw-  1 root      root           4688 Nov 13 09:57 shm.txt
+-rw-rw-rw-  1 root      root          14066 Nov 13 09:57 supervisor.log
+# ssh exit code: 0

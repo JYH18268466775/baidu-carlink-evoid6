@@ -1,0 +1,48 @@
+﻿# dhcp-fix  2026-11-13 18:25:54
+Fri Nov 13 10:25:54 UTC 2026
+==BACKUP
+-rw-rw-rw-  2 root      root            304 Nov 13 09:10 /dev/shmem/dhcpd.uap0.conf.orig
+==BEFORE
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.224.0 netmask 255.255.255.0 {
+   option routers 0.0.0.0;
+   option domain-name-servers 172.16.224.1;
+   range 172.16.224.100 172.16.224.254;
+}
+==AFTER
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.224.0 netmask 255.255.255.0 {
+   option domain-name-servers 172.16.224.1;
+   range 172.16.224.100 172.16.224.254;
+}
+old dhcpd pid=401504
+the car did not restart dhcpd in 20 s: starting it with the same arguments
+binary=/usr/sbin/dhcpd
+now pid=401504
+==PROC
+     pid Arguments
+==CONF-NOW
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.224.0 netmask 255.255.255.0 {
+   option domain-name-servers 172.16.224.1;
+   range 172.16.224.100 172.16.224.254;
+}
+# ssh exit code: 0

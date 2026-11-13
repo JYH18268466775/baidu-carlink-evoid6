@@ -1,0 +1,573 @@
+﻿# wifi-drv  2026-11-13 18:48:49
+Fri Nov 13 10:48:50 UTC 2026
+==IOPKT-MEM
+            libc.so.3          @ 109a000             468K   12K
+            devnp-evo-omap.so  @78033000              24K  8192
+            lsm-qnet.so        @7803e000             192K   44K
+            devnp-dwcmac.so    @7809a000              32K  4096
+            lsm-autoip.so      @78118000              16K  8192
+            lsm-pf-v6.so       @78162000             192K   20K
+            np-mv8787-omap5.so @781be000             464K   16K
+            libcpp-ne.so.4     @78236000             308K   36K
+==DLLS
+/opt/conn/lib/devnp-mv8787-omap5.so
+/opt/conn/lib/devnp-pan.so
+/lib/devn-asix.so
+/lib/devn-smsc9500.so
+/lib/devnp-dwcmac.so
+/lib/devnp-ecm.so
+/lib/devnp-evo-omap.so
+/lib/devnp-shim.so
+/lib/devnp-ti-crypto-omap5.so
+/lib/devnp-usbdnet.so
+==IONET
+ls: No such file or directory (/dev/io-net)
+==WPA-V
+wpa_supplicant v0.7.3_ent_1.8
+Copyright (c) 2003-2010, Jouni Malinen <j@w1.fi> and contributors
+==WPA-H
+wpa_supplicant v0.7.3_ent_1.8
+Copyright (c) 2003-2010, Jouni Malinen <j@w1.fi> and contributors
+
+This program is free software. You can distribute it and/or modify it
+under the terms of the GNU General Public License version 2.
+
+Alternatively, this software may be distributed under the terms of the
+BSD license. See README and COPYING for more details.
+
+usage:
+  wpa_supplicant [-BddhKLqqstuvW] [-P<pid file>] [-g<global ctrl>] \
+        -i<ifname> -c<config file> [-C<ctrl>] [-D<driver>] [-p<driver_param>] \
+        [-b<br_ifname>] [-f<debug file>] \
+        [-o<override driver>] [-O<override ctrl>] \
+        [-N -i<ifname> -c<conf> [-C<ctrl>] [-D<driver>] \
+        [-p<driver_param>] [-b<br_ifname>] ...]
+
+drivers:
+  wext = Linux wireless extensions (generic)
+options:
+  -b = optional bridge interface name
+  -B = run daemon in the background
+  -c = Configuration file
+  -C = ctrl_interface parameter (only used if -c is not)
+  -i = interface name
+  -d = increase debugging verbosity (-dd even more)
+  -D = driver name (can be multiple drivers: nl80211,wext)
+  -g = global ctrl_interface
+  -K = include keys (passwords, etc.) in debug output
+  -t = include timestamp in debug messages
+  -h = show this help text
+  -L = show license (GPL and BSD)
+  -o = override driver parameter for new interfaces
+  -O = override ctrl_interface parameter for new interfaces
+  -p = driver parameters
+  -P = PID file
+  -q = decrease debugging verbosity (-qq even less)
+  -v = show version
+  -W = wait for a control interface monitor before starting
+  -N = start describing new interface
+example:
+  wpa_supplicant -Dwext -iwlan0 -c/etc/wpa_supplicant.conf
+==MWU
+#
+# File:	wifidir_init.conf
+#
+# Copyright (C) 2011 Marvell International Ltd., All Rights Reserved
+#
+# MARVELL CONFIDENTIAL
+# Copyright 2008 ~ 2011 Marvell International Ltd All Rights Reserved.
+# The source code contained or described herein and all documents related to
+# the source code ("Material") are owned by Marvell International Ltd or its
+# suppliers or licensors. Title to the Material remains with Marvell International Ltd
+# proprietary and confidential information of Marvell or its suppliers and
+# laws and treaty provisions. No part of the Material may be used, copied,
+# reproduced, modified, published, uploaded, posted, transmitted, distributed,
+# or disclosed in any way without Marvell's prior express written permission.
+#
+# property right is granted to or conferred upon you by disclosure or delivery
+# of the Materials, either expressly, by implication, inducement, estoppel or
+# otherwise. Any license under such intellectual property rights must be
+# express and approved by Marvell in writing.
+#################################################################################
+
+# WPS configuration file
+# Lines that start with # are treated as comments
+# Each line should not exceed 80 characters
+# Format: TYPE=value
+#
+#################################################################################
+# Enrollee: 1, Registrar: 2, WiFi Direct mode:4
+ROLE=4
+
+#################################################################################
+# UUID: 16B, in binary format
+# NOTE: This UUID must be the same as the one in wifidir_config
+# UUID=0x12345678123456781234567812345678
+
+# VERSION: 1B, 0x10: Version 1.0, 0x20: Version 2.0
+VERSION=0x20
+
+# DEVICE_NAME: <=32B, describes the product
+DEVICE_NAME=Marvell-Embedded-WIFIDIR-Device
+
+# MANUFACTURER: <=64B, identifies the manufacturer of the device
+MANUFACTURER=Marvell
+
+# MODEL_NAME: <=32B, identifies the model of the device
+MODEL_NAME=SD-8787
+
+# MODEL_NUMBER: <=32B, provides additional description of the device
+MODEL_NUMBER=0001
+
+# SERIAL_NUMBER: <=32B, identifies the serial number of the Enrollee or Registrar
+SERIAL_NUMBER=0001
+
+# Configuration Methods: 2B
+# 0x0001 : USBA
+# 0x0002 : Ethernet
+# 0x0004 : Label
+# 0x0008 : Display
+# 0x0010 : Ethernet NFC Token
+# 0x0020 : Integrated NFC Token
+# 0x0040 : NFC Interface
+# 0x0080 : Push Button
+# 0x0280 : Virtual Push Button
+# 0x0480 : Physical Push Button
+CONFIG_METHODS=0x4388
+
+#PRIMARY_DEV_CATEGORY: 1B, identifies device type category of the Enrollee or
+#Registrar
+
+#01 : Computer
+#02 : Input Device
+#03 : Printers,scanners,faxes and copiers
+#04 : Camera
+#05 : Storage
+#06 : Network Infrastructure
+#07 : Displays
+#08 : Multimedia Devices
+#09 : Gaming Devices
+#10 : Telephone
+#
+PRIMARY_DEV_CATEGORY=10
+
+#PRIMARY_DEV_SUBCATEGORY: 1B, identifies device type subcategory of Enrollee or
+#Registrar
+#
+
+#01 : PC, Printer, Digital still camera, NAS, AP, Television, DAR, XBox, Windows Mobile
+#02 : Server, Scanner, Router, Electronic picture frame, PVR, XBox360
+#03 : Media Center, Switch, Projector, MCX, Playstation
+PRIMARY_DEV_SUBCATEGORY=04
+
+#OUI: 4B, Vendor ID
+OUI=0050F204
+VENDOR_EXTENSION=00372A000120
+
+# RF_BAND: 1B, 2.4GHz=1, 5.0GHz=2
+# Onwards, we use rf band info from driver
+# RF_BAND=1
+
+# OS_VER: 4B, indicates what operating system is running on the device
+# The most significant bit is reserved and always set to one
+OS_VER=0xFFFFFFFF
+
+# Value for Message transmit, timeout unit is msec
+MAX_RETRY=5
+MSG_TIMEOUT=5000
+
+#################################################################################
+# SSID: <=32B,  SSID of the network
+# SSID=Marvell_Wps_Test
+
+#AUTHENTICATION_TYPE=0x0002
+
+# ENCRYPTION_TYPE: 2B,  0x0001 : None, 0x0002 : WEP
+#                       0x0004 : TKIP, 0x0008 : AES
+#ENCRYPTION_TYPE=0x0004
+
+
+
+
+==WFD-DEFAULTS
+#
+# File:	wifidirect_defaults.conf
+#
+# Copyright (C) 2011 Marvell International Ltd., All Rights Reserved
+#
+# MARVELL CONFIDENTIAL
+# Copyright 2008 ~ 2011 Marvell International Ltd All Rights Reserved.
+# The source code contained or described herein and all documents related to
+# the source code ("Material") are owned by Marvell International Ltd or its
+# suppliers or licensors. Title to the Material remains with Marvell International Ltd
+# proprietary and confidential information of Marvell or its suppliers and
+# laws and treaty provisions. No part of the Material may be used, copied,
+# reproduced, modified, published, uploaded, posted, transmitted, distributed,
+# or disclosed in any way without Marvell's prior express written permission.
+#
+# property right is granted to or conferred upon you by disclosure or delivery
+# of the Materials, either expressly, by implication, inducement, estoppel or
+# otherwise. Any license under such intellectual property rights must be
+# express and approved by Marvell in writing.
+
+wifidir_config={
+	# Arrange in order of subelement Ids
+    #
+	# WIFIDIR IE parameters.
+    #
+	Capability={
+        # Device Capability: 32 (0x20)
+        #   -- Enable Invitation Procedure Support
+		DeviceCapability=32
+		GroupCapability=0		
+	}
+	GroupOwnerIntent={
+		Intent=15              # 0-15. 15-> highest GO desire
+	}
+	Channel={                          # Listen channel attribute.
+		CountryString="US"
+		RegulatoryClass=81
+		ChannelNumber=1
+	}
+	InfrastructureManageabilityInfo={
+		Manageability=0
+	}
+	ChannelList={
+		CountryString="US"
+		# multiple attributes channel entry list
+		Regulatory_Class_1=81              # Regulatory class
+		NumofChannels_1=11                 # No of channels
+		ChanList_1=1,2,3,4,5,6,7,8,9,10,11 # Scan channel list
+		#Regulatory_Class_2=115             # Regulatory class
+		#NumofChannels_2=4                  # No of channels
+		#ChanList_2=36,40,44,48             # Scan channel list
+		#Regulatory_Class_3=118            # Regulatory class
+		#NumofChannels_3=4                 # No of channels
+		#ChanList_3=52,56,60,64            # Scan channel list
+		#Regulatory_Class_4=121            # Regulatory class
+		#NumofChannels_4=11                 # No of channels
+		#ChanList_4=100,104,108,112,116,120,124,128,132,136,140            # Scan channel list
+	}
+	NoticeOfAbsence={
+		NoA_Index=0                 # Instance of NoA timing
+		OppPS=1                    	# Opportunistic Power save
+		CTWindow=10                 # Client Traffic Window
+		NoA_descriptor={
+			CountType_1=255               # Count for GO mode OR Type for client mode
+			Duration_1=51200                # Max absence duration for GO mode OR
+                                        # min acceptable presence period for client mode
+			Interval_1=102400
+			StartTime_1=0
+			#CountType_2=1               # Count for GO mode OR Type for client mode
+			#Duration_2=0                # Max absence duration for GO mode OR
+                                        # min acceptable presence period for client mode
+			#Interval_2=0
+			#StartTime_2=0
+			}
+	}
+	DeviceInfo={
+		DeviceAddress=00:00:00:00:00:00
+		# categ: 2 bytes, OUI: 4 bytes, subcateg: 2 bytes
+		PrimaryDeviceTypeCategory=10
+		PrimaryDeviceTypeOUI=0x00,0x50,0xF2,0x04
+		PrimaryDeviceTypeSubCategory=4
+		SecondaryDeviceCount=2
+		SecondaryDeviceType={
+		    SecondaryDeviceTypeCategory_1=6
+		    SecondaryDeviceTypeOUI_1=0x00,0x50,0xF2,0x04
+		    SecondaryDeviceTypeSubCategory_1=1
+		    SecondaryDeviceTypeCategory_2=4
+		    SecondaryDeviceTypeOUI_2=0x00,0x50,0xF2,0x04
+		    SecondaryDeviceTypeSubCategory_2=1
+		}
+		DeviceName=MRVL_DEFAULT_NAME
+		# ConfigMethods USB= 0x01
+		# ConfigMethods Ethernet= 0x02
+		# ConfigMethods Label= 0x04
+		# ConfigMethods Display= 0x08
+		# ConfigMethods Ext_NFC_Token= 0x10
+		# ConfigMethods Int_NFC_Token= 0x20
+		# ConfigMethods NFC_Interface= 0x40
+		# ConfigMethods PushButton= 0x80
+		WPSConfigMethods=0x188
+
+	}
+	GroupId={
+		GroupAddr=00:00:00:00:00:00
+		GroupSsId=DIRECT-
+	}
+	GroupBSSId={
+		GroupBssId=00:00:00:00:00:00
+	}
+	DeviceId={
+		WIFIDIR_MAC=00:00:00:00:00:00
+	}
+	Interface={
+		InterfaceAddress=00:00:00:00:00:00
+		InterfaceAddressCount=2
+		InterfaceAddressList=00:00:00:00:00:00,00:00:00:00:00:00
+	}
+	ConfigurationTimeout={
+        # units of 10 milliseconds
+		GroupConfigurationTimeout=100
+		ClientConfigurationTimeout=150
+	}
+	ExtendedListenTime={
+        # units of milliseconds
+		AvailabilityPeriod=1000
+		AvailabilityInterval=1500
+	}
+	IntendedIntfAddress={
+	}
+	OperatingChannel={                          # Operating channel attribute.
+		CountryString="US"
+		OpRegulatoryClass=81
+		OpChannelNumber=1
+	}
+	InvitationFlagBitmap={
+		InvitationFlag=0            # bit0: Invitation type:
+	}                                   # 0: request to reinvoke a persistent group
+                                            # 1: request to join an active WIFIDIRECT group
+
+    #Extra={
+       #Buffer=0x00,0x50,0x43,0x07,0x20,0xa1
+    #}
+
+    #
+	# WPS IE parameters.
+    #
+	WPSIE={
+		WPSVersion=0x10
+		WPSSetupState=0x1
+		WPSRequestType=0x0
+		WPSResponseType=0x0
+		WPSSpecConfigMethods=0x0188		
+		WPSUUID=0x12,0x34,0x56,0x78,0x12,0x34,0x56,0x78,0x12,0x34,0x56,0x78,0x12,0x34,0x56,0x78
+		WPSPrimaryDeviceType=0x00,0x0A,0x00,0x50,0xF2,0x04,0x00,0x04
+		WPSRFBand=0x01
+		WPSAssociationState=0x00
+		WPSConfigurationError=0x00
+		WPSDeviceName=MRVL_DEFAULT_NAME
+		WPSManufacturer=Marvell
+		WPSModelName=SD-8787
+		WPSModelNumber=0x00,0x00,0x00,0x01
+		WPSSerialNumber=0x00,0x00,0x00,0x01
+        WPSVendorExtension=0x00,0x37,0x2A,0x00,0x01,0x20
+	}
+}
+
+
+######################### WIFIDIR Parameters configuration command #######
+
+wifidir_param_config={
+	MinDiscoveryInterval=1
+	MaxDiscoveryInterval=7
+	EnableScan=1
+	#ScanPeerDeviceId=00:50:43:77:66:41
+	#ScanRequestDeviceType=0x01,0x00,0x50,0xF2,0x04,0x01,0x3C,0x10
+	DeviceState=4
+}
+==CONNCFG
+      <Name>Connectivity_NvideaPufferStats</Name>
+      <EnvName>NV_PB_STATS</EnvName>
+      <Value>uap0</Value>
+<ProcessTable>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <OnTerminate>RESTART_ALWAYS</OnTerminate>
+      <MaxProcessRestarts>5</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <OnTerminate>RESTART_ALWAYS</OnTerminate>
+      <MaxProcessRestarts>5</MaxProcessRestarts>
+      <Args>-f /var/opt/conn/pss_config.cfg -s wicome_config -r /opt/conn/data,/var/opt/conn -k HostAgent.Port=2020 MonitorService.Port=2021 VerboseLevel=5</Args>
+      <ResArgs>-f /var/opt/conn/pss_config.cfg -s wicome_config -r /opt/conn/data,/var/opt/conn -k HostAgent.Port=2020 MonitorService.Port=2021 VerboseLevel=5</ResArgs>
+      <StartParam>BACKGROUND_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <OnTerminate>RESTART_ALWAYS</OnTerminate>
+      <MaxProcessRestarts>5</MaxProcessRestarts>
+      <Name>/opt/conn/bin/ConnStarter</Name>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <Args>-f /var/opt/conn/pss_config.cfg -s wicome_config -r /opt/conn/data/JPN,/var/opt/conn -k HostAgent.Port=2020 MonitorService.Port=2021 VerboseLevel=5</Args>
+      <ResArgs>-f /var/opt/conn/pss_config.cfg -s wicome_config -r /opt/conn/data/JPN,/var/opt/conn -k HostAgent.Port=2020 MonitorService.Port=2021 VerboseLevel=5</ResArgs>
+      <StartParam>BACKGROUND_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>DETACHED_DAEMON_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <Name>/opt/conn/bin/start_webserver.sh</Name>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>DETACHED_DAEMON</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>BACKGROUND</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <Args>-dipod,acp=acp:path=/dev/i2c/i2c_1/acp:addr=0x20,fnames=short,transport=ser:nosyncbyte:dev=/dev/IAP1,mount=/fs/btipod,playback,rtimeout=2000,polltimeout=3000,verbose=5,logfile=/dev/console,splash=/tmp/mm/150_73_sw.logo:/tmp/mm/166_76.logo,config=/opt/mm/etc/ipod_ser.cfg,config=/mnt/quota/mm/A4A/eaf.cfg</Args>
+      <ResArgs>-dipod,acp=acp:path=/dev/i2c/i2c_1/acp:addr=0x20,fnames=short,transport=ser:nosyncbyte:dev=/dev/IAP1,mount=/fs/btipod,playback,rtimeout=2000,polltimeout=3000,verbose=5,logfile=/dev/console,splash=/tmp/mm/150_73_sw.logo:/tmp/mm/166_76.logo,config=/opt/mm/etc/ipod_ser.cfg,config=/mnt/quota/mm/A4A/eaf.cfg</ResArgs>
+      <StartParam>DETACHED_DAEMON_SILENCE</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <StartParam>DETACHED_DAEMON</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+      <Args>-a har-i2c-iap2 -m /dev/ipod_wifi -d iap2,config=/var/opt/conn/carplay/iap2_Wifi.cfg,ppsdir=/pps/services/multimedia/iap2_wifi,probe -t bt,path=/dev/carplayiap,type=wifi -vvvvvvvv -l slog</Args>
+      <ResArgs>-a har-i2c-iap2 -m /dev/ipod_wifi -d iap2,config=/var/opt/conn/carplay/iap2_Wifi.cfg,ppsdir=/pps/services/multimedia/iap2_wifi,probe -t bt,path=/dev/carplayiap,type=wifi -vvvvvvvv -l slog</ResArgs>
+      <StartParam>DETACHED_DAEMON</StartParam>
+      <MaxProcessRestarts>0</MaxProcessRestarts>
+</ProcessTable>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <Name>CONN_A2DP_DRIVER</Name>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <Name>CONN_CARPLAY_BT_DRIVER</Name>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <Name>CONN_CARPLAY_WLAN_DRIVER</Name>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+      <RequestState>STOP</RequestState>
+      <StartEntryAction>
+      </StartEntryAction>
+      <StartExitAction>
+      </StartExitAction>
+==PSS-NET
+NetworkingService_vlan77.ipnetmask = 255.255.255.240
+NetworkingService_vlan77.ipmode = static
+NetworkingService_vlan77.ipaddress = 160.48.199.225
+NetworkingService_uap0.startdhcps = manual
+NetworkingService_uap0.ipnetmask = 255.255.255.0
+NetworkingService_uap0.ipmode = static
+NetworkingService_uap0.ipaddress = 172.16.224.1
+NetworkingService_uap0.dhcpsrange = 172.16.224.100, 172.16.224.254
+NetworkingService_uap0.defaultgateway = 0.0.0.0
+NetworkingService_uap0.configpath = /fs/sda0/opt/conn/data/hostapd.conf
+NetworkingService_uap0.coalescingparameters = 0, 0
+NetworkingService_0_wd.ifname = wfd0
+NetworkingService_0_ap.ifname = uap0
+NetworkingService_0.type = wlan.8787
+NetworkingService_0.mounttype = io-pkt
+NetworkingService_0.mountparam = resetoffset=227, poweronoffset=82, dma4=17, fwdump_dir=/var/dump, verbose=1, sdio=3, clock=48M, fwpath=/opt/conn/etc/sd8787_uapsta.bin
+NetworkingService_0.mountdir = /opt/conn/lib/devnp-mv8787-omap5.so
+NetworkingService_0.mode = 2
+NetworkingService.dnsservers = 172.16.224.1
+NetworkingService.dhcpsmaxleasetime = 259200
+NetworkingService.dhcpsdefaultleasetime = 259200
+NetworkingService.dhcpdlease = /var/opt/conn
+NetworkingService.dhcpdconf = /var/opt/conn
+NetworkingService.autostartif = 0
+ConnMngr.apPrefix = uap
+ConnMngr.WlanDefault = off
+ConnMngr.TxPower = 70
+ConnMngr.ConfPath = /tmp/scp/
+==MWUD
+     pid Arguments
+     pid Arguments
+     pid Arguments
+# ssh exit code: 0

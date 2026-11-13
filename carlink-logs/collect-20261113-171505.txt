@@ -1,0 +1,41 @@
+﻿# collect  2026-11-13 17:15:05
+Fri Nov 13 09:15:06 UTC 2026
+-rw-rw-rw-  2 root      root            881 Nov 13 09:14 carlink-supervisor.log
+==AUDIO
+==LATENCY
+==KNOB
+==SUPERVISOR
+09:14:03 carlink: supervisor 630892 starting
+09:14:05 carlink: supervisor 630892 up: waiting for the phone
+09:14:05 carlink: clearing the factory CarPlay context (no phone plugged in)
+unknown symbol: kdMain referenced from libKD.so.1
+unknown symbol: kdMain referenced from libKD.so.1
+Destroying cpvideoctx16838. Factory CarPlay stays unavailable until the head unit restarts.
+unknown symbol: kdMain referenced from libKD.so.1
+09:14:06 carlink: quit requested
+loaded strm: /opt/conn/lib/carplay/libstrm.so
+resolve connect=1 disconnect=1 open=1 stop=1 destroy=1
+mmr_connect ok
+mmr_context_open cpvideoctx16838 ok
+mmr_stop rc=0 errno=0
+mmr_context_destroy rc=0 errno=0
+mmr_disconnect returned
+exit=0
+purge exit=0
+Remaining contexts:
+unknown symbol: kdMain referenced from libKD.so.1
+09:14:06 carlink: shutting down
+09:14:06 carlink: factory CarPlay context cleared: plug the phone in
+==SESSION
+tail:  unable to open 'carlink-session.log' (No such file or directory)
+==KEEP
+total 168
+drwxrwxrwx  2 root      root           4096 Nov 12 15:29 .
+drwxr-xr-x  3 root      root           4096 Nov 12 14:11 ..
+-rw-rw-rw-  1 root      root          19659 Nov 12 14:58 prev-session.log
+-rw-rw-rw-  1 root      root           4820 Nov 12 14:58 prev-shm.txt
+-rw-rw-rw-  1 root      root          12691 Nov 12 14:58 prev-supervisor.log
+-rw-rw-rw-  1 root      root          20793 Nov 12 15:29 session.log
+-rw-rw-rw-  1 root      root           4764 Nov 12 15:29 shm.txt
+-rw-rw-rw-  1 root      root          13512 Nov 12 15:29 supervisor.log
+# ssh exit code: 0

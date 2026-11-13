@@ -1,0 +1,12 @@
+﻿# wifi-on  2026-11-13 17:55:08
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-audio-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-audio-play-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-keep-log-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-readthread-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-watch-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:55 carlink-wifi-enable
+-rwxr-xr-x  1 root      root          34740 Nov 13 09:54 /opt/aa/carlink/carlife_qnx_usb_capture.elf
+-rwxr-xr-x  1 root      root           7842 Nov 13 09:54 /opt/aa/carlink/carlife_usb_visible.sh
+-rwxr-xr-x  1 root      root          24533 Nov 13 09:54 /opt/aa/nbt-aad
+Fri Nov 13 09:55:10 UTC 2026
+# ssh exit code: 0

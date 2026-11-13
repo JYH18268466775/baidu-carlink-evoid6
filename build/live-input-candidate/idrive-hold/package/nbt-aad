@@ -1,0 +1,20 @@
+#!/bin/sh
+# Stand-in for the NBT-AAD daemon, for the iDrive hold only (CarLink).
+# The NBT-AAD iDrive app starts /opt/aa/nbt-aad from its menu and treats a live pid plus
+# "connected <pid> 1" in the state file as "projection on screen": it then keeps iDrive on its
+# own blank state, so knob turns and pushes no longer operate the factory menu underneath.
+# This script projects nothing. CarLife is started separately; stop this script (Force Stop in
+# the Android Auto menu, or SIGTERM) when the projection ends.
+state=${IDH_STATE_FILE:-/dev/shmem/nbt-aad-state}
+log=${IDH_SHIM_LOG:-/dev/shmem/idhold-shim.log}
+cleanup() {
+    echo "idle 0 0" > "$state"
+    echo "shim $$ stopped" >> "$log"
+    exit 0
+}
+trap cleanup 1 2 15
+echo "connected $$ 1" > "$state"
+echo "shim $$ started" >> "$log"
+while :; do
+    sleep 1
+done

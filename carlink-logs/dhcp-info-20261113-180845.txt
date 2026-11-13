@@ -1,0 +1,153 @@
+﻿# dhcp-info  2026-11-13 18:08:45
+Fri Nov 13 10:08:47 UTC 2026
+==CONF
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.224.0 netmask 255.255.255.0 {
+   option routers 0.0.0.0;
+   option domain-name-servers 172.16.224.1;
+   range 172.16.224.100 172.16.224.254;
+}
+==LEASES
+lease 172.16.224.103 {
+  starts 5 2026/11/13 09:33:46;
+  ends 1 2026/11/16 09:33:46;
+  cltt 5 2026/11/13 09:33:46;
+  binding state active;
+  next binding state free;
+  hardware ethernet 6a:1d:79:b4:44:13;
+  uid "\001j\035y\264D\023";
+  client-hostname "Jane-s25-Ultra";
+}
+lease 172.16.224.103 {
+  starts 5 2026/11/13 09:54:31;
+  ends 1 2026/11/16 09:54:31;
+  cltt 5 2026/11/13 09:54:31;
+  binding state active;
+  next binding state free;
+  hardware ethernet 6a:1d:79:b4:44:13;
+  uid "\001j\035y\264D\023";
+  client-hostname "Jane-s25-Ultra";
+}
+lease 172.16.224.103 {
+  starts 5 2026/11/13 10:04:23;
+  ends 1 2026/11/16 10:04:23;
+  cltt 5 2026/11/13 10:04:23;
+  binding state active;
+  next binding state free;
+  hardware ethernet 6a:1d:79:b4:44:13;
+  uid "\001j\035y\264D\023";
+  client-hostname "Jane-s25-Ultra";
+}
+lease 172.16.224.103 {
+  starts 5 2026/11/13 10:05:02;
+  ends 1 2026/11/16 10:05:02;
+  cltt 5 2026/11/13 10:05:02;
+  binding state active;
+  next binding state free;
+  hardware ethernet 6a:1d:79:b4:44:13;
+  uid "\001j\035y\264D\023";
+  client-hostname "Jane-s25-Ultra";
+}
+lease 172.16.224.103 {
+  starts 5 2026/11/13 10:05:03;
+  ends 1 2026/11/16 10:05:03;
+  cltt 5 2026/11/13 10:05:03;
+  binding state active;
+  next binding state free;
+  hardware ethernet 6a:1d:79:b4:44:13;
+  uid "\001j\035y\264D\023";
+  client-hostname "Jane-s25-Ultra";
+}
+lease 172.16.224.103 {
+  starts 5 2026/11/13 10:05:40;
+  ends 1 2026/11/16 10:05:40;
+  cltt 5 2026/11/13 10:05:40;
+  binding state active;
+  next binding state free;
+  hardware ethernet 6a:1d:79:b4:44:13;
+  uid "\001j\035y\264D\023";
+  client-hostname "Jane-s25-Ultra";
+}
+==ROUTES
+Routing tables
+
+Internet:
+Destination        Gateway            Flags    Refs      Use    Mtu  Interface
+0/8                link#4             UC          0        0      -  dwc0 =>
+0/1                172.16.223.2       UGS         0    21436  33192  lo1
+127.0.0.1          127.0.0.1          UH         17    78929  33192  lo0
+128/1              172.16.223.2       UGS         0        0  33192  lo1
+160.48.199.0/25    link#5             UC          0        0      -  vlan73
+160.48.199.97      00:13:1e:2f:a4:2e  UHLS        9    21862      -  vlan73
+160.48.199.99      d0:b5:c2:0b:f3:92  UHLS        0        0      -  vlan73
+160.48.199.119     127.0.0.1          UH          1        0  33192  lo0
+160.48.199.184/29  link#8             UC          1        0      -  vlan80
+160.48.199.185     127.0.0.1          UH          0        0  33192  lo0
+160.48.199.186     00:13:1e:2f:a4:2e  UHLc        1      237      -  vlan80
+160.48.199.224/28  link#6             UC          0        0      -  vlan77
+160.48.199.225     127.0.0.1          UH          0        0  33192  lo0
+160.48.199.252/30  link#3             UC          1        0      -  veom0
+160.48.199.253     00:01:02:03:04:05  UHLc       21     8512      -  veom0
+169.254/16         link#4             UCS         2        0      -  dwc0
+169.254.213.50     5c:53:10:29:2b:cc  UHLc        1    68414      -  dwc0
+172.16.223.1       172.16.223.1       UH          0        0  33192  lo1
+172.16.224/24      link#9             UC          2        0      -  uap0
+172.16.224.101     1a:7d:f3:5b:89:af  UHLc        0       10      -  uap0
+172.16.224.103     6a:1d:79:b4:44:13  UHLc        8    75441      -  uap0
+224/4              160.48.199.119     UGS         9     7028      -  vlan73
+
+Internet6:
+Destination                        Gateway                        Flags    Refs      Use    Mtu  Interface
+==IFCONFIG
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 33192
+	inet 127.0.0.1 netmask 0xff000000
+pflog0: flags=0 mtu 33192
+veom0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.254 netmask 0xfffffffc broadcast 160.48.199.255
+dwc0: flags=8b43<UP,BROADCAST,RUNNING,PROMISC,ALLMULTI,SIMPLEX,MULTICAST> mtu 1500
+	inet 0.0.0.0 netmask 0xff000000 broadcast 255.255.255.255
+	inet alias 169.254.199.119 netmask 0xffff0000 broadcast 169.254.255.255
+vlan73: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.119 netmask 0xffffff80 broadcast 160.48.199.127
+vlan77: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.225 netmask 0xfffffff0 broadcast 160.48.199.239
+vlan86: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+vlan80: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.185 netmask 0xfffffff8 broadcast 160.48.199.191
+uap0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 172.16.224.1 netmask 0xffffff00 broadcast 172.16.224.255
+lo1: flags=ffff8049<UP,LOOPBACK,RUNNING,MULTICAST,SHIM> mtu 33192
+	inet 172.16.223.1 netmask 0xfffffffc
+==DHCPD
+     pid Arguments
+  401504 dhcpd -f -d -cf /var/opt/conn/dhcpd.uap0.conf -lf /var/opt/conn/dhcpd.uap0.leases -pf /tmp/dhcpd.pid.uap0 uap0
+total 162
+drwxrwxr-x  4 conn      conn           4096 Nov 13 09:38 .
+drwxrwxr-x 10 root      root           4096 Nov 09 05:02 ..
+-rwxrwxrwx  1 root      root              4 Nov 07 23:12 ResetBasicState.dat
+-rwxrwxrwx  1 root      root             20 Nov 07 13:36 WFDPass.conf
+-rwxrwxrwx  1 root      root             16 Nov 07 13:36 WFDWps.conf
+-rw-rw-rw-  1 root      root             12 Jan 01  2000 bdaddr.txt
+-rw-rw-rw-  1 root      root          20796 Nov 13 09:38 bss.bak
+-rw-rw-rw-  1 root      root          20142 Nov 13 09:38 bss.ddb
+drwxrwxrwx  2 root      root           4096 Nov 07 23:14 carplay
+-rw-rw-rw-  1 root      root            556 Nov 13 09:38 devicelist.dat
+-rw-rw-rw-  1 root      root            304 Nov 13 09:10 dhcpd.uap0.conf
+-rw-rw-r--  1 root      root           3800 Nov 13 10:05 dhcpd.uap0.leases
+-rw-rw-r--  1 root      root           1352 Nov 13 09:09 dhcpd.uap0.leases~
+-rw-rw-rw-  1 root      root            233 Nov 07 23:05 dhcpd.wfd0.conf
+-rw-rw-r--  1 root      root            191 Nov 07 23:05 dhcpd.wfd0.leases
+-rw-rw-r--  1 root      root            191 Nov 07 23:00 dhcpd.wfd0.leases~
+-rwxrwxrwx  1 root      root             25 Nov 12 15:29 macaddr.txt
+-rwxrwxrwx  1 root      root             28 Nov 07 13:37 old_label.txt
+-rw-rw-rw-  1 root      root            832 Nov 11 04:55 pdl.dat
+-rwxrwxrwx  1 root      root           8489 Nov 07 23:12 pss_config.cfg
+drwxrwxrwx  2 root      root           4096 Nov 16  2019 teleservices
+-rwxrwxrwx  1 root      root           3271 Nov 07 23:14 wifidir_init.conf
+# ssh exit code: 0

@@ -1,0 +1,238 @@
+﻿# wifi-try-103  2026-11-13 17:38:58
+receiver 34556 bytes, launcher 7842 bytes
+-rwxr-xr-x  2 root      root          34556 Nov 13 09:39 clmenu-wcap.elf
+-rw-r--r--  2 root      root           7842 Nov 13 09:39 clmenu-wlaunch.sh
+ilm-lib=/opt/sys/lib/libilmClient.cpp-ne.so.1
+ilm-lib=/opt/sys/lib/libilmClient.cpp-ne.so.1
+LD_LIBRARY_PATH=/opt/sys/lib:/opt/sys/lib:/boot/lib:/lib:/usr/lib:/opt/os/lib:/opt/sys/lib:/opt/core/lib:/opt/car/lib:/lib/graphics/omap5430
+==CONTEXTS
+==LAYER-BEFORE
+layer 2147483648 (0x80000000)
+---------------------------------------
+- created by pid:       127006
+- original size:        x=1280, y=480
+- destination region:   x=0, y=0, w=1280, h=480
+- source region:        x=0, y=0, w=1280, h=480
+- orientation:          0 (up is top)
+- opacity:              1
+- visibility:           1
+- type:                 2 (software 2d)
+- chromakey:            disabled (r=0, g=0, b=0)
+- surface render order: 256(0x100), 
+- on screen:            LayerManagerService returned: invalid arguments provided
+Failed to get available layers on screen with ID2415944
+surface 256 (0x100)
+---------------------------------------
+- created by pid:       127006
+- original size:      x=1280, y=480
+- destination region: x=0, y=0, w=1280, h=480
+- source region:      x=0, y=0, w=1280, h=480
+- virtual viewport:   x=0, y=0, w=0, h=0
+- orientation:        0 (up is top)
+- opacity:            1
+- visibility:         1
+- pixel format:       7 (unknown)
+- native surface:     2114824
+- accepts input from: keyboard mouse touch 
+- has keyboard focus: false
+- chromakey:          disabled (r=0, g=0, b=0)
+- counters:           frame=0, draw=0, update=0
+- on layer:           2147483648(0x80000000) 
+surface 1510 (0x5e6)
+---------------------------------------
+LayerManagerService returned: resource was not found
+No surface with ID 1510 found
+==RESTORE-iDrive-layer
+==LAYER-AFTER
+layer 2147483648 (0x80000000)
+---------------------------------------
+- created by pid:       127006
+- original size:        x=1280, y=480
+- destination region:   x=0, y=0, w=1280, h=480
+- source region:        x=0, y=0, w=1280, h=480
+- orientation:          0 (up is top)
+- opacity:              1
+- visibility:           1
+- type:                 2 (software 2d)
+- chromakey:            disabled (r=0, g=0, b=0)
+- surface render order: 256(0x100), 
+- on screen:            LayerManagerService returned: invalid arguments provided
+Failed to get available layers on screen with ID2416064
+surface 256 (0x100)
+---------------------------------------
+- created by pid:       127006
+- original size:      x=1280, y=480
+- destination region: x=0, y=0, w=1280, h=480
+- source region:      x=0, y=0, w=1280, h=480
+- virtual viewport:   x=0, y=0, w=0, h=0
+- orientation:        0 (up is top)
+- opacity:            1
+- visibility:         1
+- pixel format:       7 (unknown)
+- native surface:     2114824
+- accepts input from: keyboard mouse touch 
+- has keyboard focus: false
+- chromakey:          disabled (r=0, g=0, b=0)
+- counters:           frame=0, draw=0, update=0
+- on layer:           2147483648(0x80000000) 
+==== NOW press Start connection on the phone. The car waits up to 30 s for it.
+Starting live CarLife video on 172.16.224.103 (900 frames, 60-second USB limit).
+Wi-Fi: waiting for the phone to open port 7240 (press Start connection on the phone)
+Wi-Fi: connected to 172.16.224.103:7240
+Wi-Fi: connected to 172.16.224.103:8240
+Wi-Fi: connected to 172.16.224.103:9240
+Wi-Fi: connected to 172.16.224.103:9241
+Wi-Fi: connected to 172.16.224.103:9242
+Wi-Fi: connected to 172.16.224.103:9340
+HU_PROTOCOL_VERSION 1.0 sent over Wi-Fi
+CarLife CMD RX 0x00010002 (2 bytes)
+CarLife 1.0 accepted; requesting 1280x480 @ 30 fps
+CarLife CMD RX 0x0001001b (0 bytes)
+CarLife CMD RX 0x00010018 (0 bytes)
+CarLife CMD RX 0x00010004 (307 bytes)
+CarLife CMD RX 0x0001004b (2 bytes)
+CarLife CMD RX 0x00010051 (0 bytes)
+CarLife CMD RX 0x00010031 (0 bytes)
+CarLife CMD RX 0x00010008 (8 bytes)
+Phone encoder: 1280x720 @ 30 fps
+VIDEO_ENCODER_START sent; waiting for SPS, PPS and IDR
+CarLife CMD RX 0x0001001b (0 bytes)
+Captured Annex B SPS + PPS + first IDR
+Key input enabled: first video frame queued
+loading strm and mmr client
+loaded strm: /opt/conn/lib/carplay/libstrm.so
+resolve mmr_connect=1 mmr_disconnect=1
+calling mmr_connect(NULL)
+mmr_connect ok
+resolve context create=1 destroy=1
+creating context carlifebench2912372
+resolve output attach=1 detach=1
+mmr_context_parameters rc=0 errno=0
+create screen context rc=0 errno=0
+create window rc=0 errno=0
+set hidden rc=0 errno=0
+read visibility before attach rc=0 errno=0
+visible=0
+create window group rc=0 errno=0
+query display count rc=0 errno=0
+query displays rc=0 errno=0
+bind display rc=0 errno=0
+set anchor video usage rc=0 errno=0
+register anchor ID 1510 rc=0 errno=0
+set anchor source size rc=0 errno=0
+set anchor position rc=0 errno=0
+set anchor format rc=0 errno=0
+set anchor background rc=0 errno=0
+create anchor buffer rc=0 errno=0
+get anchor buffer rc=0 errno=0
+fill anchor buffer rc=0 errno=0
+post anchor buffer rc=0 errno=0
+keep anchor hidden rc=0 errno=0
+verify prepared anchor hidden rc=0 errno=0
+visible=0
+attaching output screen:/any?winid=1510&nodstviewport=0&dstx=0&dsty=0&dstw=1280&dsth=480&wingrp=carlifebench2912372
+mmr_output_attach rc=0 errno=0
+read visibility after attach rc=0 errno=0
+visible=0
+mmr_output_parameters rc=0 errno=0
+resolve input attach=1 detach=1
+mmr_input_parameters rc=0 errno=0
+speed before input rc=0 errno=0
+attaching H.264 input
+CarLife CMD RX 0x00010036 (4 bytes)
+mmr_input_attach rc=0 errno=0
+reapplying context and input parameters after input attach
+mmr_context_parameters rc=0 errno=0
+mmr_input_parameters rc=0 errno=0
+resolve play=1 stop=1
+speed before play rc=0 errno=0
+create output event rc=0 errno=0
+starting renderer
+mmr_play rc=0 errno=0
+speed after play rc=0 errno=0
+release renderer window handle rc=0 errno=0
+renderer post before feed=0
+raise private anchor rc=0 errno=0
+show private anchor rc=0 errno=0
+show private video rc=0 errno=0
+flush private visibility rc=0 errno=0
+private video visibility before LayerManager=0
+calling visible LayerManager stage
+Checking iDrive baseline before visible switch
+CarLife CMD RX 0x00010026 (32 bytes)
+Display fit (fit): phone 1280x720, source rows 0+480, destination 213,0 853x480
+VISIBLE TEST: observe the CarLife display.
+A successful command does not prove physical display.
+CarLife CMD RX 0x00010022 (0 bytes)
+CarLife CMD RX 0x00010035 (28331 bytes)
+USB video progress: 60 frames queued
+USB video progress: 120 frames queued
+Audio format: 44100 Hz, 2 channel(s), 16 bits
+Audio format: 44100 Hz, 2 channel(s), 16 bits
+CarLife CMD RX 0x00010026 (8 bytes)
+USB video progress: 180 frames queued
+CarLife CMD RX 0x00010036 (2 bytes)
+CarLife CMD RX 0x00010035 (3688 bytes)
+CarLife CMD RX 0x00010035 (3688 bytes)
+CarLife CMD RX 0x00010035 (3688 bytes)
+CarLife CMD RX 0x00010035 (7855 bytes)
+CarLife CMD RX 0x00010035 (28230 bytes)
+CarLife CMD RX 0x00010035 (28230 bytes)
+CarLife CMD RX 0x00010026 (8 bytes)
+CarLife CMD RX 0x00010035 (28230 bytes)
+CarLife CMD RX 0x00010035 (3683 bytes)
+CarLife CMD RX 0x00010035 (3683 bytes)
+CarLife CMD RX 0x00010035 (3683 bytes)
+CarLife CMD RX 0x00010035 (3683 bytes)
+CarLife CMD RX 0x00010035 (7850 bytes)
+CarLife CMD RX 0x00010035 (7850 bytes)
+CarLife CMD RX 0x00010035 (7850 bytes)
+CarLife CMD RX 0x00010035 (7850 bytes)
+USB video progress: 240 frames queued
+Audio format: 44100 Hz, 2 channel(s), 16 bits
+Audio format: 44100 Hz, 2 channel(s), 16 bits
+CarLife CMD RX 0x00010026 (8 bytes)
+CarLife CMD RX 0x00010035 (7850 bytes)
+CarLife CMD RX 0x00010035 (7850 bytes)
+USB video progress: 300 frames queued
+CarLife CMD RX 0x00010035 (7850 bytes)
+USB video progress: 360 frames queued
+CarLife CMD RX 0x00010035 (7850 bytes)
+USB video progress: 420 frames queued
+CarLife CMD RX 0x00010035 (7850 bytes)
+iDrive layer order and visibility restored.
+Display session completed; stopping this USB session.
+visible LayerManager stage raw status=0
+hide private video rc=0 errno=0
+hide private anchor rc=0 errno=0
+verify anchor restored rc=0 errno=0
+visible=0
+release renderer window handle rc=0 errno=0
+renderer window post id=1510 visible=0
+visible clip first POST=1
+mdev accepted frames=472 close rc=0
+mmr_stop rc=0 errno=0
+destroy output event rc=0 errno=0
+detaching input
+mmr_input_detach rc=0 errno=0
+read visibility after input rc=0 errno=0
+visible=0
+detaching output 0
+mmr_output_detach rc=0 errno=0
+destroy window rc=0 errno=0
+destroy screen context rc=0 errno=0
+context created; destroying carlifebench2912372
+mmr_context_destroy rc=0 errno=0
+calling mmr_disconnect
+mmr_disconnect returned
+close mmr client rc=0
+close strm rc=0
+exit=0
+CarLife CMD RX 0x00010035 (3705 bytes)
+CarLife CMD RX 0x00010035 (3705 bytes)
+CarLife CMD RX 0x00010035 (7872 bytes)
+Removed detached CarLife surface 1510.
+USB capture stopped after completed display.
+launch-exit=0
+==CONTEXTS-AFTER
+# ssh exit code: 0

@@ -1,0 +1,26 @@
+# Own vectors built from the documented controller layouts (wrap-around, other instance, older CCS protocol).
+# inst fkt op payload-hex
+03 C46 C 01 ff fe 00 00 00 00 ff
+03 C46 C 02 00 01 00 00 00 00 ff
+03 C46 C 03 00 01 00 04 00 00 ff
+03 C46 C 04 00 01 01 00 00 00 ff
+03 C46 C 05 00 01 00 0a 00 00 ff
+03 C46 C 06 00 02 00 00 00 00 ff
+03 C47 C 00 01 00 00 00 00 00
+03 C47 C 00 00 00 00 00 00 00
+03 C4F C 00 01 00 00 00 00 00 07
+03 C4F C 00 00 00 00 00 00 00 07
+05 C46 C 05 00 09 00 00 00 00 ff
+01 C10 C 01 1d ff 7f ff 1e 00
+01 C10 C 01 1d 05 7f ff 1e 00
+01 C10 C 01 1d 05 80 01 1e 00
+01 C10 C 01 1d 06 7f fe 1e 00
+01 C10 C 01 1d 07 7f ff 1e 01
+01 C20 C 01 1d 07 01 00 1e 01
+01 C20 C 01 1d 08 00 00 1e 01
+01 C20 C 01 1d 09 01 02 1d 00
+01 C20 C 01 1d 0a 00 00 1d 00
+01 C20 C 01 1d 0b 01 00 00 02
+01 C20 C 01 1d 0c 00 00 00 02
+01 C20 C 01 1d ff 01 00 00 02
+01 C20 C 01 1d 0d 03 00 00 02

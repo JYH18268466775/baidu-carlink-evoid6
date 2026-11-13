@@ -1,0 +1,19 @@
+﻿# prep  2026-11-13 17:14:58
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-audio-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-audio-play-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-keep-log-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-readthread-enable
+-rw-r--r--  2 root      root              0 Nov 13 09:14 carlink-watch-enable
+-rwxr-xr-x  2 root      root           5884 Nov 13 09:14 /dev/shmem/clmenu-tcpprobe.elf
+-rwxr-xr-x  1 root      root           1362 Nov 12 04:39 /opt/aa/carlink/carlife_cp_purge.sh
+-rwxr-xr-x  1 root      root           5984 Nov 12 04:39 /opt/aa/carlink/carlife_qnx_cp_purge.elf
+-rwxr-xr-x  1 root      root           6060 Nov 12 04:39 /opt/aa/carlink/carlife_qnx_ctl.elf
+-rwxr-xr-x  1 root      root         149384 Nov 12 04:38 /opt/aa/carlink/carlife_qnx_mmr_replay.elf
+-rwxr-xr-x  1 root      root          16132 Nov 13 09:14 /opt/aa/carlink/carlife_qnx_most_watch.elf
+-rwxr-xr-x  1 root      root           1077 Nov 12 04:39 /opt/aa/carlink/carlife_qnx_replay_guard.sh
+-rwxr-xr-x  1 root      root          34556 Nov 13 09:14 /opt/aa/carlink/carlife_qnx_usb_capture.elf
+-rwxr-xr-x  1 root      root           6940 Nov 12 04:39 /opt/aa/carlink/carlife_usb_visible.sh
+-rwxr-xr-x  1 root      root          10051 Nov 13 09:14 /opt/aa/carlink/carlife_visible_first_frame.sh
+-rwxr-xr-x  1 root      root          21920 Nov 13 09:14 /opt/aa/nbt-aad
+Fri Nov 13 09:14:59 UTC 2026
+# ssh exit code: 0

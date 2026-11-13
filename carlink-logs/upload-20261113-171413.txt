@@ -1,0 +1,13 @@
+﻿# upload  2026-11-13 17:14:13
+   21920  clmenu-nbt-aad  sha256 D4F2E81618824F8B...  -> /opt/aa/nbt-aad
+   34556  clmenu-capture.elf  sha256 A6969E6A0C7BAED0...  -> /opt/aa/carlink/carlife_qnx_usb_capture.elf
+   10051  clmenu-display.sh  sha256 AB3264F429DC5EC1...  -> /opt/aa/carlink/carlife_visible_first_frame.sh
+   16132  clmenu-watch.elf  sha256 2124D0CBB6CF9DF8...  -> /opt/aa/carlink/carlife_qnx_most_watch.elf
+    2553  watch-env-bisect.sh  sha256 B3D24D29EC1CE150...  -> 
+    5884  clmenu-tcpprobe.elf  sha256 DA83E2E49912B5B2...  -> 
+Uploading 6 files, 91096 bytes (enter the password once)
+-rwxr-xr-x  1 root      root          16132 Nov 13 09:14 /opt/aa/carlink/carlife_qnx_most_watch.elf
+-rwxr-xr-x  1 root      root          34556 Nov 13 09:14 /opt/aa/carlink/carlife_qnx_usb_capture.elf
+-rwxr-xr-x  1 root      root          10051 Nov 13 09:14 /opt/aa/carlink/carlife_visible_first_frame.sh
+-rwxr-xr-x  1 root      root          21920 Nov 13 09:14 /opt/aa/nbt-aad
+ssh exit code: 0

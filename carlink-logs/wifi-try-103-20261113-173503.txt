@@ -1,0 +1,10 @@
+﻿# wifi-try-103  2026-11-13 17:35:03
+receiver 34556 bytes, launcher 7842 bytes
+-rwxr-xr-x  2 root      root          34556 Nov 13 09:35 clmenu-wcap.elf
+-rw-r--r--  2 root      root           7842 Nov 13 09:35 clmenu-wlaunch.sh
+==CONTEXTS
+==== NOW press Start connection on the phone. The car waits up to 30 s for it.
+iDrive baseline changed; visible test deferred
+launch-exit=75
+==CONTEXTS-AFTER
+# ssh exit code: 0

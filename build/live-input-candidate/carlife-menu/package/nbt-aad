@@ -1,0 +1,506 @@
+#!/bin/sh
+# CarLife session supervisor. The upstream NBT-AAD iDrive app starts /opt/aa/nbt-aad from its menu ("Start") and talks to
+# it over UDP 127.0.0.1:52790 and /dev/shmem/nbt-aad-state; this script answers that protocol for CarLife:
+#   state file   "<connecting|connected> <pid> <overlay>"   overlay 1 = the CarLife picture is on the panel
+#   ctl messages show / hide / quit / gear N / pdc N (ping is answered by the ctl helper)
+# It waits for the phone, destroys the factory CarPlay video context, runs the capture + display session and the iDrive
+# knob watcher, retries a failed handshake, and hands the panel back to iDrive on reverse gear, park assist or "hide".
+# All files are under CL_SHM (default /dev/shmem, flat); the CL_* overrides exist for the offline tests.
+# The iDrive app starts this script with its own environment. The tools below were verified from an ssh login shell, so use the
+# same library search path (a different path made the MOST watcher crash inside libstdc++ when started from the app).
+if [ -n "${CL_LD_PATH-}" ]; then LD_LIBRARY_PATH=$CL_LD_PATH; export LD_LIBRARY_PATH
+elif [ -d /opt/sys/lib ]; then
+    LD_LIBRARY_PATH=/boot/lib:/lib:/usr/lib:/opt/os/lib:/opt/sys/lib:/opt/core/lib:/opt/car/lib:/lib/graphics/omap5430
+    export LD_LIBRARY_PATH
+fi
+# Same for PATH: the app's PATH lacks the directory with env and id (seen in the car), the ssh shell's has it.
+if [ -n "${CL_PATH-}" ]; then PATH=$CL_PATH; export PATH
+elif [ -d /opt/sys/lib ]; then PATH=/boot/bin:/bin:/opt/os/bin:/opt/sys/bin:/opt/core/bin:/opt/car/bin:.; export PATH
+fi
+SHM=${CL_SHM:-/dev/shmem}
+DIR=${CL_DIR:-/opt/aa/carlink}
+DEV=${CL_DEV:-/dev}
+STATE=${CL_STATE:-$SHM/nbt-aad-state}
+LOG=${CL_LOG:-$SHM/carlink-supervisor.log}
+PORT=${CL_PORT:-52790}
+REVERSE=${NBT_GEAR_REVERSE:-2}
+PDC_ACTIVE=${NBT_PDC_ACTIVE:-1}
+GEAR_FILE=${CL_GEAR_FILE:-$SHM/nbt-aad-gear}
+PDC_FILE=${CL_PDC_FILE:-$SHM/nbt-aad-pdc}
+LMC=${CL_LMC:-/opt/sys/bin/LayerManagerControl}
+CTL=${CL_CTL:-$DIR/carlife_qnx_ctl.elf}
+MAX_FAILS=${CL_MAX_FAILS:-3}
+HIDE=$SHM/carlink-hide        # exists while iDrive owns the panel (reverse, park assist, hide): display + watcher obey it
+STOP=$SHM/carlink-stop        # session stop (display script and launcher)
+WSTOP=$SHM/carlink-watch-stop # watcher stop
+SLOG=$SHM/carlink-session.log   # output of the capture/display sessions, all attempts (rotated to .prev at 200 KB)
+SHOWN=$SHM/carlink-shown      # exists while the CarLife picture is on the panel (written by the display script)
+SEEN=$SHM/carlink-seen        # the picture was shown at least once in the current session
+KEYS=$SHM/carlink-keys        # knob actions: watcher -> capture
+QUIT=$SHM/carlink-quit        # this supervisor is shutting down
+BOUND=$SHM/carlink-bound      # the ctl helper owns the UDP port
+WENABLE=$SHM/carlink-watch-enable  # knob watcher is opt-in (create this file, or CARLINK_WATCH=1) until it is verified in the car
+WIFIENABLE=$SHM/carlink-wifi-enable  # wireless CarLife over the car hotspot (opt-in: create this file, or CARLINK_WIFI=1)
+WIFIPHONE=$SHM/carlink-wifi-phone    # optional: the phone's address(es), 172.16.224.N[,...]; otherwise taken from arp on uap0
+CTXROOT=${CL_CTX_ROOT:-/pps/services/multimedia/renderer/context}
+SUP=$$
+WORKER=
+TICKER=
+PIPE=
+
+log() { echo "$(date +%H:%M:%S) carlink: $*" >> "$LOG"; echo "carlink: $*"; }
+
+restore_direct() {
+    "$LMC" set surface 1510 visibility 0 >/dev/null 2>&1   # the picture stays visible unless the surface itself is hidden
+    "$LMC" set layer 0x80000000 render order 0x100 >/dev/null 2>&1
+    "$LMC" set surface 256 visibility 1 >/dev/null 2>&1
+}
+
+publish_state() {
+    if [ -e "$SHOWN" ]; then line="connected $SUP 1"; else line="connecting $SUP 0"; fi
+    [ "$(cat "$STATE" 2>/dev/null)" = "$line" ] || echo "$line" > "$STATE"
+}
+
+# ---- messages from the iDrive app -------------------------------------------------------------------------------
+apply() {
+    if [ "$userhide" = 1 ] || [ "$rev" = 1 ] || { [ "$pdc" = 1 ] && [ "$dismissed" = 0 ]; }; then
+        # The picture goes first, with no other command in front of it (a log line starts a process, and on this head unit
+        # that takes a noticeable moment). SHOWN goes before HIDE appears, so the display script, which polls once a
+        # second, finds nothing left to restore and does not repeat these commands.
+        wasshown=0
+        if [ -e "$SHOWN" ]; then wasshown=1; rm -f "$SHOWN"; fi
+        newhide=0
+        if [ ! -e "$HIDE" ]; then : > "$HIDE"; newhide=1; fi
+        [ "$wasshown" = 1 ] && restore_direct
+        [ "$newhide" = 1 ] && log "panel handed to iDrive (hide=$userhide reverse=$rev park-assist=$pdc)"
+    elif [ -e "$HIDE" ]; then
+        rm -f "$HIDE"
+        log "panel returned to CarLife"
+    fi
+    publish_state
+}
+
+is_pdc_active() { case ",$PDC_ACTIVE," in *",$1,"*) return 0 ;; esac; return 1; }
+
+event_loop() {
+    userhide=0; rev=0; pdc=0; dismissed=0
+    if [ -r "$GEAR_FILE" ]; then
+        read -r k v < "$GEAR_FILE"
+        [ "$k" = gear ] && [ "$v" = "$REVERSE" ] && rev=1
+    fi
+    if [ -r "$PDC_FILE" ]; then
+        read -r k v < "$PDC_FILE"
+        [ "$k" = pdc ] && is_pdc_active "$v" && pdc=1
+    fi
+    while read -r cmd arg rest; do
+        case "$cmd" in
+            ctl:)
+                if [ "$arg" = bound ]; then : > "$BOUND"; apply; fi
+                continue ;;
+            show)   # the driver chose CarLife: over park assist too, not over reverse gear
+                userhide=0
+                [ "$pdc" = 1 ] && dismissed=1 ;;
+            hide)   userhide=1 ;;
+            gear)   if [ "$arg" = "$REVERSE" ]; then rev=1; else rev=0; fi ;;
+            pdc)    if is_pdc_active "$arg"; then pdc=1; else pdc=0; fi; dismissed=0 ;;
+            quit)   log "quit requested"; kill -TERM "$SUP"; continue ;;
+            *)      continue ;;
+        esac
+        apply
+    done
+}
+
+# ---- the session worker -----------------------------------------------------------------------------------------
+phone_nodes() {
+    for n in "$DEV"/android[0-9]* "$DEV"/oap[0-9]*; do
+        [ -e "$n" ] && return 0
+    done
+    return 1
+}
+
+# ---- wireless CarLife ------------------------------------------------------------------------------------------
+# The phone joins the car hotspot (uap0, 172.16.224.0/24); after "Start connection" in Samsung 车联 / CarLife+ it serves the
+# six CarLife ports and the car connects to it (verified in the car 2026-11-13). The firewall is not touched: the receiver
+# connects from local ports 49512 and up, which the factory rules pass.
+wifi_wanted() { [ -n "${CARLINK_WIFI-}" ] || [ -e "$WIFIENABLE" ]; }
+wifi_candidates() { # comma list of hotspot clients, or the addresses in carlink-wifi-phone
+    if [ -s "$WIFIPHONE" ]; then read -r l < "$WIFIPHONE"; echo "$l"; return; fi
+    out=
+    for ip in $(${CL_ARP:-arp} -an 2>/dev/null | sed -n 's/^? (\(172\.16\.224\.[0-9][0-9]*\)) at .* on uap0.*$/\1/p'); do
+        [ "$ip" = 172.16.224.1 ] && continue
+        out=${out:+$out,}$ip
+    done
+    echo "$out"
+}
+wifi_wait_phone() { # sets WIFI_IP once a phone on the hotspot has opened its CarLife port (Start connection pressed)
+    said=
+    while [ ! -e "$QUIT" ]; do
+        list=$(wifi_candidates)
+        if [ -n "$list" ]; then
+            WIFI_IP=$(CARLINK_WIFI_WAIT=${CL_WIFI_POLL:-5} "${CL_WIFI_WAIT_CMD:-$DIR/carlife_qnx_usb_capture.elf}" --wifi-wait "$list" 2>/dev/null)
+            if [ -n "$WIFI_IP" ]; then log "wireless: phone $WIFI_IP is ready"; return 0; fi
+        fi
+        if [ -z "$said" ]; then
+            log "wireless: waiting for a phone on the car hotspot to press Start connection (hotspot clients: ${list:-none})"
+            said=1
+        fi
+        sleep 2
+    done
+    return 1
+}
+
+wait_phone() {
+    if wifi_wanted; then wifi_wait_phone; return; fi
+    while [ ! -e "$QUIT" ]; do
+        phone_nodes && return 0
+        sleep 2
+    done
+    return 1
+}
+
+ctx_present() { ls "$CTXROOT" 2>/dev/null | grep cpvideoctx >/dev/null; }
+
+# The factory CarPlay video context must be destroyed while NO phone is plugged in (the purge script refuses otherwise).
+# So: purge first, then wait for the phone. A phone that is already plugged in has to be unplugged once.
+prepare_panel() {
+    ctx_present || return 0
+    if phone_nodes; then
+        log "factory CarPlay still holds the decoder and the phone is plugged in: unplug the phone now; CarLife clears CarPlay, then plug it in again"
+        while [ ! -e "$QUIT" ] && phone_nodes; do sleep 1; done
+        [ -e "$QUIT" ] && return 1
+        sleep 2
+    fi
+    log "clearing the factory CarPlay context (no phone plugged in)"
+    stage_files || return 1
+    run_purge
+    if ctx_present; then log "the factory CarPlay context is still present after the purge"; else log "factory CarPlay context cleared: plug the phone in"; fi
+    return 0
+}
+
+stage_files() {
+    [ -n "${CL_NO_STAGE-}" ] && return 0
+    for f in carlife_qnx_usb_capture.elf carlife_qnx_mmr_replay.elf carlife_qnx_most_watch.elf carlife_qnx_cp_purge.elf \
+             carlife_usb_visible.sh carlife_visible_first_frame.sh carlife_cp_purge.sh carlife_qnx_replay_guard.sh; do
+        cp "$DIR/$f" "$SHM/$f" || { log "cannot copy $DIR/$f"; return 1; }
+        chmod +x "$SHM/$f"
+    done
+}
+
+run_purge() {
+    if [ -n "${CL_PURGE_CMD-}" ]; then sh -c "$CL_PURGE_CMD" >> "$LOG" 2>&1; return; fi
+    ( cd "$SHM" && sh ./carlife_cp_purge.sh ./carlife_qnx_cp_purge.elf --yes ) >> "$LOG" 2>&1
+}
+
+# ---- persistent post-mortem log (opt-in) -------------------------------------------------------------------------
+# The head unit sometimes restarts a few minutes after a CarLife session, and /dev/shmem (all our logs) is cleared by the
+# restart. With carlink-keep-log-enable (or CARLINK_KEEP_LOG=1) the tails of the logs are copied to $KEEP, which is on the
+# flash and survives it: every 10 s while a session runs, right after a session ended or the supervisor shut down, and again 20, 60, 120, 180 and 300 s later
+# (so the last copy is within a minute or two of a restart). The copies are small (a few hundred lines) and replaced, not appended.
+KEEP=${CL_KEEP:-/opt/aa/carlink/keep}
+KEEPID=$SHM/carlink-keep-id
+keep_wanted() { [ -n "${CARLINK_KEEP_LOG-}" ] || [ -e "$SHM/carlink-keep-log-enable" ]; }
+keep_snapshot() { # WHY
+    keep_wanted || return 0
+    mkdir -p "$KEEP" 2>/dev/null || return 0
+    {
+        echo "== $1 at $(date +%H:%M:%S)"
+        tail -n 300 "$LOG" 2>/dev/null
+    } > "$KEEP/supervisor.log.tmp" 2>/dev/null && mv -f "$KEEP/supervisor.log.tmp" "$KEEP/supervisor.log"
+    tail -n 400 "$SLOG" > "$KEEP/session.log.tmp" 2>/dev/null && mv -f "$KEEP/session.log.tmp" "$KEEP/session.log"
+    {
+        echo "== $1 at $(date +%H:%M:%S)"; ls -l "$SHM" 2>/dev/null | tail -n 60; echo "-- contexts"; ls -l "$CTXROOT" 2>/dev/null
+    } > "$KEEP/shm.txt.tmp" 2>/dev/null && mv -f "$KEEP/shm.txt.tmp" "$KEEP/shm.txt"
+    sync 2>/dev/null   # written out now: a restart a second later must not lose it
+}
+keep_rotate() { # once per boot: the copies of the previous boot are kept as prev-*
+    keep_wanted || return 0
+    [ -e "$SHM/carlink-keep-rotated" ] && return 0
+    : > "$SHM/carlink-keep-rotated"
+    for f in supervisor.log session.log shm.txt; do
+        [ -e "$KEEP/$f" ] && mv -f "$KEEP/$f" "$KEEP/prev-$f"
+    done
+}
+keep_series() { # WHY: snapshots now and after a few delays; it outlives the supervisor, a newer series replaces it
+    keep_wanted || return 0
+    keep_id="$$-$(date +%s 2>/dev/null)-$1"
+    echo "$keep_id" > "$KEEPID"
+    ( trap '' TERM HUP INT
+      for d in ${CL_KEEP_STEPS:-0 20 40 60 60 120}; do
+          [ "$d" -gt 0 ] && sleep "$d"
+          [ "$(cat "$KEEPID" 2>/dev/null)" = "$keep_id" ] || exit 0
+          keep_snapshot "$1 +${d}s"
+      done ) > /dev/null 2>&1 &
+}
+
+# ---- audio route (opt-in) ----------------------------------------------------------------------------------------
+# carlink-audio-play-enable (or CARLINK_AUDIO_PLAY=1): play the phone's media audio on the car. The capture program writes
+# it to the browser audio device, which only makes sound once the car has built the browser source connection
+# (audioconn -b 0xb8, what the upstream daemon does). Exactly one audioconn runs at a time (several of them made a head unit
+# reset, see the upstream notes), once per session, never retried, and the route is released when the session ends.
+ROUTELOCK=$SHM/carlink-audioconn.lock
+ROUTE_CONN=${CARLINK_AUDIO_CONN:-0xb8}
+ROUTE_UP=0
+audio_play_wanted() { [ -n "${CARLINK_AUDIO_PLAY-}" ] || [ -e "$SHM/carlink-audio-play-enable" ]; }
+find_audioconn() {
+    if [ -n "${CL_AUDIOCONN-}" ]; then AUDIOCONN=$CL_AUDIOCONN; [ -x "$AUDIOCONN" ] || AUDIOCONN=; return; fi
+    AUDIOCONN=
+    for c in /fs/sda0/opt/mm/bin/audioconn /opt/mm/bin/audioconn; do
+        if [ -x "$c" ]; then AUDIOCONN=$c; return; fi
+    done
+}
+audio_run() { # ARGS...: one audioconn run, stopped after CL_AUDIOCONN_WAIT s (default 20); 124 = it had to be stopped
+    "$AUDIOCONN" "$@" >> "$LOG" 2>&1 &
+    ap=$!; at=0
+    while kill -0 "$ap" 2>/dev/null && [ "$at" -lt "${CL_AUDIOCONN_WAIT:-20}" ]; do sleep 1; at=$((at + 1)); done
+    if kill -0 "$ap" 2>/dev/null; then kill -TERM "$ap" 2>/dev/null; wait "$ap" 2>/dev/null; return 124; fi
+    wait "$ap"
+}
+audio_route_up() {
+    ROUTE_UP=0
+    audio_play_wanted || return 0
+    find_audioconn
+    if [ -z "$AUDIOCONN" ]; then log "audio: audioconn not found: no audio route, the session runs without sound"; return 0; fi
+    # The lock is a plain file made with noclobber (create only if absent): /dev/shmem cannot make directories.
+    if ! ( set -C; : > "$ROUTELOCK" ) 2>/dev/null; then
+        log "audio: a route is already up or an audioconn is running ($ROUTELOCK exists): not starting another"
+        return 0
+    fi
+    log "audio: building the browser audio route: audioconn -b $ROUTE_CONN"
+    audio_run -b "$ROUTE_CONN"; arc=$?
+    if [ "$arc" = 0 ]; then ROUTE_UP=1; log "audio: route built"
+    else log "audio: audioconn -b failed (status $arc): the session runs without a route"; rm -f "$ROUTELOCK"
+    fi
+}
+audio_route_down() {
+    [ "$ROUTE_UP" = 1 ] || return 0
+    ROUTE_UP=0
+    log "audio: releasing the route: audioconn -r $ROUTE_CONN"
+    audio_run -r "$ROUTE_CONN"; log "audio: route released (status $?)"
+    rm -f "$ROUTELOCK"
+}
+
+audio_release_stale() { # shutdown: a route the (killed) worker could not release
+    [ -e "$ROUTELOCK" ] || return 0
+    find_audioconn
+    if [ -n "$AUDIOCONN" ]; then
+        log "audio: releasing a route left behind: audioconn -r $ROUTE_CONN"
+        audio_run -r "$ROUTE_CONN"; log "audio: route released (status $?)"
+    fi
+    rm -f "$ROUTELOCK"
+}
+
+run_session() {
+    CARLINK_SESSION_SECONDS=0; CARLINK_INPUT_FILE=$KEYS; CARLINK_SESSION_STOP=$STOP; CARLINK_DISPLAY_HIDE=$HIDE
+    CARLINK_DISPLAY_SHOWN=$SHOWN; CARLINK_PLUGGED_OK=1; CARLINK_DISPLAY_FIT=${CARLINK_DISPLAY_FIT-fit}
+    export CARLINK_SESSION_SECONDS CARLINK_INPUT_FILE CARLINK_SESSION_STOP CARLINK_DISPLAY_HIDE CARLINK_DISPLAY_SHOWN \
+           CARLINK_PLUGGED_OK CARLINK_DISPLAY_FIT
+    # Opt-in diagnostics, off by default: create the file (or set the variable) before pressing Start.
+    #   carlink-readthread-enable: USB reads on a dedicated thread (fewer transfers taken by the factory reader)
+    #   carlink-audio-enable:      save the raw media-audio channel to /dev/shmem/carlink-audio.raw (max 6 MB)
+    #   carlink-audio-play-enable: play the media audio on the car (builds the browser audio route first, see above)
+    if [ -n "${CARLINK_READ_THREAD-}" ] || [ -e "$SHM/carlink-readthread-enable" ]; then
+        CARLINK_READ_THREAD=1; export CARLINK_READ_THREAD
+    fi
+    if [ -n "${CARLINK_AUDIO-}" ] || [ -e "$SHM/carlink-audio-enable" ]; then
+        : > "$SHM/carlink-audio.raw"
+        CARLINK_AUDIO_DUMP=$SHM/carlink-audio.raw; export CARLINK_AUDIO_DUMP
+    fi
+    if audio_play_wanted; then
+        CARLINK_AUDIO_PLAY=1; export CARLINK_AUDIO_PLAY
+        # The audio shim's dependency liba2i_client.so is in /opt/mm/lib: appended last, so nothing else resolves differently.
+        LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}${CL_MM_LIB:-/opt/mm/lib}"; export LD_LIBRARY_PATH
+    fi
+    if wifi_wanted && [ -n "${WIFI_IP-}" ]; then CARLINK_WIFI_PHONE=$WIFI_IP; export CARLINK_WIFI_PHONE; fi
+    if [ -n "${CL_SESSION_CMD-}" ]; then exec sh -c "$CL_SESSION_CMD"; fi
+    cd "$SHM" || exit 1
+    exec sh ./carlife_usb_visible.sh ./carlife_qnx_usb_capture.elf ./carlife_qnx_mmr_replay.elf
+}
+
+run_watch() {
+    CARLINK_EMIT_HIDE=$HIDE; CARLINK_WATCH_STOP=$WSTOP; CARLINK_INPUT_FILE=$KEYS
+    # fast hide: the watcher hides the picture itself the moment MENU or MEDIA is pressed (see carlife_qnx_most_watch.c)
+    CARLINK_WATCH_SHOWN=$SHOWN; CARLINK_FAST_HIDE_LMC=$LMC
+    export CARLINK_EMIT_HIDE CARLINK_WATCH_STOP CARLINK_INPUT_FILE CARLINK_WATCH_SHOWN CARLINK_FAST_HIDE_LMC
+    if [ -n "${CL_WATCH_CMD-}" ]; then exec sh -c "$CL_WATCH_CMD"; fi
+    cd "$SHM" || exit 1
+    exec ./carlife_qnx_most_watch.elf --watch 0 --emit "$KEYS"
+}
+
+# The ctl helper can outlive the shell that started it (seen in the car): find it by its command line and stop it.
+kill_ctl() {
+    ${CL_PIDIN:-pidin} arg 2>/dev/null | grep -F "$CTL --serve $PORT" | grep -v grep | while read -r p rest; do
+        kill "$p" 2>/dev/null
+    done
+}
+
+stop_process() { # PID SECONDS: wait for a process to end, then terminate it
+    p=$1; t=$2
+    while [ "$t" -gt 0 ] && kill -0 "$p" 2>/dev/null; do sleep 1; t=$((t - 1)); done
+    kill -0 "$p" 2>/dev/null && kill -TERM "$p" 2>/dev/null
+}
+
+worker_loop() {
+    fails=0
+    while [ ! -e "$QUIT" ]; do
+        prepare_panel || break
+        wait_phone || break
+        if wifi_wanted; then log "wireless phone ready: starting a CarLife session"; else log "phone present: starting a CarLife session"; fi
+        stage_files || break
+        rm -f "$STOP" "$WSTOP" "$SHOWN" "$SEEN"
+        : > "$KEYS"
+        if [ -f "$SLOG" ] && [ "$(wc -c < "$SLOG")" -gt 200000 ]; then mv -f "$SLOG" "$SLOG.prev"; fi
+        echo "===== attempt starting $(date +%H:%M:%S) =====" >> "$SLOG"
+        t0=$(date +%s 2>/dev/null)
+        audio_route_up
+        ( run_session ) >> "$SLOG" 2>&1 &
+        session=$!
+        i=0
+        while [ ! -e "$KEYS" ] && [ "$i" -lt 10 ] && kill -0 "$session" 2>/dev/null; do sleep 1; i=$((i + 1)); done
+        watcher=
+        if [ -n "${CARLINK_WATCH-}" ] || [ -e "$WENABLE" ]; then
+            ( run_watch ) >> "$LOG" 2>&1 &
+            watcher=$!
+        elif [ "$fails" -eq 0 ]; then
+            log "iDrive knob watcher is off (create $WENABLE to turn it on)"
+        fi
+        livekeep=
+        if keep_wanted; then   # a restart in the middle of a session must leave a recent copy of the logs
+            ( while kill -0 "$session" 2>/dev/null; do sleep "${CL_KEEP_LIVE:-10}"; keep_snapshot "live"; done ) > /dev/null 2>&1 &
+            livekeep=$!
+        fi
+        wait "$session"
+        rc=$?
+        [ -n "$livekeep" ] && kill "$livekeep" 2>/dev/null
+        audio_route_down
+        : > "$WSTOP"
+        [ -n "$watcher" ] && stop_process "$watcher" 3
+        rm -f "$WSTOP" "$SHOWN"
+        if [ -e "$SEEN" ]; then fails=0; else fails=$((fails + 1)); fi
+        secs=
+        t1=$(date +%s 2>/dev/null)
+        case "$t0$t1" in *[!0-9]*|"") ;; *) secs=$((t1 - t0)) ;; esac
+        log "session ended (status $rc, picture shown: $([ -e "$SEEN" ] && echo yes || echo no), failed attempts in a row: $fails${secs:+, ran $secs s})"
+        keep_series "session ended"
+        [ -e "$QUIT" ] && break
+        if [ "$fails" -ge "$MAX_FAILS" ]; then
+            log "giving up after $fails attempts without a picture: unplug and replug the phone, then Start again (details: $SLOG, $SLOG.prev)"
+            break
+        fi
+        if wifi_wanted; then
+            # Wireless: nothing to unplug. The phone shows "connection ended/timed out"; press Start connection again.
+            if [ -e "$SEEN" ]; then
+                log "wireless session ended: press Start connection on the phone to connect again"
+            else
+                log "wireless attempt $fails failed (details: $SLOG): press Start connection on the phone again"
+            fi
+            WIFI_IP=
+            sleep 3
+            continue
+        fi
+        # A failed USB handshake is only cured by a fresh enumeration: retrying with the phone still attached does nothing.
+        if [ "$rc" = 0 ] && [ -e "$SEEN" ]; then
+            log "the CarLife session was stopped: unplug the phone and plug it in again to start CarLife again"
+        elif [ -e "$SEEN" ]; then
+            log "the CarLife picture ended (the USB link broke): unplug the phone and plug it in again to start CarLife again (details: $SLOG)"
+        else
+            log "attempt $fails failed: unplug the phone and plug it in again (details: $SLOG)"
+        fi
+        while [ ! -e "$QUIT" ] && phone_nodes; do sleep 1; done
+        sleep 1
+    done
+    kill -TERM "$SUP" 2>/dev/null
+}
+
+# What the panel's layers look like while the picture is supposed to be shown (read-only queries), for the log.
+log_layers() {
+    sleep 2
+    { echo "layer state 2 s after the picture was marked shown:"
+      "$LMC" get surface 1510; "$LMC" get surface 256; "$LMC" get layer 0x80000000; } >> "$LOG" 2>&1
+}
+
+ticker_loop() {
+    lmlogged=0
+    while kill -0 "$SUP" 2>/dev/null; do
+        if [ -e "$SHOWN" ]; then
+            : > "$SEEN"
+            if [ "$lmlogged" = 0 ]; then lmlogged=1; ( log_layers ) & fi
+        else
+            lmlogged=0
+        fi
+        publish_state
+        sleep 1
+    done
+    # The supervisor died without cleaning up (kill -9): give the panel back and stop the session.
+    : > "$QUIT"; : > "$STOP"; : > "$WSTOP"
+    restore_direct
+    rm -f "$SHOWN"
+    [ -n "$PIPE" ] && kill "$PIPE" 2>/dev/null   # lets the ctl helper see its parent gone and release the port
+    echo "idle 0 0" > "$STATE"
+}
+
+shutdown_all() {
+    trap '' TERM INT HUP
+    log "shutting down"
+    if [ "$OWNED" != 1 ]; then   # still starting: only our own helper pipeline
+        [ -n "$PIPE" ] && kill "$PIPE" 2>/dev/null
+        [ "$STALE_OK" = 1 ] && kill_ctl
+        exit 0
+    fi
+    : > "$QUIT"; : > "$STOP"; : > "$WSTOP"
+    restore_direct
+    rm -f "$SHOWN"
+    if [ -n "$WORKER" ]; then
+        stop_process "$WORKER" 8
+    fi
+    audio_release_stale
+    [ -n "$TICKER" ] && kill "$TICKER" 2>/dev/null
+    [ -n "$PIPE" ] && kill "$PIPE" 2>/dev/null
+    kill_ctl
+    rm -f "$HIDE" "$STOP" "$WSTOP" "$SHOWN" "$SEEN" "$KEYS" "$QUIT" "$BOUND"
+    echo "idle 0 0" > "$STATE"
+    keep_series "shutdown"
+    exit 0
+}
+
+# ---- start ------------------------------------------------------------------------------------------------------
+# The trap comes first: the iDrive app may send "quit" (Force Stop, or a stale instance on Start) while we are still
+# waiting for the control port, and a default SIGTERM would kill this shell and leave the ctl helper holding the port.
+# OWNED stays 0 until we hold the port, so a stopped start never touches another daemon's files.
+OWNED=0
+STALE_OK=0
+trap shutdown_all TERM INT HUP
+log "supervisor $SUP starting"
+keep_rotate
+# Environment the app gave us, to compare with an SSH shell (the knob watcher crashes only here).
+# (env and id are not found in the app environment: PATH there lacks their directory, so use shell builtins only)
+{ echo "--- env"; echo "PATH=$PATH"; echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"; export; echo "--- ulimit"; ulimit -a; } > "$SHM/carlink-env-supervisor.txt" 2>&1
+try=0
+while :; do
+    rm -f "$BOUND"
+    ( "$CTL" --serve "$PORT" | event_loop ) &
+    PIPE=$!
+    i=0
+    while [ ! -e "$BOUND" ] && [ "$i" -lt 20 ] && kill -0 "$PIPE" 2>/dev/null; do sleep 1; i=$((i + 1)); done
+    [ -e "$BOUND" ] && break
+    kill "$PIPE" 2>/dev/null
+    # A ctl left behind by a supervisor that is gone holds the port: only then is it ours to remove.
+    oldpid=$(cut -d' ' -f2 "$STATE" 2>/dev/null)
+    if [ -z "$oldpid" ] || [ "$oldpid" = 0 ] || ! kill -0 "$oldpid" 2>/dev/null; then STALE_OK=1; kill_ctl; fi
+    try=$((try + 1))
+    if [ "$try" -ge "${CL_BIND_TRIES:-5}" ]; then
+        log "control port $PORT is not available (another daemon running?): nothing started"
+        exit 3
+    fi
+    log "control port $PORT not ready (try $try): retrying"
+    sleep 2   # a previous helper may still be releasing the port
+done
+OWNED=1
+rm -f "$QUIT" "$STOP" "$WSTOP" "$SEEN"
+publish_state
+( ticker_loop ) &
+TICKER=$!
+( worker_loop ) &
+WORKER=$!
+log "supervisor $SUP up: waiting for the phone"
+wait "$PIPE"
+shutdown_all

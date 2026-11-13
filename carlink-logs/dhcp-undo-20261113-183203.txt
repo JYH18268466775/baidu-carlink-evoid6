@@ -1,0 +1,32 @@
+﻿# dhcp-undo  2026-11-13 18:32:03
+Permission denied, please try again.
+Fri Nov 13 10:32:08 UTC 2026
+restored from /dev/shmem/dhcpd.uap0.conf.orig
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.224.0 netmask 255.255.255.0 {
+   option routers 0.0.0.0;
+   option domain-name-servers 172.16.224.1;
+   range 172.16.224.100 172.16.224.254;
+}
+old dhcpd pid=82796657
+the car did not restart dhcpd in 20 s: starting it with the same arguments
+binary=/usr/sbin/dhcpd
+start-exit=0
+Internet Systems Consortium DHCP Server 4.1-ESV-R3
+Copyright 2004-2011 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Wrote 4 leases to leases file.
+Listening on BPF/uap0/bc:30:7e:30:93:c4/172.16.224.0/24
+Sending on   BPF/uap0/bc:30:7e:30:93:c4/172.16.224.0/24
+Sending on   Socket/fallback/fallback-net
+now pid=83857522
+     pid Arguments
+83857522 /usr/sbin/dhcpd -cf /var/opt/conn/dhcpd.uap0.conf -lf /var/opt/conn/dhcpd.uap0.leases -pf /tmp/dhcpd.pid.uap0 uap0
+# ssh exit code: 0

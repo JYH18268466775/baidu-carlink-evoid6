@@ -1,0 +1,4 @@
+package/ holds files from the NBT-AAD release (Required Notice: Copyright (c) 2026 nanaisu - NBT-AAD,
+https://github.com/Sq00ky/Supra-iDrive6-Android-Auto), licensed under PolyForm Noncommercial 1.0.0.
+Personal, noncommercial use only. Do not redistribute this folder.
+package/nbt-aad is a CarLink stand-in script, not the upstream daemon.

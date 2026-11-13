@@ -1,0 +1,18 @@
+﻿# upload  2026-11-13 17:13:30
+   21920  clmenu-nbt-aad  sha256 D4F2E81618824F8B...  -> /opt/aa/nbt-aad
+   34556  clmenu-capture.elf  sha256 A6969E6A0C7BAED0...  -> /opt/aa/carlink/carlife_qnx_usb_capture.elf
+   10051  clmenu-display.sh  sha256 AB3264F429DC5EC1...  -> /opt/aa/carlink/carlife_visible_first_frame.sh
+   16132  clmenu-watch.elf  sha256 2124D0CBB6CF9DF8...  -> /opt/aa/carlink/carlife_qnx_most_watch.elf
+    2553  watch-env-bisect.sh  sha256 B3D24D29EC1CE150...  -> 
+    5884  clmenu-tcpprobe.elf  sha256 DA83E2E49912B5B2...  -> 
+Uploading 6 files, 91096 bytes (enter the password once)
+ssh: connect to host 127.0.0.1 port 6969: Connection refused
+使用“3”个参数调用“Write”时发生异常:“管道已结束。
+”
+所在位置 C:\Users\Jane\Documents\ChatGPT\codex carlife\build\live-input-candidate\carlife-menu\update-carlife-menu.ps1:
+38 字符: 1
++ $in.Write($all, 0, $all.Length)
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : IOException
+ 

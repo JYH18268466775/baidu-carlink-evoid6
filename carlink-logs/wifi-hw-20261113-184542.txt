@@ -1,0 +1,352 @@
+﻿# wifi-hw  2026-11-13 18:45:42
+Fri Nov 13 10:45:42 UTC 2026
+==IFCONFIG
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 33192
+	inet 127.0.0.1 netmask 0xff000000
+pflog0: flags=0 mtu 33192
+veom0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.254 netmask 0xfffffffc broadcast 160.48.199.255
+dwc0: flags=8b43<UP,BROADCAST,RUNNING,PROMISC,ALLMULTI,SIMPLEX,MULTICAST> mtu 1500
+	status: active
+	inet 0.0.0.0 netmask 0xff000000 broadcast 255.255.255.255
+	inet alias 169.254.199.119 netmask 0xffff0000 broadcast 169.254.255.255
+vlan73: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.119 netmask 0xffffff80 broadcast 160.48.199.127
+vlan77: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.225 netmask 0xfffffff0 broadcast 160.48.199.239
+vlan86: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+vlan80: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+	inet 160.48.199.185 netmask 0xfffffff8 broadcast 160.48.199.191
+uap0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	inet 172.16.224.1 netmask 0xffffff00 broadcast 172.16.224.255
+lo1: flags=ffff8049<UP,LOOPBACK,RUNNING,MULTICAST,SHIM> mtu 33192
+	inet 172.16.223.1 netmask 0xfffffffc
+==IO-PKT
+    8203 bin/io-pkt-v6-hc  
+     pid Arguments
+    8203 /bin/io-pkt-v6-hc -S -ptcpip stacksize=16384,mclbytes=4096,enmap=0,pkt_typed_mem=/ram/dma/sysram -ppf-v6
+==DLL
+==TOOLS
+found /opt/conn/bin/wpa_supplicant
+found /usr/sbin/dhcp.client
+found /usr/bin/dhcp.client
+found /sbin/dhcp.client
+found /bin/dhcp.client
+==CONNBIN
+.
+..
+BrowserRenderer-NBTEVOEXT
+BrowserRenderer-NBTEVOEXT_Bin.sh
+BrowserRenderer-NBTEVOEXT_Main
+BrowserRenderer-NBTEVOEXT_Main.sh
+ConnStarter
+Connectivity
+Connectivity.cfg
+Connectivity_efence.cfg
+DevCtrlBrowser
+DevCtrlBrowser_Bin.sh
+DevCtrlBrowser_Main
+DevCtrlBrowser_Main.sh
+DnsMasq
+IPCEServer
+OfficeViewerMain
+Online
+WlanDSICommander
+carplay
+dmsserver_addr
+dmsserver_pim
+f.bin
+lighttpd
+lighttpd-nbt-cfg.sh
+mwu_dev.conf
+mwud
+scp
+sendcall
+start_webserver.sh
+v.bin
+wifidir_app
+wifidir_init.conf
+wifidirect_defaults.conf
+wifidisplay.conf
+wpa_supplicant
+wps_init.conf
+==CONNCFG
+
+/opt/conn/etc:
+total 1081
+drwxrwxr-x  6 conn      conn           4096 Nov 07 20:57 .
+drwxrwxr-x  9 conn      conn           4096 Nov 07 20:57 ..
+-rw-rw-r--  2 conn      conn           2376 Nov 07 20:52 BMWAppKitDevelopment.p12
+-rw-rw-r--  2 conn      conn           2521 Nov 07 20:52 BMWAppKitDevelopment.p7b
+-rw-rw-r--  2 conn      conn              2 Nov 07 20:52 ELcycle
+drwxrwxr-x  2 conn      conn           4096 Nov 07 20:57 carplay
+-rw-rw-r--  2 conn      conn             65 Nov 07 20:52 client.conf
+drwxrwxr-x  2 conn      conn           4096 Nov 07 20:57 cursors
+drwxrwxr-x  2 conn      conn           4096 Nov 07 20:57 dhcp
+-rw-rw-r--  2 conn      conn             66 Nov 07 20:52 dnsmasq.conf
+-rw-rw-r--  2 conn      conn            458 Nov 07 20:52 hosts
+-rw-rw-r--  2 conn      conn           1574 Nov 07 20:52 ipce.cfg
+-rw-rw-r--  2 conn      conn           1578 Nov 07 20:52 ipce_no_logging.cfg
+-rw-rw-r--  2 conn      conn            186 Nov 07 20:52 lighttpd-logging.cfg
+-rw-rw-r--  2 conn      conn           1257 Nov 07 20:52 lighttpd-nbt-cfg-full.cfg
+-rw-rw-r--  2 conn      conn          13014 Nov 07 20:52 lighttpd-nbt.conf
+srw-rw-rw-  1 root      root              0 Nov 13 10:17 mdnsd
+drwxrwxr-x  2 conn      conn           4096 Nov 07 20:57 ppp
+-rw-rw-r--  2 conn      conn          47500 Nov 07 20:52 provcode.tab
+-rw-rw-r--  2 conn      conn             23 Nov 07 20:52 resolv.conf
+-rw-rw-r--  2 conn      conn         453736 Nov 07 20:52 sd8787_uapsta.bin
+
+/var/opt/conn:
+total 155
+drwxrwxr-x  4 conn      conn           4096 Nov 13 10:41 .
+drwxrwxr-x 10 root      root           4096 Nov 09 05:02 ..
+-rwxrwxrwx  1 root      root              4 Nov 07 23:12 ResetBasicState.dat
+-rwxrwxrwx  1 root      root             20 Nov 07 13:36 WFDPass.conf
+-rwxrwxrwx  1 root      root             16 Nov 07 13:36 WFDWps.conf
+-rw-rw-rw-  1 root      root             12 Jan 01  2000 bdaddr.txt
+-rw-rw-rw-  1 root      root          19366 Nov 13 10:41 bss.bak
+-rw-rw-rw-  1 root      root          19505 Nov 13 10:41 bss.ddb
+drwxrwxrwx  2 root      root           4096 Nov 07 23:14 carplay
+-rw-rw-rw-  1 root      root            556 Nov 13 10:44 devicelist.dat
+-rw-rw-rw-  1 root      root            304 Nov 13 09:10 dhcpd.uap0.conf
+-rw-r--r--  1 root      root           1659 Nov 13 10:39 dhcpd.uap0.leases
+-rw-r--r--  1 root      root           1931 Nov 13 10:29 dhcpd.uap0.leases~
+-rw-rw-rw-  1 root      root            233 Nov 07 23:05 dhcpd.wfd0.conf
+-rw-rw-r--  1 root      root            191 Nov 07 23:05 dhcpd.wfd0.leases
+-rw-rw-r--  1 root      root            191 Nov 07 23:00 dhcpd.wfd0.leases~
+-rwxrwxrwx  1 root      root             25 Nov 13 10:12 macaddr.txt
+-rwxrwxrwx  1 root      root             28 Nov 07 13:37 old_label.txt
+-rw-rw-rw-  1 root      root            750 Nov 13 10:41 pdl.dat
+-rwxrwxrwx  1 root      root           8489 Nov 07 23:12 pss_config.cfg
+drwxrwxrwx  2 root      root           4096 Nov 16  2019 teleservices
+-rwxrwxrwx  1 root      root           3271 Nov 07 23:14 wifidir_init.conf
+
+/var/opt/conn/carplay:
+total 44
+drwxrwxrwx  2 root      root           4096 Nov 07 23:14 .
+drwxrwxr-x  4 conn      conn           4096 Nov 13 10:41 ..
+-rwxrwxrwx  1 root      root           2774 Nov 07 23:14 carplay.ini
+-rwxrwxrwx  1 root      root              4 Nov 07 23:14 coding_NavAsia.txt
+-rwxrwxrwx  1 root      root           2364 Nov 07 23:14 iap2.cfg
+-rwxrwxrwx  1 root      root           6558 Nov 07 23:14 iap2_Wifi.cfg
+-rwxrwxrwx  1 root      root           1245 Nov 07 23:14 protocolsIap2.cfg
+==WFD-DHCP
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.222.0 netmask 255.255.255.0 {
+   range 172.16.222.100 172.16.222.110;
+}
+==WIFIDIR
+#
+# File:	wifidir_init.conf
+#
+# Copyright (C) 2011 Marvell International Ltd., All Rights Reserved
+#
+# MARVELL CONFIDENTIAL
+# Copyright 2008 ~ 2011 Marvell International Ltd All Rights Reserved.
+# The source code contained or described herein and all documents related to
+# the source code ("Material") are owned by Marvell International Ltd or its
+# suppliers or licensors. Title to the Material remains with Marvell International Ltd
+# proprietary and confidential information of Marvell or its suppliers and
+# laws and treaty provisions. No part of the Material may be used, copied,
+# reproduced, modified, published, uploaded, posted, transmitted, distributed,
+# or disclosed in any way without Marvell's prior express written permission.
+#
+# property right is granted to or conferred upon you by disclosure or delivery
+# of the Materials, either expressly, by implication, inducement, estoppel or
+# otherwise. Any license under such intellectual property rights must be
+# express and approved by Marvell in writing.
+#################################################################################
+
+# Wifidir Application configuration file
+# Lines that start with # are treated as comments
+# Each line should not exceed 80 characters
+# Format: TYPE=value
+#
+#################################################################################
+# UUID: 16B, in binary format
+# Do not use. Onwards, UUID is automatically generated from device mac addr
+#UUID=0x12345678123456781234567812345678
+
+# VERSION: 1B, 0x10: Version 1.0, 0x20: Version 2.0
+VERSION=0x20
+
+# DEVICE_NAME: <=32B, describes the product
+DEVICE_NAME=MRVL-P2P
+
+# MANUFACTURER: <=64B, identifies the manufacturer of the device
+MANUFACTURER=Marvell
+
+# MODEL_NAME: <=32B, identifies the model of the device
+MODEL_NAME=SD-8787
+
+# MODEL_NUMBER: <=32B, provides additional description of the device
+MODEL_NUMBER=0001
+
+# SERIAL_NUMBER: <=32B, identifies the serial number of the Enrollee or Registrar
+SERIAL_NUMBER=0001
+
+# Configuration Methods: 2B
+# 0x0001 : USBA
+# 0x0002 : Ethernet
+# 0x0004 : Label
+# 0x0008 : Display
+# 0x0010 : Ethernet NFC Token
+# 0x0020 : Integrated NFC Token
+# 0x0040 : NFC Interface
+# 0x0080 : Push Button
+#CONFIG_METHODS=0x01C8 HBAS : Configuration methods set by Marvell
+
+CONFIG_METHODS=0x0088
+
+#################################################################################
+# SSID Suffix: <= 24. e.g If SSID_SUFFIX=Marvell, after becoming GO its SSID would be
+# DIRECT-XyMarvell
+SSID_SUFFIX=_Marvell
+
+
+#################################################################################
+## WIFI Direct Settings
+
+# INTENT: 0 to 15
+#         15-> highest GO desire
+INTENT=15
+
+# Listen Channel Settings
+LISTEN_CHANNEL_NUMBER=1
+
+# Operating Channel Settings
+OP_CHANNEL_NUMBER=11
+
+# Persistent record backup file
+PERSISTENT_RECORD_BACKUP_FILE=./records.db
+
+==PSS
+VoipSip.OutputChannel = /input_mono_5
+VoipSip.InputChannel = /output_mono_5
+SAM.ChannelNames = HostAgent, MonitorService, AliveService, RmssService, NetAccessService, BSSService, SASService, PhoneService, NetworkingService, ConnMngrService, PimService, TTYdevService, DmlService, MediaService, BTMediaFSService, DSIService
+PimService.ChannelQueueSize = 1000
+PhoneService.SvcCompNameList = PhoneCtrl, Phone2, Modem1, Phone1
+PhoneService.ChannelQueueSize = 200
+PhoneCtrl.SCOConnectMode = 0
+Phone3.HFNRStatus = 2
+Phone2.DriverModel = PHONE_MODEL_PEIKER_ATM
+Phone2.Disposition = PHONE_DISPOS_STATIC
+Phone2.ATChannels = 1
+Phone1.SCOChannel = 1
+Phone1.HFNRStatus = 2
+NetworkingService_vlan77.ipmode = static
+NetworkingService_uap0.startdhcps = manual
+NetworkingService_uap0.ipmode = static
+NetworkingService_uap0.configpath = /fs/sda0/opt/conn/data/hostapd.conf
+NetworkingService_0_wd.ifname = wfd0
+NetworkingService_0.type = wlan.8787
+NetworkingService_0.mountparam = resetoffset=227, poweronoffset=82, dma4=17, fwdump_dir=/var/dump, verbose=1, sdio=3, clock=48M, fwpath=/opt/conn/etc/sd8787_uapsta.bin
+NetworkingService_0.mode = 2
+NetworkingService.autostartif = 0
+NetAccess_PKTCB.SerialChannels = 1
+NetAccess.StatusPort = /NadStatus
+NetAccess.StatusPolarity = ACTIVE_HIGH
+NetAccess.ResetPort = /NadStatus
+NetAccess.OnOffPort = /NadStatus
+NetAccess.InitialPowerState = ON
+MonitorService.TimestampEnable = 1
+MonitorService.LogMode = 3
+HostAgent.RegfSvcList_8 = NetworkingService, ConnMngrService_Wlan
+HostAgent.RegfSvcList_7 = NetworkingService, BSSService
+HostAgent.RegfSvcList_6 = ConnMngrService, BSSService, NetworkingService
+HostAgent.RegfSvcList_5 = TTYdevService, NetAccessService, ConnMngrService_Ppp
+HostAgent.RegfSvcList_4 = MediaService, BSSService
+HostAgent.RegfSvcList_3 = MediaService, BTMediaFSService
+HostAgent.RegfSvcList_2 = AliveService, MonitorService, TTYdevService, RmssService
+HostAgent.RegfSvcList_1 = PhoneService, NetAccessService
+HostAgent.RegfCall_8_1 = EVNT ConnMngrService_Wlan NAME=STARTUP;
+HostAgent.RegfCall_7_1 = CALL SRC:1 BSS_GAP_SetHwState state=BSS_GAP_HW_READY;
+HostAgent.RegfCall_6_1 = EVNT ConnMngrService NAME=STARTUP;
+HostAgent.RegfCall_5_1 = EVNT NetAccess NAME=REGISTER_DIALUP_EVENTS;
+HostAgent.RegfCall_4_1 = EVNT MediaCtrl NAME=STARTUP;
+HostAgent.RegfCall_3_1 = EVNT BTMediaFSService NAME=STARTUP;
+HostAgent.RegfCall_2_1 = EVNT TTYdev NAME=STARTUP;
+HostAgent.RegfCall_1_1 = EVNT PhoneCtrl NAME=STARTUP;
+ConnMngr.WlanDefault = off
+Bluetooth.PCM_SLOT_2_STARTING_BIT = 17
+Bluetooth.PCM_SLOT_1_STARTING_BIT = 1
+Bluetooth.IGNORE_ROLE_CHANGE = 1
+==PF-NOT-UAP0
+scrub in all
+block drop all
+anchor "filter_OBD" all
+pass quick on vlan80 inet all
+pass out quick on wfd0 inet proto tcp from 172.16.222.1 port = 64326 to <wfd>
+pass out quick on wfd0 inet proto tcp from 172.16.222.1 port = 64327 to <wfd>
+pass in quick on wfd0 inet proto tcp from <wfd> to 172.16.222.1 port = 64326
+pass in quick on wfd0 inet proto tcp from <wfd> to 172.16.222.1 port = 64327
+pass in quick on wfd0 inet proto tcp from <wfd> to 172.16.222.1 port = 9871
+pass in quick on wfd0 inet proto tcp from <wfd> to 172.16.222.1 port = 9874
+pass out quick on wfd0 inet proto tcp from 172.16.222.1 port = 9871 to <wfd>
+pass out quick on wfd0 inet proto tcp from 172.16.222.1 port = 9874 to <wfd>
+pass in quick on wfd0 inet proto udp from <wfd> to 172.16.222.1 port = 9870
+pass in quick on wfd0 inet proto udp from <wfd> to 172.16.222.1 port = 9873
+pass in quick on wfd0 inet proto tcp from <wfd> to 172.16.222.1 port = 4099
+pass out quick on wfd0 inet proto tcp from 172.16.222.1 port = 4099 to <wfd>
+pass quick on en5 all
+pass quick on veom0 all
+pass quick on lo0 all
+pass in quick on wfd0 inet proto udp from 0.0.0.0 port = 68 to 255.255.255.255 port = 67
+pass in quick on wfd0 inet proto udp from <wfd> port = 68 to 255.255.255.255 port = 67
+pass in quick on wfd0 inet proto udp from <wfd> port = 68 to 172.16.222.1 port = 67
+pass out quick on wfd0 inet proto udp from 172.16.222.1 port = 67 to 255.255.255.255 port = 68
+pass out quick on wfd0 inet proto udp from 172.16.222.1 port = 67 to <wfd> port = 68
+pass quick inet proto icmp from (self) to (self) icmp-type echoreq keep state
+pass quick inet proto icmp from (self) to 172.16.222.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from (self) to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from (self) to 192.168.0.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from (self) to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from (self) to 172.16.224.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.222.0/24 to (self) icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.222.0/24 to 172.16.222.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.222.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.222.0/24 to 192.168.0.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.222.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.222.0/24 to 172.16.224.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to (self) icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 172.16.222.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 192.168.0.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 172.16.224.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 192.168.0.0/24 to (self) icmp-type echoreq keep state
+pass quick inet proto icmp from 192.168.0.0/24 to 172.16.222.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 192.168.0.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 192.168.0.0/24 to 192.168.0.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 192.168.0.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 192.168.0.0/24 to 172.16.224.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to (self) icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 172.16.222.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 192.168.0.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 160.48.199.0/24 to 172.16.224.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.224.0/24 to (self) icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.224.0/24 to 172.16.222.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.224.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.224.0/24 to 192.168.0.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.224.0/24 to 160.48.199.0/24 icmp-type echoreq keep state
+pass quick inet proto icmp from 172.16.224.0/24 to 172.16.224.0/24 icmp-type echoreq keep state
+anchor "filter_NAD" all
+anchor "route_NAD" all
+anchor "filter_BT1" all
+anchor "route_BT1" all
+anchor "filter_BT2" all
+anchor "route_BT2" all
+anchor "filter_USB" all
+anchor "route_USB" all
+==DHCPCLIENT
+     pid Arguments
+  278605 /bin/dhcp.client -idwc0 -anbH -hDIAGADR62BMWMAC000A0893E4A8
+# ssh exit code: 0

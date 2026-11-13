@@ -1,0 +1,29 @@
+﻿# dhcp-start  2026-11-13 18:27:32
+Fri Nov 13 10:27:41 UTC 2026
+==BEFORE
+     pid Arguments
+start-exit=0
+Internet Systems Consortium DHCP Server 4.1-ESV-R3
+Copyright 2004-2011 Internet Systems Consortium.
+All rights reserved.
+For info, please visit https://www.isc.org/software/dhcp/
+Wrote 4 leases to leases file.
+Listening on BPF/uap0/bc:30:7e:30:93:c4/172.16.224.0/24
+Sending on   BPF/uap0/bc:30:7e:30:93:c4/172.16.224.0/24
+Sending on   Socket/fallback/fallback-net
+==AFTER
+     pid Arguments
+82796657 /usr/sbin/dhcpd -cf /var/opt/conn/dhcpd.uap0.conf -lf /var/opt/conn/dhcpd.uap0.leases -pf /tmp/dhcpd.pid.uap0 uap0
+==CONF
+# !! File generated automatically !!
+# !! Do not edit !!
+
+authoritative;
+max-lease-time 259200;
+default-lease-time 259200;
+ddns-update-style none;
+subnet 172.16.224.0 netmask 255.255.255.0 {
+   option domain-name-servers 172.16.224.1;
+   range 172.16.224.100 172.16.224.254;
+}
+# ssh exit code: 0
